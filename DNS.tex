@@ -30,11 +30,19 @@ Xiaolin Li}
 
 \begin{abstract}
 A three dimensional direct numerical simulation (DNS) of the entrainment 
-of clear air and its mixing with cloudy air is performed. 
+of clear air and its mixing with cloudy air in the decaying and force 
+turbulence environment is performed. Since turbulence is a dynamic system 
+that is highly sensitive to its initial condition, several initial settings 
+have been applied to the simulation and the numerical results were compared 
+with each other. It is interesting to see that even with the same cloud 
+water fraction, the properties of the thermodynamics and micro-physics are 
+highly different especially for the decaying cases. 
+The results suggest that the initial shape of cloud filaments should be 
+considered as a significant factor in the DNS of cloud entrainment and mixing.   
 \end{abstract}
 
 \section{Introduction}
-In the past decades, many authors have contributed to the model of
+In the past decades, many authors have contributed to the simulation of
 turbulent mixing of cloudy and clear air. In Andrejczuk and Grabowski's series work \cite{And04,And06,And09}, an incompressible Boussinesq approximation model, along with vapor mixing ratio and temperature, is proposed to study the cloud-clear air interfacial mixing. Different turbulence kinetic energy (TKE) are used as input parameters at initial time to examine the impact of turbulence intensity on droplet size distribution and mixing homogeneity. The cloud filaments and velocity field are preset to make a heavily idealized initial and boundary condition, while focusing on the details of the evolving flow. 
 
 Kumar and Schumacher in \cite{Kumar11,Kumar12} developed a particle-point DNS to investigate entrainment mixing processes. In their work, a slab-like vapor field is adopted to mimic the supersaturated cloud area and subsaturated environment. The effects of temperature and buoyancy are ignored while an artificial isotropic volume forcing is introduced to maintain the turbulence. Using isotropic artificial forced turbulence is valid for adiabatic cloudy areas, but might be unrealistic at the interface between cloudy and clear air, because the flow in the regions of mixing may not be isotropic due to the negative buoyancy from the droplet evaporation \cite{Vaillancourt00}. In \cite{Kumar14}, the authors extended their previous work to both forced and decaying turbulence, and claimed that the buoyancy due to droplet evaporation played minor role in the mixing for their configuration.
@@ -75,6 +83,7 @@ clear air, $\mathbf{u}$ is the velocity field, $p$ is the pressure field. Here $
 \mathbf{f}_e
 \end{array} 
 \right.
+\label{eq:source_term}
 \end{equation}
 where $\mathbf{g}$ is the gravity, $T$ and $q_{v}$ are temperature
 and vapor mixing ratio field respectively with the subscript ``$0$''
@@ -184,7 +193,7 @@ turbulence were performed with pseudo-spectral methods due to its
 superior accuracy \cite{Rogallo81,Orszag72}. In recent years, pseudo-spectral 
 method has been extensively applied to the numerical study of cloud 
 entrainment problem in turbulent flows \cite{And04,Celani05,Kumar11}. However, the standard pseudo-spectral method has some severe restrictions. 
-As claimed in \cite{Kumar11}, the spectral method requires a smooth initial condition to avoid the Gibbs phenomenon. This artificial initial condition is not realistic or physical, thus has potential to bring some imperceptible errors during the simulation. Moreover, the spectral method requires periodic boundary condition in each direction and cannot be applied to flows that require a non-periodic, physical boundary condition. To be flexible enough to deal with various initial profiles with discontinuities at cloudy-clear air interfaces as well as applying different boundary conditions in the future, equations (\ref{eq:NS1})--(\ref{eq:Vapor}) are solved by finite difference method coupled with WENO (weighted essentially non-oscillatory) scheme \cite{WENO96}, which has the capability of dealing with discontinuity without causing numerical overshoots at sharp interfaces. Droplets position (\ref{eq:Coords}) and motion (\ref{eq:Velocity}) are solved by implicit Euler method in consideration of efficiency and stability. The time step size is adaptive to satisfy the Courant-–Friedrichs-–Lewy (CFL) condition. Parallel computing techniques are implemented with MPI library to increase the computational speed.
+As claimed in \cite{Kumar11}, the spectral method requires a smooth initial condition to avoid the Gibbs phenomenon. This artificial initial condition is not realistic or physical, thus has potential to bring some imperceptible errors during the simulation. Moreover, the spectral method requires periodic boundary condition in each direction and cannot be applied to flows that require a non-periodic, physical boundary condition. To be flexible enough to deal with various initial profiles with sharp cloudy-clear air interfaces as well as applying different boundary conditions in the future, equations (\ref{eq:NS1})--(\ref{eq:Vapor}) are solved by finite difference method coupled with WENO (weighted essentially non-oscillatory) scheme \cite{WENO96}, which has the capability of dealing with discontinuity without causing numerical overshoots at sharp interfaces. Droplets position (\ref{eq:Coords}) and motion (\ref{eq:Velocity}) are solved by implicit Euler method in consideration of efficiency and stability. The time step size is adaptive to satisfy the Courant-–Friedrichs-–Lewy (CFL) condition. Parallel computing techniques are implemented with MPI library to increase the computational speed.
 
 The numerical domain is set to be $0.512m^{3}$ with periodic boundary
 in all directions. The computational grid is $256^{3}$, thus
@@ -359,7 +368,7 @@ The $q_{max}$ in each case is set to be $3.95g/kg$ and the $q_{v,e}$ is $0.03g/k
 \[
 q'_v(\mathbf{x},t) = q_v(\mathbf{x},t)-\langle q_v(t)\rangle_V
 \]
-and the same definition holds for the temperature. An observation for the cases of decaying turbulence (case d1, d2, d3) is that, in spite of similar configuration with d2, case d3 has stronger fluctuations in temperature and faster evaporation process. This can be explained by the fact that the sedimentation effects accelerate the exchange of heat and water between cloudy and clear air in the vertical direction. We also observed that, the mixing of d1 is faster than d2 and d3 since it can be regarded as an intermediate process in d2 or d3. However, this difference becomes smaller in the forced turbulence as the motion of particles is dominated by the external forcing which are the same for f1, f2 and f3.
+and the same definition holds for the temperature. An observation for the cases of decaying turbulence (case D1, D2, D3) is that, in spite of similar configuration with D2, case D3 has stronger fluctuations in temperature and faster evaporation process. This can be explained by the fact that the sedimentation effects accelerate the exchange of heat and water between cloudy and clear air in the vertical direction. We also observed that, the mixing of D1 is faster than D2 and D3 since it can be regarded as an intermediate process in D2 or D3. However, this difference becomes smaller in the forced turbulence as the motion of particles is dominated by the external forcing which are the same for F1, F2 and F3.
 \begin{figure}[H]
 \includegraphics[width=0.48\textwidth]{Figures/vap_var}
 \includegraphics[width=0.48\textwidth]{Figures/temp_var}\\
@@ -369,7 +378,8 @@ and the same definition holds for the temperature. An observation for the cases 
 \end{figure}
 
 \subsection{Microphysics}
-The radius distributions for case 1, 2 ,3 in both decaying and forced turbulence are displayed in \ref{fig:rad_distri}. At the initial stage, some particles enter into the clear air, so as to expand the size distribution. As mixing going on, the environment becomes more uniform, making the distribution narrower and narrower. It continues approaching to zero until completely evaporation happens.
+The radius distributions for case 1, 2 ,3 in both decaying and forced turbulence are displayed in \Fig{fig:rad_distri}. At the initial stage, some droplets enter into the clear air and expand their size distribution. As mixing going on, since the environment becomes unsaturated and homogeneous, the distribution starts to shift to zero. It continues approaching to zero until completely evaporation happens or the background environment becomes saturated. 
+In the \Fig{fig:rad_distri}, an important observation is that case D1, D2 and D3 are quite different in both reaction time and size distribution. However, by substituting the buoyancy by external force, these difference almost disappear. This demonstrates that the difference is caused by the buoyancy term in \Eq{eq:source_term}. In specific, the buoyancy plays as a source of kinetic energy, so as to accelerate the motion of fluid field.
 \begin{figure}[H]
 \includegraphics[width=0.48\textwidth]{Figures/pdf_radius_d1}
 \includegraphics[width=0.48\textwidth]{Figures/pdf_radius_f1}\\
@@ -381,6 +391,7 @@ The radius distributions for case 1, 2 ,3 in both decaying and forced turbulence
 and forced turbulence (right column). From up to bottom are case 1, case 2 and case 3 respectively.}\label{fig:rad_distri}
 \end{figure}
 
+The distribution of supersaturation in \Fig{fig:supersat_distri} also clearly reflects the mixing process. Firstly, all the droplets stay in the cloud filaments thus has narrow spectrum and high probability density. After some droplets entering into the clear air, the spectrum immediately expands but with low probability density. This stage could be observed in D2 and D3, but extremely short for the rest cases. As mixing going on, the environment becomes much more homogeneous, that is most droplets stay in a similar environment. Finally, the environment becomes well-mixed, droplets completely evaporate and all the cases reach the same state.
 \begin{figure}[H]
 \includegraphics[width=0.48\textwidth]{Figures/pdf_supersat_d1}
 \includegraphics[width=0.48\textwidth]{Figures/pdf_supersat_f1}\\
@@ -390,7 +401,7 @@ and forced turbulence (right column). From up to bottom are case 1, case 2 and c
 \includegraphics[width=0.48\textwidth]{Figures/pdf_supersat_f3}
 \caption{Evolution of supersaturation distribution for decaying turbulence (left column) and forced turbulence (right column). From up to bottom are case 1, case 2 and case 3 respectively.}\label{fig:supersat_distri}
 \end{figure}
-
+In conclusion, the shape of the cloud filament has no influence on the final state after the mixing but will affect the intermediate process. The shape also has little impact on the mixing process for forced turbulence, while can not be completely ignored in the decaying cases. The results suggest that the initial shape of cloud filaments should be considered as an important factor when studying mixing scenario without external forcing.
 \bibliographystyle{plain}
 \bibliography{refs}
 
