@@ -28,7 +28,7 @@ The results show that even with the same cloud water fraction, the thermodynamic
 \begin{article}
 
 \section{Introduction}
-The microphysics of cloud droplets in small-scale, such as evaporation and condensation add some uncertainties to the Large-eddy simulation (LES) models \cite{Jarecka13}, by impacting on the spectrum of cloud droplets during entrainment and mixing process. It was poorly understood that whether the reduction of liquid water content was through the reduction of only the droplet size (extremely homogeneous mixing), or only the number of droplets (extremely inhomogeneous mixing), or both the number and size (inhomogeneous mixing). These situations are defined by comparing two time scales: the turbulent homogenization time scale and droplet evaporation time scale. In the extreme cases, one time scale will dominate the other while in the unextreme case the two scales are comparable. Recently, it has been demonstrated that different mixing scenarios can occur and change during one single cloud evolution (\cite{And09,Burnet07,Lehmann09}). Therefore, it becomes more and more important to have a reasonable and accurate estimation of the mixing scenario for a sub-grid model. \cite{Jarecka2013}, utilized the DNS results from \cite{And04,And06,And09}  to estimate the mixing scenario with a parameter $\alpha$ and successfully merged the $\lambda$-$\beta$ subgrid scheme (\cite{Jarecka2009}) with the double-moment LES model(\cite{Morrison2008}). \cite{Lu2013}, proposed the transition scale number to measure the occurrence probability of homogeneous or inhomogeneous entrainment-mixing process. Both of the cloud observations and numerical simulations imply a positive relationship between the transition scale number and the homogeneous mixing degree. In spite of many progresses in the study of cloud microphysics, to capture the details of turbulent transportation and dilution of cloud water is still a challenge for representing clouds in coarse-resolution climate model.
+The microphysics of cloud droplets in small-scale, such as evaporation and condensation add some uncertainties to the Large-eddy simulation (LES) models \cite{Jarecka2013}, by impacting on the spectrum of cloud droplets during entrainment and mixing process. It was poorly understood that whether the reduction of liquid water content was through the reduction of only the droplet size (extremely homogeneous mixing), or only the number of droplets (extremely inhomogeneous mixing), or both the number and size (inhomogeneous mixing). These situations are defined by comparing two time scales: the turbulent homogenization time scale and droplet evaporation time scale. In the extreme cases, one time scale will dominate the other while in the unextreme case the two scales are comparable. Recently, it has been demonstrated that different mixing scenarios can occur and change during one single cloud evolution (\cite{And09,Burnet07,Lehmann09}). Therefore, it becomes more and more important to have a reasonable and accurate estimation of the mixing scenario for a sub-grid model. \cite{Jarecka2013}, utilized the DNS results from \cite{And04,And06,And09}  to estimate the mixing scenario with a parameter $\alpha$ and successfully merged the $\lambda$-$\beta$ subgrid scheme (\cite{Jarecka2009}) with the double-moment LES model(\cite{Morrison2008}). \cite{Lu2013}, proposed the transition scale number to measure the occurrence probability of homogeneous or inhomogeneous entrainment-mixing process. Both of the cloud observations and numerical simulations imply a positive relationship between the transition scale number and the homogeneous mixing degree. In spite of many progresses in the study of cloud microphysics, to capture the details of turbulent transportation and dilution of cloud water is still a challenge for representing clouds in coarse-resolution climate model.
    
 As a supplementary to laboratory experiments (e.g., \cite{Malinowski1998}), DNS allows extracting information that is difficult to obtain in the laboratory. In specific, DNS gives a complete view of the mixing process at various length scales from energy containing scale to dissipation length scale.
 It is also efficient to study the correlation of two different variables by changing the parameters of the simulator. In the past decades, many authors have contributed to the DNS
@@ -248,7 +248,7 @@ T(x,t = 0) = T_0 - 0.608T_0[q_v(x,t = 0) - q_{v0}]
 where the reference values are defined by volume averages $T_0 = \langle T(t=0)\rangle_V$ and $q_{v0} = \langle q_v(t=0)\rangle_V$. This condition implies that neither the vapor mixing ratio nor temperature would contribute to the initial buoyancy. This procedure is only performed for the initial temperature field and will completely follow \Eq{eq:Temp} afterwards.
 \subsection{Initial droplets}
 
-The cloud water is distributed to approximately $10^{7}$ number of droplets, which have the same sizes and are uniformly placed in the cloudy region at time $0s$. \textcolor{red}{how to decide?} After the turbulence reaches a steady state in a short time, the droplets will be freed to move and change their sizes according to the physics law. A droplet with zero radius will be immediately removed from the computational domain and will not contribute to any statistical results. Some important quantities for initial condition are summarized in \Table{tb:parameters}.
+The cloud water is distributed to approximately $10^{7}$ number of droplets, which have the same sizes and are uniformly placed in the cloudy region at time $0s$. Notice that, at the initial several seconds, the TKE of the forced turbulence has a sharp fall, which is due to the numerical method, in which the velocity field needs a few steps to relax to a static state. Therefore, after the turbulence reaches a steady state in a short time (here is $5$ seconds), the droplets will be freed to move and change their sizes according to the physics law. A droplet with zero radius will be immediately removed from the computational domain and will not contribute to any statistical results. Some important quantities for initial condition are summarized in \Table{tb:parameters}.
 
 \begin{table*}
 \begin{tabular}{l c c c c c}
@@ -344,7 +344,7 @@ by (\ref{eq:CondCoeff}), $S$ is the averaged supersaturation over
 the cloud-free part of the computational domain. In general, $Da\ll1$ corresponds to the homogeneous mixing while $Da\gg1$ is the inhomogeneous one. The real entrainment and mixing process has a $Da$ number often between
 these two limits.
 
-The $\tau_{react}$ is computed by solving the following ordinary differential equation with instantaneous volume mean radius and mean supersaturation as the initial condition:
+The $\tau_{react}$ can also be computed by solving the following ordinary differential equation with volume mean radius and mean supersaturation as the initial condition:
 \begin{equation}
 \frac{dR_{m}}{dt}=K\frac{S}{R_{m}}\label{eq:DiffR}
 \end{equation}
@@ -369,13 +369,15 @@ To characterize the microphysical properties of the mixing, the $\langle r^3\ran
 \begin{equation}
 N=N_{a}(\frac{q_l}{q_{l_0}})^{\alpha}\label{eq:alpha}
 \end{equation}
-where $N_{a}$ and $q_{l_a}$ are the adiabatic value of number density and liquid water mixing ratio, and $N$ and $q_{l}$ are the instantaneous values in the sample boxes. Lu et. al. (2012, 2015) introduced other microphysical measures to quantify different mixing mechanisms.
+where $N_{a}$ and $q_{l_a}$ are the adiabatic value of number density and liquid water mixing ratio, and $N$ and $q_{l}$ are the instantaneous values in the sample boxes. \cite{Lu2011} introduced other microphysical measures to quantify different mixing mechanisms.
 
-Following \cite{Kumar14}'s idea, the computational domain is divided into $64$ equal-sized sample boxes. We keep tracking the volume mean radius and number concentration for each sample box and make them scaled by the adiabatic values. The mixing diagram for different cases are displayed in \Fig{fig:mixing_diagram}. In the mixing diagram, the homogeneous mixing line (red dotted) and inhomogeneous mixing line (black dotted) are plotted in the diagram for reference. 
+Following \cite{Kumar14}'s idea, the computational domain is divided into $64$ equal-sized sample boxes. We keep tracking the volume mean radius and number concentration for each sample box and scale them by their adiabatic values, which is the number concentration in the cloud filaments. The mixing diagram for different cases are displayed in \Fig{fig:mixing_diagram}. In the mixing diagram, the homogeneous mixing line (red dotted) and inhomogeneous mixing line (black dotted) are plotted in the diagram for reference (see \cite{Burnet07} for how to plot homogeneous mixing line). 
 
-In the top panel, the mixing diagram of D1 and F1 does not start from the $(1,1)$ point since the initial droplets in a sample box have already been diluted and the their number concentration are much less than the adiabatic value. The droplets number concentration remains nearly unchanged until some droplets completely evaporate. As claimed in \cite{And04}, this configuration excludes the dilution effects and can only be used to simulate the final stage of the entrainment and mixing process. The difference between forced turbulence and decaying turbulence is not obvious.
+In the top panel, the mixing diagram of D1 and F1 do not start from the $(1,1)$ point since the initial droplets in a sample box have already been diluted and the their number concentration are much less than the adiabatic value. The droplets number concentration remains nearly unchanged until some droplets completely evaporate. As claimed in \cite{And04}, this configuration excludes the dilution process and can only be used to simulate the final stage of the entrainment and mixing process. The difference between forced turbulence and decaying turbulence is not obvious, except a wider range of variability in the shape of the mixing trajectories for the decaying turbulence D1, since the forced turbulence will foster the mixing process, resulting in similar states in different sample boxes.
 
-In the middle panel, the mixing diagram shows the mixing curves for case D2 and F2. As the observation in \cite{Kumar14}, the inhomogeneous offset could be also be observed in panel (c) and (d).
+In the middle panel, the mixing diagram shows the mixing curves for case D2 and F2. These cases have the same configurations with \cite{Kumar14}. However, a sharp initial profile of vapor mixing ratio was used in our simulation. This results in an unsaturated vapor mixing ratio at equilibrium state, leading to completely evaporation of the droplets. The phenomenon of inhomogeneous offset described by \cite{Kumar14} could also be observed in the figures: the mixing trajectories tend to shift to smaller values of $N_d/N_{d,a}$. This inhomogeneous offset is almost due to the initial dilution process, in which the droplets number concentration in the sample boxes is diluted while the droplets mean radius in the sample box doesn't change too much. As mixing proceeds, the turbulent time scale in the decaying case continues to increase while the time scale for the forced turbulence remains unchanged. Therefore, the inhomogeneous mixing is more likely to happen in the D2, leading to a strong deviation from the homogeneous mixing line.
+
+A similar conclusion can be obtained in the bottom panel for case D3 and F3. However, it is interesting to observe two groups in the mixing trajectories (red and blue). We interpret this divergence by considering the following facts. According to our way of selecting sample boxes, the cloud slab will be divided into two groups: the upper layer (red) and the lower layer (blue). On one hand, due to the sedimentation effect, a part of the droplets will escape from the upper layer, thus making its number concentration decreased and volume mean radius unchanged. On the other hand, the evaporating droplets below the lower layer may reentering into the lower sample boxes by the turbulent mixing, leading to reduced volume mean radius and slowly decreasing number concentration.
 \begin{figure}\centering
 \includegraphics[width=0.48\textwidth]{Figures/mixing_cased1}
 \includegraphics[width=0.48\textwidth]{Figures/mixing_casef1}\\
@@ -383,7 +385,7 @@ In the middle panel, the mixing diagram shows the mixing curves for case D2 and 
 \includegraphics[width=0.48\textwidth]{Figures/mixing_casef2}\\
 \includegraphics[width=0.48\textwidth]{Figures/mixing_cased3}
 \includegraphics[width=0.48\textwidth]{Figures/mixing_casef3}
-\caption{Mixing diagram for case D1, D2, D3, F1, F2 and F3. Mean cubic radius and mixing fraction have been calculated in 64 equal-sized samples boxes. Only the boxes with non-zero particles at the initial time will be counted.\label{mixing_diagram}}
+\caption{Mixing diagram for case D1, D2, D3, F1, F2 and F3. Mean cubic radius and mixing fraction have been calculated in 64 equal-sized samples boxes. Only the boxes with non-zero particles at the initial time will be counted.\label{fig:mixing_diagram}}
 \end{figure}
 
 \section{Effects of sedimentation on preferential concentration }
@@ -393,8 +395,10 @@ experiments and numerical simulations \cite{Sundaram97, Reade2000}, but the sedi
 C_L = \hat{V}_L(n)/V_L(n)-1
 \label{eq:cluster_index}
 \end{equation}
-where $\hat{V}_L(n)$ is the measured variance of the number density and $V_L(n)$ is the mean concentration of droplets.
-From the history of the clustering index \Fig{fig:gravity_cluster}, one can clearly tell that the clustering index increase at the beginning stage due to the strong turbulence fluctuation and then decrease as the turbulence decaying. Another observation is that strong gravity force leads to weak preferential concentration results. The conclusion also holds for the forced turbulence. 
+where $\hat{V}_L(n)$ is the measured variance of the droplets number concentration and $V_L(n)$ is the Poisson variance which is equal to the mean droplets number concentration.
+The droplets are uniformly placed in the domain at initial time, thus their number concentration will follow the Poisson point distribution. Since we are only interested on the functional relationship between clustering index and gravity, the particles are not allowed to evaporate or condensate during the simulation, thus keeping their sizes unchanged.
+
+From the history of the clustering index in \Fig{fig:gravity_cluster}, one can tell that the clustering indexes increase at the beginning stage due to the strong turbulence fluctuation and then decrease as the turbulence decaying. The forced turbulence differs from the decaying case by remaining on average of clustering index int the latter stage of the simulation. Another observation is that a strong gravity force leads to a weak preferential concentration results. This relationship can also be visualized in \Fig{fig:sed_gravity} by plotting the clustering index as a function of the gravity at the final step. 
 \textcolor{red}{
 [(1) as suggested earlier, have a plot showing cluster index as a function of gravity; (2) to see the connection with preferential concentration, plot clustering index for different sized particles and droplet concentration of different sizes as a function of vorticity).
 }
@@ -404,6 +408,11 @@ From the history of the clustering index \Fig{fig:gravity_cluster}, one can clea
 \caption{Time evolution of clustering index with different sedimentation term in decaying turbulence (see left) and 
 forced turbulence (see right figure).}
 \label{fig:gravity_cluster}
+\end{figure}
+
+\begin{figure}\centering
+\includegraphics[width=0.8\textwidth]{Figures/sedwithgravity}
+\caption{Clustering index as a function of gravitational accleration. The parameters are normalized by the original gravitational accerlation $g_0 = 9.8m/s^2$.}\label{fig:sed_gravity}
 \end{figure}
 
 \bibliographystyle{agufull08}
