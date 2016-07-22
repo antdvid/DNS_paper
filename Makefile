@@ -24,5 +24,9 @@ $(PAPER).bbl: $(BIBS) $(PAPER).aux
 $(PAPER).aux: $(PAPER).tex
 	latex $(PAPER)
 
+git-clean:
+	git clean -f
 clean:
-	rm -f $(PAPER).bbl $(PAPER).blg $(PAPER).aux $(PAPER).dvi $(PAPER).log
+	rm -f *.dvi *.ps *.bbl *.aux *.log 
+html:   $(PAPER).pdf
+	tth -i -t -e2 $(PAPER).tex
