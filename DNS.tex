@@ -59,7 +59,7 @@ mixing ratio $q_v$ are described by the following equations (\cite{Kumar11}):
 where $L_{h}$ is the latent heat of water vapor condensation,
 $c_{p}$ is the specific heat at constant pressure, $\mu_{T}=\mu_{v}$ are
 the molecular diffusivity for temperature and water vapor, respectively
-and assumes to be equal. The condensation rate $C_{d}$ is defined as the rate of exchange between liquid and vapor, and is described by:
+and assumes to be equal. The condensation rate $C_{d}$ denotes the rate of exchange between liquid and vapor, and is described by:
 
 \begin{subequations}
 
@@ -123,14 +123,13 @@ dry air, $\mathbf{u}$ is the velocity field, $p$ is the pressure field. Here $\m
 \end{equation}
 where $\mathbf{g}$ is the gravity, $T$ and $q_{v}$ are temperature
 and vapor mixing ratio field respectively with the subscript ``$0$''
-denoting the reference values; $q_{c}$ is the cloud water mixing
-ratio. $\mathbf{f}_e$ is the artificial external force defined in the Fourier space:
+denoting the reference value. $\mathbf{f}_e$ is the artificial external force defined in the Fourier space:
 \begin{equation}
-\mathbf{f}_e = \epsilon_{in}\frac{\mathbf{u}(\mathbf{k},t)}
+\mathbf{f}_e(\mathbf{k},t) = \epsilon_{in}\frac{\mathbf{u}(\mathbf{k},t)}
 {\sum_{\mathbf{k}_f\in \kappa}|\mathbf{u}(\mathbf{k}_f,t)|^2}
 \sigma_{\mathbf{k},\mathbf{k}_f}
 \end{equation}
-where $\mathbf{k}$ is chosen from a subset of the wavenumber space $\kappa$ containing a few wavevectors, $\epsilon_{in}$ is the input energy rate. $\delta_{k,k_f}$ is a delta function. Therefore, statistics stationary homogeneous turbulence 
+where $\mathbf{u}(\mathbf{k},t)$ is the velocity function in Fourier space, $\mathbf{k}_f$ is chosen from a subset of the wavenumber space $\kappa$ containing a few wavevectors, for example $(1,1,2)$ plus all permutations with respect to components and sign, $\epsilon_{in}$ is the input energy rate. $\delta_{k,k_f}$ is a delta function. Therefore, statistics stationary homogeneous turbulence 
 can be obtained in DNS by forcing the low-wavenumber modes.
 
 \subsection{Droplet growth and motion}
@@ -152,7 +151,7 @@ R(t)\frac{R(t)}{dt}=K\cdot S(\mathbf{X},t)\label{eq:Radius}
 \end{equation}
 
 
-Here $R(t)$ is the radius of a single droplet, $\mathbf{X}(t)$ is the position
+Here $R(t)$ is the radius, $\mathbf{X}(t)$ is the position
 coordinate and $\mathbf{V}(t)$ is the droplet velocity, $\mathbf{g}$ is the gravitational constant. $\tau_{p}=2\rho_{l}R^{2}/(9\rho_{0}\nu)$ is the finite
 particle response time. The particle response time measures the droplet
 inertial effects; when $\tau_{p}$ is set to be zero, equation (\ref{eq:Velocity}) becomes $\mathbf{V}(t)=\mathbf{u}(\mathbf{X},t)$, which implies that the droplets will exactly follows the turbulent flows. The last term in equation (\ref{eq:Velocity}) is the sedimentation term that accounts for the effect of gravity on droplets motion. Equation (\ref{eq:Velocity}) is appropriate if the Reynolds number based on the relative velocity between the particle and fluid is significantly less than one \cite{Eaton94}. The particle
@@ -163,7 +162,7 @@ their sizes are too small comparing with the average distance between
 two droplets.
 
 \subsection{Numerical Implementation}
-The dynamic equations \Eq{eq:NS1} and \Eq{eq:NS2} are solved following the fraction-step algorithm \cite{Brown2001}. The thermodynamic fields \Eq{eq:Temp}, \Eq{eq:Vapor} are solved with semi-implicit method coupling with fifth-order WENO scheme for the discretization of the hyperbolic term. The use of WENO scheme here is critical since it can well handle the numerical overshoots as well as keep the high order of the overall accuracy. To simplify the implementation, we adopt the external package PETSc \cite{petsc_cite} as the parallel linear solver and HYPRE \cite{hypre_cite} as the high performance preconditioner. These two packages are widely used in the community of computational fluid dynamics and has a good parallel scaling in both Linux cluster and supercomputer.The Droplets position (\Eq{eq:Coords}) and motion (\Eq{eq:Velocity}) are solved by implicit Euler method in consideration of efficiency and stability. The time step size is adaptive to satisfy the Courant-–Friedrichs-–Lewy (CFL) condition. Parallel computing techniques are implemented with MPI library to increase the computational speed.The numerical domain is set to be $0.512m^{3}$ with periodic boundary in all directions. The computational grid is $256^{3}$, thus giving the corresponding grid length of $2mm$. This grid size falls between the droplet distance of $1cm$ vital for turbulence-microphysics interactions and the typical Kolmogorov length of $1mm$.
+The dynamic equations \Eq{eq:NS1} and \Eq{eq:NS2} are solved following the fraction-step algorithm \cite{Brown2001}. The thermodynamic fields \Eq{eq:Temp}, \Eq{eq:Vapor} are solved with semi-implicit method coupling with fifth-order WENO scheme for the discretization of the hyperbolic term. The use of WENO scheme here is critical since it can well handle the numerical overshoots as well as keep the high order of the overall accuracy. To simplify the implementation, we adopt the external package PETSc \cite{petsc_cite} as the parallel linear solver and HYPRE \cite{hypre_cite} as the high performance preconditioner. These two packages are widely used in the community of computational fluid dynamics and has a good parallel scaling in both Linux cluster and supercomputer.The Droplets position (\Eq{eq:Coords}) and motion (\Eq{eq:Velocity}) are solved by implicit Euler method in consideration of efficiency and stability. The time step size is adaptive to satisfy the Courant-–Friedrichs-–Lewy (CFL) condition. Parallel computing techniques are implemented with MPI library to increase the computational speed.The numerical domain is set to be $0.512m^{3}$ with periodic boundary in all directions. The computational grid is $256^{3}$, corresponding to grid spacing of $2mm$. This grid size falls between the droplet distance of $1cm$ vital for turbulence-microphysics interactions and the typical Kolmogorov length of $1mm$.
 
 \section{Experiment description}\label{experiment_description}
 
@@ -173,7 +172,7 @@ The initial velocity field is constructed in Fourier space and then transformed 
 E(k) = \frac{16}{\sqrt{\pi/2}}\frac{u_0^2k^4}{k_0^5}\exp(-\frac{2k^2}{k_0^2})
 \end{equation}
 where $u_0^2$ is the initial r.m.s. velocity, and $k_0$ is the wavenumber at which the maximum of $E(k)$ occurs. The parameters $u_0$ and $k_0$ determine the exact power spectral shape. Different from the commonly used Kolmogorov spectrum, this function enforces the kinetic energy be concentrated in a relatively narrow band at the initial time, so as to not affect the turbulence behavior in larger wave number space. As turbulence evolves, the spectrum will quickly spread to the inertial range and dissipation range according to the Navier-Stokes equation. \Fig{fig:eng_spr} illustrates the energy spectrum with different parameters. The parameters for most cases in this paper are $u_0 = 0.35m/s$ and $k_0 = |(1,1,2)| \approx 2.4$, which allows one to generate an initial turbulence field with reasonable Reynolds number and narrow energy band in large wave length.
-\begin{figure}
+\begin{figure}\centering
 \includegraphics[width=0.48\textwidth]{Figures/eng_spr_u}
 \includegraphics[width=0.48\textwidth]{Figures/eng_spr_k}
 \caption{Initial energy spectrum with different parameters: left figure shows the energy spectrum with fixed $k_0 = 2.4$ while varing $u_0$ from $0m/s$ to $2m/s$, right figure shows the one with fixed $u_0 = 0.35m/s$ and varing $k$ from $1$ to $20$.\label{fig:eng_spr}}
@@ -187,7 +186,7 @@ the Kolmogorov time scale defined as $(\nu/\varepsilon)^{1/2}$. $\tau_L$
 is the eddy turnover time, estimated by $L_x/u_{rms}$
 where $L_x$ is the domain size.
 
-\begin{figure}[H]
+\begin{figure}[H]\centering
 \includegraphics[width=0.48\textwidth]{Figures/vortex-0}
 \includegraphics[width=0.48\textwidth]{Figures/vortex-1}
 
@@ -215,9 +214,9 @@ q_{v,e}, & \mbox{elsewhere}
 \end{array}\right.\label{case2}
 \end{equation}
 
-where $q_v^{max}$ is maximum amplitude of $q_v$, which exceeds $q_{v,s}$ by $2\%$, and $q_{v,e}$ is the vapor mixing ratio of the clear air. $L$ is the length of computational domain, and $d = L/2$ is the width of the cloud slab. The $q_{max}$ in each case is set to be $3.95g/kg$ and the $q_{v,e}$ is $0.03g/kg$. The simulation is terminated when droplets completely evaporate or the supersaturation field becomes nearly uniform ($std<0.0002$).
+where $q_v^{max}$ is maximum amplitude of $q_v$, which exceeds $q_{v,s}$ by $2\%$, and $q_{v,e} = 0.03g/kg$ is the vapor mixing ratio of the clear air. $L$ is the length of computational domain, and $d = L/2$ is the width of the cloud slab. The simulation is terminated when droplets completely evaporate or the field becomes nearly uniform ($std<0.0002$).
 
-According to studies, entrainment-mixing processes can also occur near cloud tops. To mimic the cloud-top entrainment-mixing process, herein we add a new cloud configuration by rotating Case 2 by $90$ degree, and name it Case 3.
+Entrainment-mixing processes can also occur near cloud tops. To mimic the cloud-top entrainment-mixing process, herein we add a new cloud configuration by rotating Case 2 by $90$ degree, and name it Case 3.
 \begin{equation}
 \mbox{case 3: } q_v(z,t=0) = 
 \left\{\begin{array}{lr}
@@ -232,24 +231,25 @@ T(x,t = 0) = T_0 - 0.608T_0[q_v(x,t = 0) - q_{v0}]
 \end{equation}
 where the reference values are defined by volume averages $T_0 = \langle T(t=0)\rangle_V$ and $q_{v0} = \langle q_v(t=0)\rangle_V$. This condition implies that neither the vapor mixing ratio nor temperature would contribute to the initial buoyancy. This procedure is only performed for the initial temperature field and will completely follow \Eq{eq:Temp} afterwards. \Fig{fig:slice_case123} illustrates the initial fields of water vapor mixing ratio and temperature for the three cases.
 
-\begin{figure}\center
-\includegraphics[width=1.0\textwidth]{Figures/supersat_case123}\\
-\includegraphics[width=1.0\textwidth]{Figures/temp_case123}
+\begin{figure}\centering
+\includegraphics[width=0.8\textwidth]{Figures/supersat_case123}\\
+\includegraphics[width=0.8\textwidth]{Figures/temp_case123}
 \caption{Cross sectional view of the initial supersaturation and temperature (K) field for different cases: case 1, 2, 3 from left to right. The cloudy part occupies about half of the computational domain.\label{fig:slice_case123}}
 \end{figure}
 
 \subsection{Initial droplets}
 
-At beginning, a total of $10^{7}$ droplets with the same radius of $15\mu m$  are uniformly placed in the cloudy area, so as to make the droplet number concentration about $153{cm}^{-3}$. Note that for the forced turbulence scenario, the velocity field needs a few steps ($5$ seconds here) to relax to a steady state. Therefore, the droplets is released to move and change their sizes according to the physics law after this spin-up period. For the decaying turbulence, the droplets are released at time $t = 0s$ since there is no needs to seek for a steady state. A droplet with radius smaller than $1\mu m$ will be immediately removed from the computational domain and will not contribute to any statistical results. Some important quantities for initial condition are summarized in \Table{tb:parameters}.
+At beginning, a total of $10^{7}$ droplets with the same radius of $15\mu m$  are uniformly placed in the cloudy area, so as to make the droplet number concentration about $153{cm}^{-3}$. Note that for the forced turbulence scenario, the velocity field needs a few steps ($5$ seconds here) to relax to a steady state. Therefore, the droplets are released to move and change their sizes according to the physics law after this spin-up period. For the decaying turbulence, the droplets are released at time $t = 0s$ since there is no needs to seek for a steady state. A droplet with radius smaller than $1\mu m$ will be immediately removed from the computational domain and will not contribute to any statistical results. 
 
-\begin{table*}
+For convenience, \Table{tb:parameters} summarizes the key quantities and initial conditions.
+\begin{table*}[T]
 \begin{tabular}{l c c c c c}
 \hline\hline
 Quantity & Symbol & Value & Quantity & Symbol & Value\\
 \hline
 Grid points & $N$ & $256$ & Droplet radius & $R_{0}$ & $15\mu m$\\
-Box length & $L$ & $0.512m$ & Environ supersat & $S_{e}$ & $-0.99$\\
-Grid size & $a$ & $0.002m$ & Cloud supersat & $S_{c}$ & $0.02$\\
+Box length & $L$ & $0.512m$ & Environ supersat & $S_{e}$ & $-99\%$\\
+Grid size & $a$ & $0.002m$ & Cloud supersat & $S_{c}$ & $2\%$\\
 Viscosity & $\nu$ & $1.5\times10^{-5}m^{2}s^{-1}$ & Number density& $N_{c}$ & $153cm^{-3}$\\
 Dissip rate& $\epsilon$ & $2.0\times10^{-3}m^{2}s^{-3}$ & Eddy turnover time & $\tau_{L}$ & $4.27s$\\
 Dissip length& $\eta$ & $10^{-3}m$ & Evaporation time & $\tau_{evap}$ & $2.09s$\\
@@ -265,16 +265,15 @@ The main goal in this paper is using numerical simulation to study
 the entrainment and mixing process which often occurs near the cloud-clear air interface. In this section, some principal results are presented, including thermodynamics, microphysics.
 
 \subsection{Thermodynamics}
-In \Fig{fig:therm_dynam}, we inspect different cases by comparing the behaviors of their macroscopic 
-variables: the temporal evolution of the turbulent kinetic energy (a), droplets number concentration (b), standard deviation and relative dispersion of temperature (c,d) and the same for water vapor mixing ratio (e,f). 
+\Fig{fig:therm_dynam} compares the temporal evolution of the turbulent kinetic energy (a), droplets number concentration (b), standard deviation and relative dispersion of temperature (c,d) and the same for water vapor mixing ratio (e,f). 
 
 In panel (a), the turbulent kinetic energy (TKE) of the forced cases F1, F2 and F3 remains on average after a short relaxation at the initial time. However, it is interesting to observe a transient growth in the decaying cases before continuing to decay to zero. We interpret this growth as the results of buoyancy effect, which is caused by the deviation of temperature and vapor mixing ratio to the reference value according to \Eq{eq:source_term}. In details, case D1 could be regarded as the intermediate stage of mixing process in D2 or D3, therefore this deviation quickly disappear and show no growth in the figure. As for D2, the mixing only happens at the interface between cloudy and clear air, thus it takes much longer to damp the transient growth. The mixing in case D3 is accelerated by sedimentation effect, making it a little faster than D2.
 
-The droplets number concentration for different cases are displayed in panel (b). All cases have the same equilibrium state with a zero liquid water content. The rate at which droplets evaporate is higher for the forced turbulence than the decaying turbulence except D1. Since D1 has a complex structure of cloud filaments at the initial time, all the droplets will quickly be exposed to the same environment and begin to evaporate, leading to its number concentration curve to be similar as the forced cases.
+The droplets number concentration for different cases are displayed in panel (b). All cases have the same equilibrium state with a zero liquid water content, i.e., all droplets eventually evaporate. The rate at which droplets evaporate is higher for the forced turbulence than the decaying turbulence except D1. In D1 all the droplets quickly be exposed to the same environment and begin to evaporate, leading to its number concentration curve to be similar as the forced cases.
 
-Panel (c) and (d) show the standard deviation and relative dispersion of temperature field. In spite of similar configuration with D2, case D3 has a stronger growth in amplitude. We interpret this finding as a indication that the droplets movements are accelerated in the vertical direction by the sedimentation effect. Most of the droplets have a chance to enter into the clear air and evaporate at an early stage. This evaporation process will absorb latent heat from the environment thus strongly making the temperature field deviate from the mean value. However, this difference becomes smaller in the forced turbulence since the motion of particles is almost dominated by the external forcing which are the same for F1, F2 and F3.
+Panel (c) and (d) show the standard deviation and relative dispersion of temperature field. In spite of similar configuration with D2, case D3 has a stronger growth in amplitude. We interpret this phenomenon as sedimentation effect, indicating that the droplet movements are accelerated in the vertical direction by gravity. Most of the droplets have a chance to enter into the clear air and evaporate at an early stage. This evaporation process absorb latent heat from the environment thus strongly making the temperature field deviate from the mean value. However, this difference becomes smaller in the forced turbulence since the motion of particles is predominantly controlled by the external forcing, which are the same for F1, F2 and F3.
 
-Panel (e) and (f) present the standard deviation and relative dispersion of vapor mixing ratio. In these figures, we cannot observe any transient growth as shown for temperature field. This result is consistent with the ones in \cite{Kumar14}. Notice that the vapor mixing ratio in the clear air is much lower than in the cloudy air. The droplets entering into the clear area will quickly turn into the vapor while the droplets staying in the cloudy area continue to condensate. This phase transition process will reduce the difference of vapor mixing ratio between clear air and cloudy air, thus the transient growth of the deviation could not be observed.
+\ref{fig:therm_dynam} (e) and (f) show the standard deviation and relative dispersion of vapor mixing ratio, respectively. In these figures, we cannot observe any transient growth as shown for temperature field. This result is consistent with \cite{Kumar14}. Notice that the vapor mixing ratio in the clear air is much lower than in the cloudy air. The droplets entering into the clear area will quickly turn into vapor while the droplets staying in the cloudy area continue to condensate. This phase transition process reduce the difference of vapor mixing ratio between clear air and cloudy air, thus the transient growth of the deviation can hardly be observed.
 
 \begin{figure}\centering
 \includegraphics[width=0.48\textwidth]{Figures/tke}
@@ -288,8 +287,8 @@ energy (a), droplets number concentration (b), standard deviation (c), relative 
 \end{figure}
 
 \subsection{Microphysics}
-The radius distributions for case 1, 2 ,3 in both decaying and forced turbulence are displayed in \Fig{fig:rad_distri}. At the initial stage, some droplets enter into the clear air and expand their size distribution. As mixing going on, since the environment becomes unsaturated and homogeneous, the distribution starts to shift to zero. It continues approaching to zero until completely evaporation happens or the background environment becomes saturated. 
-In the \Fig{fig:rad_distri}, an important observation is that case D1, D2 and D3 are quite different in both reaction time and size distribution. However, by adding the external force, these difference almost disappear. This demonstrates that the difference is caused by the buoyancy term in \Eq{eq:source_term}. In specific, the buoyancy plays as a source of kinetic energy, so as to influence the motion of the fluid field.
+The droplet size distributions for case 1, 2 ,3 in both decaying and forced turbulence are displayed in \Fig{fig:rad_distri}. At the initial stage, some droplets enter into the clear air and expand their size distribution. As mixing going on, since the environment is unsaturated and homogeneous, the distribution gradually shift to small sizes until all droplets completely evaporate or the background environment becomes saturated. 
+An important observation is that case D1, D2 and D3 are quite different in both reaction time and size distribution. However, by adding the external force, these difference almost disappear. This demonstrates that the role of buoyancy effect is overwhelmed by the external forcing and the differences in the decaying cases are caused by the buoyancy term in \Eq{eq:source_term}. In specific, the buoyancy plays as a source of kinetic energy, so as to influence the motion of the fluid field.
 \begin{figure}[H]\centering
 \includegraphics[width=0.48\textwidth]{Figures/pdf_radius_d1}
 \includegraphics[width=0.48\textwidth]{Figures/pdf_radius_f1}\\
@@ -301,7 +300,7 @@ In the \Fig{fig:rad_distri}, an important observation is that case D1, D2 and D3
 and forced turbulence (right column). From up to bottom are case 1, case 2 and case 3 respectively.}\label{fig:rad_distri}
 \end{figure}
 
-The distribution of supersaturation in \Fig{fig:supersat_distri} also clearly reflects the mixing process. In the initial period, most of the droplets will stay in the cloud filaments thus has narrow spectrum and high probability density. After some droplets entering into the clear air, the spectrum immediately expands with low probability density. This stage could be observed in D2 and D3, but extremely short for the rest cases. As mixing proceeds, the environment becomes much more homogeneous, that is most droplets stay in a similar environment. Finally, the environment becomes well-mixed, droplets completely evaporate and all the cases reach the same state.
+The distribution of supersaturation in \Fig{fig:supersat_distri} also clearly reflects the mixing process. In the initial period, most of the droplets stay in the cloud filaments, and thus has narrow probability density distribution (PDF). After some droplets entering into the clear air, the spectrum immediately expands with low probability density. This stage could be observed in D2 and D3, but extremely short for the rest cases. As mixing proceeds, the environment becomes much more homogeneous, that is most droplets stay in a similar environment. Finally, the environment becomes well-mixed, droplets completely evaporate and all the cases reach the same state.
 \begin{figure}[H]\centering
 \includegraphics[width=0.48\textwidth]{Figures/pdf_supersat_d1}
 \includegraphics[width=0.48\textwidth]{Figures/pdf_supersat_f1}\\
@@ -314,27 +313,33 @@ The distribution of supersaturation in \Fig{fig:supersat_distri} also clearly re
 
 \section{Entrainment and mixing processes}\label{mixing_processes}
 Depending on the mixing scenario (the homogeneity of mixing), the
-droplets will evolve in quite different ways. In the extremely homogeneous mixing scenario, the number of droplets does not change while the mean radius decreases. In the extremely inhomogeneous mixing scenario, some droplets in the cloud completely disappear while the others remain unchanged. This mixing of clear and cloudy air is often quantified by the Damkohler number:
+droplets evolve in quite different ways. In the extremely homogeneous mixing scenario, droplet concentration does not change while liquid water mixing ratio and thus the mean radius decreases. In the extremely inhomogeneous mixing scenario, some droplets in the cloud completely evaporate, reducing droplet number concentration and liquid water mixing ratio while keeping mean radius roughly unchanged. The mixing of clear and cloudy air is often quantified by the Damkohler number:
 
 \begin{equation}
 Da=\frac{\tau_{mix}}{\tau_{react}}\label{eq:DaNumber}
 \end{equation}
 
 
-here $\tau_{mix}$ is the time scale for an eddy of size $l_E$ and is defined as:
+where $\tau_{mix}$ is the turbulent mixing time scale for an eddy of size $l_E$ given by:
 
 \begin{equation}
 \tau_{mix}=(\frac{l_E^{2}}{\varepsilon})^{1/3}\label{eq:Tmix}
 \end{equation}
 
-$\tau_{react}$ is the time for complete chemical reaction, which often given by the evaporation time scale in the cloud physics literature:
+The evaporation time $\tau_{react}$ defined as either the time when the droplets have completely evaporated or the time at which the averaged supersaturation $S > -0.005$.
+
+In general, $Da\ll1$ corresponds to the homogeneous mixing while $Da\gg1$ is the inhomogeneous one. Ambient clouds often have $Da$ between these two limits.
+
+In spite of popularity, this approach has a shortcoming:
+the value of $l_E$ used in (\ref{eq:Tmix}) is ambiguous. To overcome this difficulty, \cite{Lehmann09} introduced the concept of transition length $l^{*}$, at which the mixing transits from inhomogeneous to homogeneous:
 \begin{equation}
-\tau_{e}=\frac{R_{m}^{2}}{-KS}\label{eq:Tevap}
+l^{*}=\varepsilon^{1/2}\tau_{react}^{3/2}\label{eq:TransL}
 \end{equation}
-where $R_{m}$ is the mean radius of a droplets group and $K$ is defined
-by (\ref{eq:CondCoeff}), $S$ is the averaged supersaturation over
-the cloud-free part of the computational domain. In general, $Da\ll1$ corresponds to the homogeneous mixing while $Da\gg1$ is the inhomogeneous one. The real entrainment and mixing process has a $Da$ number often between
-these two limits.
+With transition length $l^{*}$, a dimensionless number called transition scale number was introduced in \cite{Chunsong13} and defined as the ratio of $l^{*}$ and Kolmogorov length scale $\eta$:
+
+\begin{equation}
+N_{L}=\frac{l^{*}}{\eta}\label{eq:NL}
+\end{equation}
 
 The $\tau_{react}$ can also be computed by solving the following ordinary differential equation with volume mean radius and mean supersaturation as the initial condition:
 \begin{equation}
@@ -344,17 +349,14 @@ The $\tau_{react}$ can also be computed by solving the following ordinary differ
 \begin{equation}
 \frac{dS}{dt}=-BR_{m}S\label{eq:DiffSuper}
 \end{equation}
-where $B$ is a function of pressure and temperature, whose specific definition can be found in \cite{Chunsong11}. In spite of popularity, this approach has a shortcoming:
-the value of $l_E$ used in (\ref{eq:Tmix}) is ambiguous. To overcome this difficulty, \cite{Lehmann09} introduced the concept of transition length $l^{*}$, at which the mixing transits from inhomogeneous to homogeneous:
+where $B$ is a function of pressure and temperature:
 \begin{equation}
-l^{*}=\varepsilon^{1/2}\tau_{react}^{3/2}\label{eq:TransL}
+B = 
+\frac{4\pi N\rho_L[\frac{R_dT}{\varepsilon e_s(T)} + \frac{\varepsilon L^2_h}{pTc_p}]} 
+{(\frac{L_h}{R_vT}-1)\frac{L_h\rho_L}{KT} + \frac{\rho_L R_v T}{De_s(T)}}
 \end{equation}
-where the reaction time $\tau_{react}$ is defined as either the time when the droplets have completely evaporated or the time at which the averaged supersaturation $S>-0.005$. 
-With transition length $l^{*}$, a dimensionless number called transition scale number was introduced in \cite{Chunsong13} and defined as the ratio of $l^{*}$ and Kolmogorov length scale $\eta$:
 
-\begin{equation}
-N_{L}=\frac{l^{*}}{\eta}\label{eq:NL}
-\end{equation}
+where $L_h$ is latent heat, $R_v$ is individual gas constant for water vapor, $T$ is air temperature, $\rho_L$ is density of liquid water, $K$ is coefficient of thermal conductivity of air, $D$ is coefficient of diffusion of water vapor in air, $e_s(T)$ is saturation vapor pressure over a plane water surface at temperature $T$, $N$ is number concentration of droplets, $R_d$ is individual gas constant for dry air, $\varepsilon = R'/R_v$, $p$ is air pressure, and $c_p$ is specific heat with pressure held constant (\cite{Lu2011}).
 
 To characterize the microphysical properties of the mixing, the $\langle r^3\rangle -N_d$ diagram (volume mean radius versus number density) was introduced in \cite{Burnet07} and has been widely applied to study the homogeneous/inhomogeneous entrainment-mixing process. Taking advantage of $\langle r^3\rangle -N_d$ diagram, one can predict the extremely homogeneous mixing line with different initial liquid water content and vapor mixing ratio (\cite{Lehmann09,Kumar14}). 
 
@@ -366,8 +368,8 @@ In the middle panel, the mixing diagram shows the mixing curves for case D2 and 
 
 A similar conclusion can be obtained in the bottom panel for case D3 and F3. However, it is interesting to observe two groups in the mixing trajectories (red and blue). We interpret this divergence by considering the following facts. According to our way of selecting sample boxes, the cloud slab will be divided into two groups: the upper layer (red) and the lower layer (blue). On one hand, due to the sedimentation effect, a part of the droplets will escape from the upper layer and enter into the lower layer, thus making the number concentration of upper level sample boxes decreased and their volume mean radius unchanged. On the other hand, the evaporating droplets below the lower layer may reentering into the lower sample boxes by the turbulent mixing, leading to reduced volume mean radius and slowly decreasing number concentration.
 
-The quantities mentioned at the beginning of this section can be used as good predictors of the mixing scenario. As shown in \Table{tb:parameters}, the eddy turnover time $\tau_L = 4.27s$, evaporation time scale $\tau_{evap} = 2.09s$ and reaction time scale $\tau_{react} = 4.52s$. Defining a Damkohler number based on $\tau_{evap}$ gives $Da_{L,evap} = 2.04$, which is significantly greater than unity and seems to favor a strong inhomogeneous mixing in the inertial range. However, during the mixing procedure, the evaporation of droplets will gradually saturated surrounding vapor and therefore the chemical reaction will spend longer time to complete. This implies that the assumption of constant supersaturation for the $\tau_{evap}$ is not strictly correct. 
-As opposed to $\tau_{evap}$, the definition of $\tau_{react}$ based on \Eq{eq:DiffR} and \Eq{eq:DiffSuper} considers the interactions between radius $R$ and supersaturation $S$ and therefore should be more suitable to predict the thermodynamic time scale. Defining the Damkohler number based on $\tau_{react}$ results in $Da_{L,react} = 0.94$, slightly lower than unity and hence yields an intermediate state between the homogeneous and inhomogeneous mixing. In fact, the transition length scale is equal to $l^{*} = 0.426m$, defining the length scale within the inertial range at which $Da = 1$. This $l^*$ is somewhat smaller than the domain size $0.512m$ while $400$ times greater than the Kolmogorov length scale. As the turbulence eddies evolve from the energy containing length $L_x$, through $l^*$, and down to the smallest length scale $\eta$, the mixing scenario quickly expands from inhomogeneous to homogeneous mixing. The side length of the sample boxes $0.512m/4 = 0.128 m$ is significantly smaller than $l^* = 0.426m$, thus an extreme homogeneous mixing is most possible to be observed. However, from \Fig{fig:mixing_diagram}, the relationship between the mixing trajectory and mixing scenario is not obvious. The mixing trajectories do not have to follow the homogeneous mixing line although the mixing scenario is expected to be homogeneous. Moreover, the behaviors of the mixing trajectories for different cases differ from each other even if they have the same liquid water content and initial turbulence settings. In conclusion, the behaviors of the mixing trajectories are not only determined by the relative time scale or Damkohler number but also by the distribution of the cloud water content. 
+The quantities mentioned at the beginning of this section can be used as good predictors of the mixing scenario. As shown in \Table{tb:parameters}, the eddy turnover time $\tau_L = 4.27s$, evaporation time scale $\tau_{evap} = 2.09s$ and reaction time scale $\tau_{react} = 4.52s$. Defining a Damkohler number based on $\tau_{evap}$ gives $Da_{L,evap} = 2.04$, which is significantly greater than unity and seems to favor a strong inhomogeneous mixing in the inertial range. However, during mixing, the evaporation of droplets gradually saturate surrounding vapor and therefore the chemical reaction will spend longer time to complete. This implies that the assumption of constant supersaturation for the $\tau_{evap}$ is not strictly correct. 
+As opposed to $\tau_{evap}$, the definition of $\tau_{react}$ based on \Eq{eq:DiffR} and \Eq{eq:DiffSuper} considers the interactions between radius $R$ and supersaturation $S$ and therefore should be more suitable to predict the thermodynamic time scale. Defining the Damkohler number based on $\tau_{react}$ results in $Da_{L,react} = 0.94$, slightly lower than unity and hence yields an intermediate state between the homogeneous and inhomogeneous mixing. In fact, the transition length scale is equal to $l^{*} = 0.426m$, defining the length scale within the inertial range at which $Da = 1$. This $l^*$ is somewhat smaller than the domain size $0.512m$ but $400$ times greater than the Kolmogorov length scale. As the turbulence eddies evolve from the energy containing length $L_x$, through $l^*$, and down to the smallest length scale $\eta$, the mixing scenario quickly expands from inhomogeneous to homogeneous mixing. The side length of the sample boxes $0.512m/4 = 0.128 m$ is significantly smaller than $l^* = 0.426m$, thus an extreme homogeneous mixing is most possible to be observed. However, from \Fig{fig:mixing_diagram}, the relationship between the mixing trajectory and mixing scenario is not obvious. The mixing trajectories do not have to follow the homogeneous mixing line although the mixing scenario is expected to be homogeneous. Moreover, the behaviors of the mixing trajectories for different cases differ from each other even if they have the same liquid water content and initial turbulence settings. In conclusion, the behaviors of the mixing trajectories are not only determined by the relative time scale or Damkohler number but also by the distribution of the cloud water content. 
 \begin{figure}\centering
 \includegraphics[width=0.48\textwidth]{Figures/mixing_cased1}
 \includegraphics[width=0.48\textwidth]{Figures/mixing_casef1}\\
@@ -380,22 +382,22 @@ As opposed to $\tau_{evap}$, the definition of $\tau_{react}$ based on \Eq{eq:Di
 
 \section{Effects of sedimentation on preferential concentration }\label{sedimentation}
 Clustering of inertial particles has been extensively studied via both 
-experiments and numerical simulations \cite{Sundaram97, Reade2000}, but the sedimentation effects on the clustering are poorly understood. In this section, a series of numerical test are performed by gradually increasing the gravity force and calculate the corresponding clustering index \cite{Vaillancourt02} with
+experiments and numerical simulations \cite{Sundaram97, Reade2000}, but the sedimentation effects on the clustering are poorly understood. In this section, a series of numerical test are performed by gradually increasing the gravity force. Since we are only interested on the functional relationship between clustering index and gravity, the particles are not allowed to evaporate or condensate during the simulation, thus keeping their sizes unchanged.  The clustering index calculated with \cite{Vaillancourt02}
 \begin{equation}
 C_L = \hat{V}_L(n)/V_L(n)-1
 \label{eq:cluster_index}
 \end{equation}
-where $\hat{V}_L(n)$ is the measured variance of the droplets number concentration and $V_L(n)$ is the Poisson variance which is equal to the mean droplets number concentration.
-The droplets are uniformly placed in the domain at initial time, thus their number concentration will follow the Poisson point distribution. Since we are only interested on the functional relationship between clustering index and gravity, the particles are not allowed to evaporate or condensate during the simulation, thus keeping their sizes unchanged.
+where $\hat{V}_L(n)$ is the measured variance of the droplets number concentration and $V_L(n)$ is the Poisson variance equal to the mean droplet number concentration. The droplets are uniformly placed in the domain at initial time, thus their number concentration will follow the Poisson point distribution.
 
-From the history of the clustering index in \Fig{fig:gravity_cluster}, one can tell that the clustering indexes increase at the beginning stage due to the strong turbulence fluctuation and then decrease as the turbulence decaying. The forced turbulence differs from the decaying case by remaining on average of clustering index in the latter stage of the simulation. Another observation is that a strong gravity force leads to a weak preferential concentration results. This relationship can also be visualized in \Fig{fig:sed_gravity} by plotting the clustering index as a function of the gravity at the final step. 
+From the history of the clustering index in \Fig{fig:gravity_cluster}, one can tell that the clustering indexes increase at the beginning stage due to the strong turbulence fluctuation and then decrease as the turbulence decaying. The forced turbulence differs from the decaying case by remaining on average of clustering index in the latter stage of the simulation. The result suggests that gravity weakens the preferential concentration. This phenomenon can also be visualized in \Fig{fig:sed_gravity} by plotting the clustering index as a function of the gravity at the final step. 
 
-Furthermore, the sedimentation also affects the preferential concentration, which can be measured with Pearson correlation coefficients between droplets number concentration and vorticity magnitude. In \Fig{fig:correlation}, the correlation coefficients of four cases, decaying or force turbulence with or without considering sedimentation, are computed and shown as a function of time. All the cases show negative correlations, which agree with the observation of preferential concentration, that is the dense particles tend to accumulate within the low vorticity area of turbulence field. Two nondimensional numbers are useful for understanding the mechanism of preferential concentration. One is the Stokes number, which measures the relative time scale of particle and turbulence flow:
+Preferential concentration can also be measured with Pearson correlation coefficient between droplet number concentration and vorticity magnitude. \Fig{fig:correlation} shows the correlation coefficients of four cases, decaying or force turbulence with or without considering sedimentation as a function of time. All the cases show negative correlations, which agrees with that particles tend to accumulate within the low vorticity area of turbulence field. Two nondimensional numbers are useful for understanding the mechanism of preferential concentration. One is the Stokes number, which measures the relative time scale of particle and turbulence flow:
 \begin{equation}
 S_t = \tau_p/\tau_{\eta}
 \end{equation}
-where $\tau_p = 2\rho_wR^2/9\mu$ is the particle response time and $\tau_{\eta}$ is the Kolmogorov time scale. It is expected that maximum preferential concentration occurs at $S_t \sim 1$. 
-For sedimenting particles, another useful nondimensional number can be derived based on the terminal velocity of the particles:
+where $\tau_p = 2\rho_wR^2/9\mu$ is the particle response time and $\tau_{\eta}$ is the Kolmogorov time scale. 
+
+Previous studies \cite{grabowski1999comments,vaillancourt2000review} have shown that maximum preferential concentration occurs at $S_t \sim 1$. For sedimenting particles, another useful nondimensional number is based on the terminal velocity of the particles:
 \begin{equation}
 S_v = v_T/v_{\eta}
 \end{equation}
@@ -419,19 +421,22 @@ forced turbulence (see right figure).}
 \caption{Clustering index as a function of gravitational accleration. The parameters are normalized by the original gravitational accerlation $g_0 = 9.8m/s^2$.}\label{fig:sed_gravity}
 \end{figure}
 
-\begin{figure}\center
+\begin{figure}\centering
 \includegraphics[width=0.8\textwidth]{Figures/correlation}
-\caption{Correlation coefficients between vorticity magnitude and droplets number density as a function of time. The correlation coefficients are computed following the Pearson product-moment correlation coefficients, which measures the linear correlation between two variables with positive and negative correlations inclusive.\label{fig:correlation}}
+\caption{Correlation coefficient between vorticity magnitude and droplet number density as a function of time. The correlation coefficients are computed following the Pearson product-moment correlation coefficients, which measures the linear correlation between two variables with positive and negative correlations inclusive.\label{fig:correlation}}
 \end{figure}
 
 \section{Conclusions}\label{conclusion}
-In this paper, a series of numerical simulation is performed to study the cloud entrainment and mixing phenomena. Three different configurations are compared with each other to inspect the influence of the initial cloudy shape on the cloud microphysics in the mixing process. The simulation duplicates the configurations in \cite{And04} and \cite{Kumar11} and agrees with their main results. Case 1 corresponds to \cite{And04}, which is aiming to study the final stage of the mixing process. Case 2 tries to mimic the idealized cloud slab in \cite{Kumar11}, presenting a complete view of entrainment and mixing. Case 3 is created by rotating case 2 with $90$ degree clockwise to show the sedimentation effects on the cloud spectrum.
+In this paper, a series of numerical simulation is performed to study the cloud entrainment and mixing phenomena. Three different configurations are compared with each other to inspect the influence of the initial cloudy shape on the cloud microphysics in the mixing process. The simulation duplicates the configurations in \cite{And04} and \cite{Kumar11} and agrees with their main results. Case 1 corresponds to \cite{And04}, which is aiming to study the final stage of the mixing process. Case 2 tries to mimic the idealized cloud slab in \cite{Kumar11}, presenting a complete view of entrainment and mixing. Case 3 is created by rotating case 2 with $90$ degree clockwise to show the sedimentation effects on the droplet spectrum.
 
 The work described in this paper almost follows the configurations in \cite{Kumar11}. However, due to the Gibb's phenomena of the pseudo-spectral method, there is an inconsistency between the initial profile of cloud droplets and vapor mixing ratio in \cite{Kumar11}, in which an artificial continuous function was used to connect the area of cloudy air and clear air, while the cloud droplets were treated as a simple slab. This inconsistency is not desirable and can be overcome by taking advantage of the high resolution finite difference WENO scheme, which is designed for problems with piecewise smooth solutions containing discontinuities. Therefore, we are able to perform the simulation with the same sharp initial interface for both cloud droplets and the vapor mixing ratio.
 
 All the simulation have been tested in both decaying turbulence and forced turbulence. The thermodynamics, cloud microphysics and mixing diagram are studied to make a comparison between different cases. The transient growth of turbulence kinetic energy due to buoyancy effects in the decaying cases agrees with the observation in \cite{Kumar14}. The spectrum of droplets size and supersaturation implies that the cloudy shape effectively influence the mixing process in decaying turbulence by affecting the reaction time and the size distribution. However, this effect seems to be much smaller in the forced turbulence.
 
 The mixing diagram is then plotted to compare the $R$-$N$ relationship in different cases, which have the same final state with zero liquid water content. The number density in case 1 does not change for a long time due to its already diluted configuration. This implies that the initial reductions of number density in case 2 and 3 are due to dilution process. Case 2 is performed to duplicate the results in \cite{Kumar14} for radius $15\mu m$ (note that their results were amended in \cite{Kumar16Corr}). Our results disagree the conclusion in \cite{Kumar14} but support their amendment in \cite{Kumar16Corr}, that is the mixing trajectories are not scattered around the homogeneous mixing curve. The configuration of case 3 is the same as case 2 except the direction of the cloud slab. The results infer that the sedimentation will accelerate the mixing to a certain degree when comparing with case 2. Two groups of mixing trajectories are observed in the results of case 3. We interpret the separation of the curves as an indication that the sedimentation will push the particles moving downwards, so as to accelerate the mixing process. The experiment designed to test the relationship between gravity and clustering index gives a better understanding of the sedimentation effect.
+
+\section{Acknowledgements}
+The research was supported by the U.S. Department of Energy's Atmospheric System Research(ASR) program and partially by the US Army Research Office under ARO-DURIP Grant W911NF-15-1-0403.
 \bibliographystyle{agufull08}
 \bibliography{refs}
 
