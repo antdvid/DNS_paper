@@ -335,10 +335,20 @@ These measures are based on the mixing of adiabatic cloudy air and clear air, an
 modified here to consider the instantaneous homogeneous mixing degree between two adjacent 
 temporal states in time $t_j$ and $t_{j-1}$, such that
   
+\begin{subequations}
 \begin{equation}
-\psi_2 = \frac{\tan^{-1}(\frac{R_{j}^3/R_{j-1}^3 - 1}{N_j/N_{j-1} - N_H/N_{j-1}})}{\pi/2}
+\psi_2 = \frac{\beta}{\pi/2}
 \label{phi2}
 \end{equation}
+
+\begin{equation}
+\beta = \tan^{-1}(\frac{R_{j}^3/R_{j-1}^3 - 1}{N_j/N_{j-1} - N_H/N_{j-1}}) \text{ for } N_j < N_H, \text{ or}
+\end{equation}
+
+\begin{equation}
+\beta = \pi + \tan^{-1}(\frac{R_{j}^3/R_{j-1}^3 - 1}{N_j/N_{j-1} - N_H/N_{j-1}})  \text{ for } N_j \geq N_H
+\end{equation}
+\end{subequations}
 
 \begin{equation}
 \psi_3 = 0.5(\frac{N_j-N_{I}}{N_H-N_I} + \frac{R_j^3-R_{j-1}^3}{R_H^3 - R_{j-1}^3})
