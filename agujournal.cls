@@ -83,7 +83,7 @@
 \RaggedRightParindent=24pt
 \advance\RaggedRightRightskip 24pt
 \RaggedRight
-
+   
 %% Defines \sidewaystable and \sidewaysfigure, preferred by AGU
 \RequirePackage{rotating}
 \newif\ifturnofflinenums
