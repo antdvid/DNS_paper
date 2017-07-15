@@ -28,7 +28,7 @@
 \usepackage{amsmath}
 \usepackage{epstopdf}
 \usepackage{xcolor}
-\usepackage[nomarkers, nolists,figuresonly]{endfloat} % to put all figures in the end of paper
+\usepackage[nomarkers, nolists, tablesfirst]{endfloat} % to put all figures in the end of paper
 \usepackage{enumitem} % to make caption list
 \usepackage{hyperref} % to make caption list
 
@@ -256,7 +256,7 @@ configurations have the same dynamical field and initial cloud fraction of $0.5$
 At beginning, a total of $10^{7}$ droplets with the same radius of $15\mu m$ are randomly placed in the cloudy area according to the Poisson point process, giving a droplet number concentration of $153{cm}^{-3}$. Note that for the forced turbulence mode, the velocity field needs a few steps ($5$ seconds here) to relax to a steady state. Therefore, the droplets are released to move and change their sizes according to the physical laws after this spin-up period. For the decaying turbulence, the droplets are released at time $t = 0s$ since there is no needs to reach a steady state. The simulation is terminated when droplets completely evaporate or the field becomes nearly uniform (the standard deviation of supersaturation is less than $0.0002$). 
 
 For convenience, \Table{tb:parameters} summarizes the key quantities and initial conditions.
-\begin{table}[T]
+\begin{table}
 \centering
 \caption{Summary of key model parameters and initial conditions}
 \label{tb:parameters}
