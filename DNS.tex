@@ -157,7 +157,7 @@ in the grid cell; $\rho_{l}$ and $\rho_{0}$ are the densities of water and air. 
 To describe the motion and condensation(or evaporation) of cloud droplets, we use
 
 \begin{equation}
-R_i(t)\frac{R_i(t)}{dt}=K\cdot S(\mathbf{X}_i,t)\label{eq:Radius}
+R_i(t)\frac{dR_i(t)}{dt}=K\cdot S(\mathbf{X}_i,t)\label{eq:Radius}
 \end{equation}
 
 
@@ -187,7 +187,7 @@ condensation/evaporation considering that the droplet sizes are too small compar
 is obtained through \replaced{bilinear}{trilinear} interpolation of the Eulerian field at position $\mathbf{X}_i$.
 
 \subsection{Numerical Implementation}
-The numerical code consists of three main modules to represent the Eulerian fluid, Lagrangian droplet, and coupling between the two. The dynamic equations \Eq{eq:NS1} and \Eq{eq:NS2} are solved following the fraction-step algorithm \citep{Brown2001}. The thermodynamic fields \Eq{eq:Temp}, \Eq{eq:Vapor} are solved with semi-implicit method coupling with fifth-order WENO scheme for the discretization of the hyperbolic term. The use of WENO scheme here is critical since it can well handle the numerical overshoots as well as keep the high order of the overall accuracy. To simplify the implementation, we adopt the external package Portable Extensible Toolkit for Scientific Computation (PETSc) \citep{petsc_cite} as the parallel linear solver and Parallel High Performance Preconditioners (HYPRE) \citep{hypre_cite} as the preconditioner. These two packages are widely used in the community of computational fluid dynamics and has a good parallel scaling in both Linux clusters and supercomputers. The droplets position \Eq{eq:Coords} and motion \Eq{eq:Velocity} are solved by implicit Euler method in consideration of efficiency and stability. The dynamical and thermodynamical fields are represented on an Eulerian rectangular grid, while the particles are explicitly tracked during the simulation by utilizing the information of the Eulerian field through \replaced{bilinear}{trilinear} interpolation. The Lagrangian particles impact on the Eulerian field through \Eq{eq:CondRate}, which acts as a source or sink term in \Eq{eq:Temp} and \Eq{eq:Vapor}. The fluid field is not directly affected by the particle ensemble, but is influenced by the thermodynamical field through the buoyancy force described by \Eq{eq:source_term}. The time step size is adaptive to satisfy the Courant--Friedrichs--Lewy (CFL) condition. Parallel computing techniques are implemented with MPI library to increase the computational speed.
+The numerical code consists of three main modules to represent the Eulerian fluid, Lagrangian droplet, and coupling between the two. The dynamic equations \Eq{eq:NS1} and \Eq{eq:NS2} are solved following the fraction-step algorithm \citep{Brown2001}. \added{This method is second order accurate and uses projection method to decouple the pressure and velocity field.} The thermodynamic fields \Eq{eq:Temp}, \Eq{eq:Vapor} are solved with semi-implicit method coupling with fifth-order WENO scheme for the discretization of the hyperbolic term. The use of WENO scheme here is critical since it can well handle the numerical overshoots as well as keep the high order of the overall accuracy. \added{A central-difference formula is used to approximate the derivatives in the analysis to obtain a consistent accuracy.} To simplify the implementation, we adopt the external package Portable Extensible Toolkit for Scientific Computation (PETSc) \citep{petsc_cite} as the parallel linear solver and Parallel High Performance Preconditioners (HYPRE) \citep{hypre_cite} as the preconditioner. These two packages are widely used in the community of computational fluid dynamics and has a good parallel scaling in both Linux clusters and supercomputers. The droplets position \Eq{eq:Coords} and motion \Eq{eq:Velocity} are solved by implicit Euler method in consideration of efficiency and stability. The dynamical and thermodynamical fields are represented on an Eulerian rectangular grid, while the particles are explicitly tracked during the simulation by utilizing the information of the Eulerian field through \replaced{bilinear}{trilinear} interpolation. The Lagrangian particles impact on the Eulerian field through \Eq{eq:CondRate}, which acts as a source or sink term in \Eq{eq:Temp} and \Eq{eq:Vapor}. The fluid field is not directly affected by the particle ensemble, but is influenced by the thermodynamical field through the buoyancy force described by \Eq{eq:source_term}. The time step size is adaptive to satisfy the Courant--Friedrichs--Lewy (CFL) condition. \deleted{Parallel computing techniques are implemented with MPI library to increase the computational speed.}\added{The parallel algorithm is designed by decomposing the domain into subdomains. The computation of a subdomain is carried on an independent process and the exchange of boundary information between the processes is needed after solving the equation. This algorithm is implemented using MPI library and a linear scaling has been achieved up to $128$ number of cores on a Linux cluster.}
 
 The current numerical domain is set to be $0.512m^{3}$ with triply periodic boundary conditions. The computational grid is $256^{3}$, corresponding to grid spacing of $2mm$, close to the typical Kolmogorov length.
 
@@ -198,13 +198,13 @@ The initial velocity field is constructed in Fourier space and then transformed 
 \begin{equation}
 E(k) = \frac{16}{\sqrt{\pi/2}}\frac{u_0^2k^4}{k_0^5}\exp(-\frac{2k^2}{k_0^2})
 \end{equation}
-where $u_0^2$ is the initial r.m.s. velocity, and $k_0$ is the wavenumber at which the maximum of $E(k)$ occurs. The parameters $u_0$ and $k_0$ determine the power spectral shape. Different from the commonly used Kolmogorov spectrum, this function enforces the kinetic energy be concentrated in a relatively narrow band at the initial time, so as to not affect the turbulence behavior in larger wavenumber space. As turbulence evolves, the spectrum will quickly spread to the inertial range and dissipation range according to the Navier-Stokes equation. \deleted{\Fig{fig:eng_spr} illustrates the energy spectrum with different values of $u_0$ and $k_0$.} The parameters $u_0 = 0.35m/s$ and $k_0 = |(1,1,2)| \approx 2.4$ are used in simulations presented in this paper, which allows one to generate an initial turbulence field with reasonable Reynolds number and narrow energy band in large wavelengths.
+where $u_0^2$ is the initial r.m.s. velocity, and $k_0$ is the wavenumber at which the maximum of $E(k)$ occurs. The parameters $u_0$ and $k_0$ determine the power spectral shape. Different from the commonly used Kolmogorov spectrum, this function enforces the kinetic energy be concentrated in a relatively narrow band at the initial time, so as to not affect the turbulence behavior in larger wavenumber space. As turbulence evolves, the spectrum will quickly spread to the inertial range and dissipation range according to the Navier-Stokes equation. \Fig{fig:eng_spr} illustrates the energy spectrum with different values of $u_0$ and $k_0$. The parameters $u_0 = 0.35m/s$ and $k_0 = |(1,1,2)| \approx 2.4$ are used in simulations presented in this paper, which allows one to generate an initial turbulence field with reasonable Reynolds number and narrow energy band in large wavelengths.
 
-%\begin{figure}\centering
-%\includegraphics[width=0.48\linewidth]{Figures/eng_spr_u}
-%\includegraphics[width=0.48\linewidth]{Figures/eng_spr_k}
-%\caption{Initial energy spectra with different parameters. Left figure shows %the energy spectra with fixed $k_0 = 2.4$ but varing $u_0$ from $0m/s$ to $2m/s%$; right figure shows the spectra with fixed $u_0 = 0.35m/s$ and varing $k$ %from $1$ to $20$.\label{fig:eng_spr}}
-%\end{figure}
+\begin{figure}\centering
+\includegraphics[width=0.48\linewidth]{Figures/eng_spr_u}
+\includegraphics[width=0.48\linewidth]{Figures/eng_spr_k}
+\caption{Initial energy spectra with different parameters.Left figure shows the energy spectra with fixed $k_0 = 2.4$ but varing $u_0$ from $0m/s$ to $2m/s$; right figure shows the spectra with fixed $u_0 = 0.35m/s$ and varing $k$ from $1$ to $20$. \label{fig:eng_spr}}
+\end{figure}
 
 \subsection{Initial fields of vapor mixing ratio and temperature}
 Three different initial configurations of cloudy area are used to investigate the impact of cloudy area configuration. Case 1 follows that used in \citet{And04} whereby water mixing ratio is defined according to the sign of the velocity function in physical space such that
@@ -248,7 +248,7 @@ configurations have the same dynamical field and initial cloud fraction of $0.5$
 
 \begin{figure}\centering
 \includegraphics[width=0.9\linewidth]{Figures/init_vapor_supersat}
-\caption{Cross sections of the initial supersaturation and temperature (K) field for different cases. The cloudy part occupies about half of the computational domain.\label{fig:slice_case123}}
+\caption{Cross sections of the initial supersaturation(upper row) and temperature (K) field(lower row) for different cases. The cloudy part occupies about half of the computational domain.\label{fig:slice_case123}}
 \end{figure}
 
 \subsection{Initial droplets}
@@ -338,12 +338,12 @@ The mixing diagrams for case D3 and F3 are displayed in the bottom panel. Case 3
 Also noteworthy is that the difference between the mixing diagrams lies primarily in the cloudy area configurations, esp., Case 1 vs. Case 2 or Case 3, instead of lying in whether or not the turbulence is forced or freely decaying as shown \Fig{fig:rad_distri} for the temporal evolutions of droplet size distribution.  This result suggests the potential for a unified parameterization of different mixing mechanisms detailed next.
 
 \begin{figure}[!htbp]\centering
-\includegraphics[width=0.4\linewidth]{Figures/mixing_cased1}
-\includegraphics[width=0.4\linewidth]{Figures/mixing_casef1}
-\includegraphics[width=0.4\linewidth]{Figures/mixing_cased2}
-\includegraphics[width=0.4\linewidth]{Figures/mixing_casef2}
-\includegraphics[width=0.4\linewidth]{Figures/mixing_cased3}
-\includegraphics[width=0.4\linewidth]{Figures/mixing_casef3}
+\includegraphics[width=0.4\linewidth]{Figures/mixing_cased1_tt}
+\includegraphics[width=0.4\linewidth]{Figures/mixing_casef1_tt}
+\includegraphics[width=0.4\linewidth]{Figures/mixing_cased2_tt}
+\includegraphics[width=0.4\linewidth]{Figures/mixing_casef2_tt}
+\includegraphics[width=0.4\linewidth]{Figures/mixing_cased3_tt}
+\includegraphics[width=0.4\linewidth]{Figures/mixing_casef3_tt}
 \caption{Microphysical mixing diagram for scenario D1, D2, D3, F1, F2 and F3. The green
 circles represent the results for different sample boxes and the red triangles represent the mean over the entire domain, with arrow indicating the direction of time. The solid and dashed black lines denote the extreme inhomogeneous and homogeneous mixing, respectively. Only the boxes with non-zero droplets at the initial time are considered.}
 \label{fig:mixing_diagram}
@@ -497,6 +497,11 @@ A new particle-resolved three dimensional direct numerical simulation (DNS) mode
 Six numerical experiments are performed to investigate the processes of entrainment of clear air and subsequent mixing with cloudy air and their interactions with cloud microphysics. The experiments are designed to represent different combinations of three initial cloudy areas (Case 1, 2 and 3), and two turbulence modes (decaying and forced turbulence). Case 1 corresponds to \citet{And04}, which aims to study the final stage of the mixing process. Case 2 tries to mimic the idealized cloud slab in \citet{Kumar12}. However, due to the Gibb's phenomena of the pseudo-spectral method, there is an inconsistency between the initial fields of cloud droplets and vapor mixing ratio in \citet{Kumar12}, in which an artificial continuous function was used to connect the area of cloudy air and clear air, while the cloud droplets were treated as a simple slab. This inconsistency is not desirable and is overcome here by taking advantage of the high resolution finite difference WENO scheme, which is designed for problems with piecewise smooth solutions containing discontinuities. Case 3 is created by rotating Case 2 with 90 degree clockwise to better mimic the cloud-top entrainment-mixing process and show the sedimentation effect on the entrainment-mixing processes and cloud droplet size distributions. All the simulation have been tested in modes of both decaying turbulence and forced turbulence. The thermodynamics and cloud microphysics are compared between different cases. The transient growth of turbulence kinetic energy due to buoyancy effects in the decaying cases agrees with the observation in \citet{Kumar14}. Analysis of the temporal changes of the droplet size distribution and key microphysical properties reveals that the initial configuration of cloudy areas effectively influence the mixing and microphysical processes in decaying turbulence. However, the effect of initial configuration seems to be much smaller in the forced turbulence. 
 
 Five existing measures of microphysical homogeneous mixing degree are systematically examined, modified, and compared in terms of their ability as a unifying metric to represent the effect of various entrainment-mixing mechanisms on cloud microphysics. Also examined and compared are the conventional Damk\"{o}hler number and transition scale number as a dynamical measure of different mixing mechanisms. Further analysis of the relationship between the microphysical homogeneous mixing degree and the dynamical measure confirms the few previous studies \citep{And09,Lu2013,Lu2014} that despite the detailed differences among the six simulation scenarios in cloud properties, the variety of turbulent entrainment-mixing mechanisms can be reasonably represented with a power-law relationship between one of the microphysical homogeneous mixing degrees and one of the dynamical measures. The relationship between $\psi_2$ and transition scale number is recommended  for practical use. 
+
+\added{In this paper, the microphysical homogeneous mixing degrees are derived based on the sample boxes at two adjacent time frames. In contrast, 
+\citet{Kumar2017} studied the mixing scenario based on a fixed time frame by placing many sample boxes in different locations on a transect of the computational domain. However, in the mixing procedure, the mixing scenario can varies between homogeneous 
+and inhomogeneous in a short period.  For example, if the number density remains the same during this period, the mixing process should be identified as an inhomogeneous mixing even if the sample points are located on the homogeneous line in the mixing diagram. Therefore, we consider 
+two adjacent time frames to measure the homogeneous mixing degrees, so that the dynamics of the mixing procedure can be captured.}
 
 Two points are noteworthy. First, this study is focused on presenting the new particle-resolved DNS model and its general application to exploring the potential of developing a unified parameterization for effect of turbulent entrainment-mixing processes on cloud microphysics. The new model has other great potentials as well. For example, we plan to use the model to investigate the detailed effects of different factors such as \deleted{turbulent intensity and }environmental relative humidity. Another important topic to be examined is the interaction between turbulence and cloud microphysics, and the relative importance of turbulence and entrainment-mixing processes in shaping droplet size distributions. Second, similar to other DNS models, the domain DNS size used in this study is still too small to cover the full range of turbulent eddy sizes, which will require the model to run on high-performance supercomputing platform.  
 
@@ -689,10 +694,13 @@ Kumar, B., F.~Janetzko, J.~Schumacher, and R.-A.Shaw (2012{\natexlab{b}}),
 
 \bibitem[{\textit{Kumar et~al.}(2014)\textit{Kumar, Schumacher, and
   R.-A.Shaw}}]{Kumar14}
-Kumar, B., J.~Schumacher, and R.-A.Shaw (2014), Lagrangian mixing dynamics at
+Kumar, B., J.~Schumacher, and R.~A.Shaw (2014), Lagrangian mixing dynamics at
   the cloudy-clear air interface, \textit{Journal of the Atmospheric Sciences},
   \textit{71}(7), 2564--2580.
 
+\bibitem[{\textit{Kumar et~al.}(2017)\textit{Kumar, Bera, Prabha, Grabowski}}]{Kumar2017}
+Kumar, B., S.~Bera, T.~V. Prabha, W.~W. Grabowski (2017), Cloud-edge mixing: Direct numerical simulation and observations in Indian Monsoon clouds, \textit{Journal of Advances in Modeling Earth Systems}, \textit{9}, \doi{1002/2016MS000731}
+  
 \bibitem[{\textit{Lanotte et~al.}(2009)\textit{Lanotte, Seminara, and
   Toschi}}]{Lanotte2009}
 Lanotte, A.~S., A.~Seminara, and F.~Toschi (2009), Cloud droplet growth by

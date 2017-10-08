@@ -1,0 +1,8981 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Creator: MATLAB, The MathWorks, Inc. Version 8.2.0.701 (R2013b). Operating System: Linux 4.4.0-34-generic #53-Ubuntu SMP Wed Jul 27 16:06:39 UTC 2016 x86_64.
+%%Title: ./mixing_cased2.eps
+%%CreationDate: 10/01/2017  14:54:27
+%%DocumentNeededFonts: Helvetica
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%Extensions: CMYK
+%%Pages: 1
+%%BoundingBox:    50   196   546   602
+%%EndComments
+
+%%BeginProlog
+% MathWorks dictionary
+/MathWorks 160 dict begin
+% definition operators
+/bdef {bind def} bind def
+/ldef {load def} bind def
+/xdef {exch def} bdef
+/xstore {exch store} bdef
+% operator abbreviations
+/c  /clip ldef
+/cc /concat ldef
+/cp /closepath ldef
+/gr /grestore ldef
+/gs /gsave ldef
+/mt /moveto ldef
+/np /newpath ldef
+/cm /currentmatrix ldef
+/sm /setmatrix ldef
+/rm /rmoveto ldef
+/rl /rlineto ldef
+/s {show newpath} bdef
+/sc {setcmykcolor} bdef
+/sr /setrgbcolor ldef
+/sg /setgray ldef
+/w /setlinewidth ldef
+/j /setlinejoin ldef
+/cap /setlinecap ldef
+/rc {rectclip} bdef
+/rf {rectfill} bdef
+% page state control
+/pgsv () def
+/bpage {/pgsv save def} bdef
+/epage {pgsv restore} bdef
+/bplot /gsave ldef
+/eplot {stroke grestore} bdef
+% orientation switch
+/portraitMode 0 def /landscapeMode 1 def /rotateMode 2 def
+% coordinate system mappings
+/dpi2point 0 def
+% font control
+/FontSize 0 def
+/FMS {/FontSize xstore findfont [FontSize 0 0 FontSize neg 0 0]
+  makefont setfont} bdef
+/reencode {exch dup where {pop load} {pop StandardEncoding} ifelse
+  exch dup 3 1 roll findfont dup length dict begin
+  { 1 index /FID ne {def}{pop pop} ifelse } forall
+  /Encoding exch def currentdict end definefont pop} bdef
+/isroman {findfont /CharStrings get /Agrave known} bdef
+/FMSR {3 1 roll 1 index dup isroman {reencode} {pop pop} ifelse
+  exch FMS} bdef
+/csm {1 dpi2point div -1 dpi2point div scale neg translate
+ dup landscapeMode eq {pop -90 rotate}
+  {rotateMode eq {90 rotate} if} ifelse} bdef
+% line types: solid, dotted, dashed, dotdash
+/SO { [] 0 setdash } bdef
+/DO { [.5 dpi2point mul 4 dpi2point mul] 0 setdash } bdef
+/DA { [6 dpi2point mul] 0 setdash } bdef
+/DD { [.5 dpi2point mul 4 dpi2point mul 6 dpi2point mul 4
+  dpi2point mul] 0 setdash } bdef
+% macros for lines and objects
+/L {lineto stroke} bdef
+/MP {3 1 roll moveto 1 sub {rlineto} repeat} bdef
+/AP {{rlineto} repeat} bdef
+/PDlw -1 def
+/W {/PDlw currentlinewidth def setlinewidth} def
+/PP {closepath eofill} bdef
+/DP {closepath stroke} bdef
+/MR {4 -2 roll moveto dup  0 exch rlineto exch 0 rlineto
+  neg 0 exch rlineto closepath} bdef
+/FR {MR stroke} bdef
+/PR {MR fill} bdef
+/L1i {{currentfile picstr readhexstring pop} image} bdef
+/tMatrix matrix def
+/MakeOval {newpath tMatrix currentmatrix pop translate scale
+0 0 1 0 360 arc tMatrix setmatrix} bdef
+/FO {MakeOval stroke} bdef
+/PO {MakeOval fill} bdef
+/PD {currentlinewidth 2 div 0 360 arc fill
+   PDlw -1 eq not {PDlw w /PDlw -1 def} if} def
+/FA {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arc tMatrix setmatrix stroke} bdef
+/PA {newpath tMatrix currentmatrix pop	translate 0 0 moveto scale
+  0 0 1 5 -2 roll arc closepath tMatrix setmatrix fill} bdef
+/FAn {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arcn tMatrix setmatrix stroke} bdef
+/PAn {newpath tMatrix currentmatrix pop translate 0 0 moveto scale
+  0 0 1 5 -2 roll arcn closepath tMatrix setmatrix fill} bdef
+/vradius 0 def /hradius 0 def /lry 0 def
+/lrx 0 def /uly 0 def /ulx 0 def /rad 0 def
+/MRR {/vradius xdef /hradius xdef /lry xdef /lrx xdef /uly xdef
+  /ulx xdef newpath tMatrix currentmatrix pop ulx hradius add uly
+  vradius add translate hradius vradius scale 0 0 1 180 270 arc 
+  tMatrix setmatrix lrx hradius sub uly vradius add translate
+  hradius vradius scale 0 0 1 270 360 arc tMatrix setmatrix
+  lrx hradius sub lry vradius sub translate hradius vradius scale
+  0 0 1 0 90 arc tMatrix setmatrix ulx hradius add lry vradius sub
+  translate hradius vradius scale 0 0 1 90 180 arc tMatrix setmatrix
+  closepath} bdef
+/FRR {MRR stroke } bdef
+/PRR {MRR fill } bdef
+/MlrRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lry uly sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 90 270 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 270 90 arc tMatrix setmatrix
+  closepath} bdef
+/FlrRR {MlrRR stroke } bdef
+/PlrRR {MlrRR fill } bdef
+/MtbRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lrx ulx sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 180 360 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 0 180 arc tMatrix setmatrix
+  closepath} bdef
+/FtbRR {MtbRR stroke } bdef
+/PtbRR {MtbRR fill } bdef
+/stri 6 array def /dtri 6 array def
+/smat 6 array def /dmat 6 array def
+/tmat1 6 array def /tmat2 6 array def /dif 3 array def
+/asub {/ind2 exch def /ind1 exch def dup dup
+  ind1 get exch ind2 get sub exch } bdef
+/tri_to_matrix {
+  2 0 asub 3 1 asub 4 0 asub 5 1 asub
+  dup 0 get exch 1 get 7 -1 roll astore } bdef
+/compute_transform {
+  dmat dtri tri_to_matrix tmat1 invertmatrix 
+  smat stri tri_to_matrix tmat2 concatmatrix } bdef
+/ds {stri astore pop} bdef
+/dt {dtri astore pop} bdef
+/db {2 copy /cols xdef /rows xdef mul dup 3 mul string
+  currentfile exch readhexstring pop
+  dup 0 3 index getinterval /rbmap xdef
+  dup 2 index dup getinterval /gbmap xdef
+  1 index dup 2 mul exch getinterval /bbmap xdef pop pop}bdef
+/it {gs np dtri aload pop moveto lineto lineto cp c
+  cols rows 8 compute_transform 
+  rbmap gbmap bbmap true 3 colorimage gr}bdef
+/il {newpath moveto lineto stroke}bdef
+currentdict end def
+%%EndProlog
+
+%%BeginSetup
+MathWorks begin
+
+0 cap
+
+end
+%%EndSetup
+
+%%Page: 1 1
+%%BeginPageSetup
+%%PageBoundingBox:    50   196   546   602
+MathWorks begin
+bpage
+%%EndPageSetup
+
+%%BeginObject: obj1
+bplot
+
+/dpi2point 12 def
+portraitMode 0216 7344 csm
+
+  388   110  5957  4877 MR c np
+76 dict begin %Colortable dictionary
+/c0 { 0.000000 0.000000 0.000000 sr} bdef
+/c1 { 1.000000 1.000000 1.000000 sr} bdef
+/c2 { 0.900000 0.000000 0.000000 sr} bdef
+/c3 { 0.000000 0.820000 0.000000 sr} bdef
+/c4 { 0.000000 0.000000 0.800000 sr} bdef
+/c5 { 0.910000 0.820000 0.320000 sr} bdef
+/c6 { 1.000000 0.260000 0.820000 sr} bdef
+/c7 { 0.000000 0.820000 0.820000 sr} bdef
+c0
+1 j
+1 sg
+   0    0 6913 5186 PR
+6 w
+0 4226 5356 0 0 -4226 899 4615 4 MP
+PP
+-5356 0 0 4226 5356 0 0 -4226 899 4615 5 MP stroke
+4 w
+DO
+0 sg
+ 899 4615 mt  899  389 L
+ 899  389 mt  899  389 L
+1872 4615 mt 1872  389 L
+1872  389 mt 1872  389 L
+2846 4615 mt 2846  389 L
+2846  389 mt 2846  389 L
+3820 4615 mt 3820  389 L
+3820  389 mt 3820  389 L
+4794 4615 mt 4794  389 L
+4794  389 mt 4794  389 L
+5768 4615 mt 5768  389 L
+5768  389 mt 5768  389 L
+ 899 4615 mt 6255 4615 L
+6255 4615 mt 6255 4615 L
+ 899 3846 mt 6255 3846 L
+6255 3846 mt 6255 3846 L
+ 899 3078 mt 6255 3078 L
+6255 3078 mt 6255 3078 L
+ 899 2309 mt 6255 2309 L
+6255 2309 mt 6255 2309 L
+ 899 1541 mt 6255 1541 L
+6255 1541 mt 6255 1541 L
+ 899  773 mt 6255  773 L
+6255  773 mt 6255  773 L
+SO
+6 w
+ 899 4615 mt 6255 4615 L
+ 899  389 mt 6255  389 L
+ 899 4615 mt  899  389 L
+6255 4615 mt 6255  389 L
+ 899 4615 mt 6255 4615 L
+ 899 4615 mt  899  389 L
+ 899 4615 mt  899 4561 L
+ 899  389 mt  899  442 L
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 120 FMSR
+
+ 866 4760 mt 
+(0) s
+1872 4615 mt 1872 4561 L
+1872  389 mt 1872  442 L
+1789 4760 mt 
+(0.2) s
+2846 4615 mt 2846 4561 L
+2846  389 mt 2846  442 L
+2763 4760 mt 
+(0.4) s
+3820 4615 mt 3820 4561 L
+3820  389 mt 3820  442 L
+3737 4760 mt 
+(0.6) s
+4794 4615 mt 4794 4561 L
+4794  389 mt 4794  442 L
+4711 4760 mt 
+(0.8) s
+5768 4615 mt 5768 4561 L
+5768  389 mt 5768  442 L
+5735 4760 mt 
+(1) s
+ 899 4615 mt  952 4615 L
+6255 4615 mt 6201 4615 L
+ 798 4659 mt 
+(0) s
+ 899 3846 mt  952 3846 L
+6255 3846 mt 6201 3846 L
+ 698 3890 mt 
+(0.2) s
+ 899 3078 mt  952 3078 L
+6255 3078 mt 6201 3078 L
+ 698 3122 mt 
+(0.4) s
+ 899 2309 mt  952 2309 L
+6255 2309 mt 6201 2309 L
+ 698 2353 mt 
+(0.6) s
+ 899 1541 mt  952 1541 L
+6255 1541 mt 6201 1541 L
+ 698 1585 mt 
+(0.8) s
+ 899  773 mt  952  773 L
+6255  773 mt 6201  773 L
+ 798  817 mt 
+(1) s
+ 899 4615 mt 6255 4615 L
+ 899  389 mt 6255  389 L
+ 899 4615 mt  899  389 L
+6255 4615 mt 6255  389 L
+0 j
+/c8 { 0.000000 0.500000 0.400000 sr} bdef
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4013  838 PO
+0 sg
+  51   51 4013  838 FO
+/c9 { 0.015873 0.507937 0.400000 sr} bdef
+c9
+  51   51 3636  923 PO
+0 sg
+  51   51 3636  923 FO
+/c10 { 0.031746 0.515873 0.400000 sr} bdef
+c10
+  51   51 3614  959 PO
+0 sg
+  51   51 3614  959 FO
+/c11 { 0.047619 0.523810 0.400000 sr} bdef
+c11
+  51   51 2956 1229 PO
+0 sg
+  51   51 2956 1229 FO
+/c12 { 0.063492 0.531746 0.400000 sr} bdef
+c12
+  51   51 2712 1765 PO
+0 sg
+  51   51 2712 1765 FO
+/c13 { 0.079365 0.539683 0.400000 sr} bdef
+c13
+  51   51 2864 2248 PO
+0 sg
+  51   51 2864 2248 FO
+/c14 { 0.095238 0.547619 0.400000 sr} bdef
+c14
+  51   51 3104 2483 PO
+0 sg
+  51   51 3104 2483 FO
+/c15 { 0.111111 0.555556 0.400000 sr} bdef
+c15
+  51   51 3074 2728 PO
+0 sg
+  51   51 3074 2728 FO
+/c16 { 0.126984 0.563492 0.400000 sr} bdef
+c16
+  51   51 3009 2990 PO
+0 sg
+  51   51 3009 2990 FO
+/c17 { 0.142857 0.571429 0.400000 sr} bdef
+c17
+  51   51 3006 3193 PO
+0 sg
+  51   51 3006 3193 FO
+/c18 { 0.158730 0.579365 0.400000 sr} bdef
+c18
+  51   51 2977 3344 PO
+0 sg
+  51   51 2977 3344 FO
+/c19 { 0.174603 0.587302 0.400000 sr} bdef
+c19
+  51   51 2954 3471 PO
+0 sg
+  51   51 2954 3471 FO
+/c20 { 0.190476 0.595238 0.400000 sr} bdef
+c20
+  51   51 2950 3592 PO
+0 sg
+  51   51 2950 3592 FO
+/c21 { 0.206349 0.603175 0.400000 sr} bdef
+c21
+  51   51 2935 3701 PO
+0 sg
+  51   51 2935 3701 FO
+/c22 { 0.222222 0.611111 0.400000 sr} bdef
+c22
+  51   51 2895 3805 PO
+0 sg
+  51   51 2895 3805 FO
+/c23 { 0.238095 0.619048 0.400000 sr} bdef
+c23
+  51   51 2852 3903 PO
+0 sg
+  51   51 2852 3903 FO
+/c24 { 0.253968 0.626984 0.400000 sr} bdef
+c24
+  51   51 2800 3995 PO
+0 sg
+  51   51 2800 3995 FO
+/c25 { 0.269841 0.634921 0.400000 sr} bdef
+c25
+  51   51 2693 4038 PO
+0 sg
+  51   51 2693 4038 FO
+/c26 { 0.285714 0.642857 0.400000 sr} bdef
+c26
+  51   51 2567 4065 PO
+0 sg
+  51   51 2567 4065 FO
+/c27 { 0.301587 0.650794 0.400000 sr} bdef
+c27
+  51   51 2380 4100 PO
+0 sg
+  51   51 2380 4100 FO
+/c28 { 0.317460 0.658730 0.400000 sr} bdef
+c28
+  51   51 2222 4136 PO
+0 sg
+  51   51 2222 4136 FO
+/c29 { 0.333333 0.666667 0.400000 sr} bdef
+c29
+  51   51 2136 4140 PO
+0 sg
+  51   51 2136 4140 FO
+/c30 { 0.349206 0.674603 0.400000 sr} bdef
+c30
+  51   51 2095 4139 PO
+0 sg
+  51   51 2095 4139 FO
+/c31 { 0.365079 0.682540 0.400000 sr} bdef
+c31
+  51   51 2066 4131 PO
+0 sg
+  51   51 2066 4131 FO
+/c32 { 0.380952 0.690476 0.400000 sr} bdef
+c32
+  51   51 1989 4143 PO
+0 sg
+  51   51 1989 4143 FO
+/c33 { 0.396825 0.698413 0.400000 sr} bdef
+c33
+  51   51 1923 4159 PO
+0 sg
+  51   51 1923 4159 FO
+/c34 { 0.412698 0.706349 0.400000 sr} bdef
+c34
+  51   51 1927 4171 PO
+0 sg
+  51   51 1927 4171 FO
+/c35 { 0.428571 0.714286 0.400000 sr} bdef
+c35
+  51   51 1882 4214 PO
+0 sg
+  51   51 1882 4214 FO
+/c36 { 0.444444 0.722222 0.400000 sr} bdef
+c36
+  51   51 1812 4251 PO
+0 sg
+  51   51 1812 4251 FO
+/c37 { 0.460317 0.730159 0.400000 sr} bdef
+c37
+  51   51 1720 4274 PO
+0 sg
+  51   51 1720 4274 FO
+/c38 { 0.476190 0.738095 0.400000 sr} bdef
+c38
+  51   51 1627 4295 PO
+0 sg
+  51   51 1627 4295 FO
+/c39 { 0.492063 0.746032 0.400000 sr} bdef
+c39
+  51   51 1549 4304 PO
+0 sg
+  51   51 1549 4304 FO
+/c40 { 0.507937 0.753968 0.400000 sr} bdef
+c40
+  51   51 1506 4295 PO
+0 sg
+  51   51 1506 4295 FO
+/c41 { 0.523810 0.761905 0.400000 sr} bdef
+c41
+  51   51 1478 4293 PO
+0 sg
+  51   51 1478 4293 FO
+/c42 { 0.539683 0.769841 0.400000 sr} bdef
+c42
+  51   51 1448 4296 PO
+0 sg
+  51   51 1448 4296 FO
+/c43 { 0.555556 0.777778 0.400000 sr} bdef
+c43
+  51   51 1461 4283 PO
+0 sg
+  51   51 1461 4283 FO
+/c44 { 0.571429 0.785714 0.400000 sr} bdef
+c44
+  51   51 1484 4282 PO
+0 sg
+  51   51 1484 4282 FO
+/c45 { 0.587302 0.793651 0.400000 sr} bdef
+c45
+  51   51 1472 4302 PO
+0 sg
+  51   51 1472 4302 FO
+/c46 { 0.603175 0.801587 0.400000 sr} bdef
+c46
+  51   51 1426 4325 PO
+0 sg
+  51   51 1426 4325 FO
+/c47 { 0.619048 0.809524 0.400000 sr} bdef
+c47
+  51   51 1361 4363 PO
+0 sg
+  51   51 1361 4363 FO
+/c48 { 0.634921 0.817460 0.400000 sr} bdef
+c48
+  51   51 1277 4401 PO
+0 sg
+  51   51 1277 4401 FO
+/c49 { 0.650794 0.825397 0.400000 sr} bdef
+c49
+  51   51 1197 4430 PO
+0 sg
+  51   51 1197 4430 FO
+/c50 { 0.666667 0.833333 0.400000 sr} bdef
+c50
+  51   51 1147 4452 PO
+0 sg
+  51   51 1147 4452 FO
+/c51 { 0.682540 0.841270 0.400000 sr} bdef
+c51
+  51   51 1109 4469 PO
+0 sg
+  51   51 1109 4469 FO
+/c52 { 0.698413 0.849206 0.400000 sr} bdef
+c52
+  51   51 1072 4472 PO
+0 sg
+  51   51 1072 4472 FO
+/c53 { 0.714286 0.857143 0.400000 sr} bdef
+c53
+  51   51 1052 4476 PO
+0 sg
+  51   51 1052 4476 FO
+/c54 { 0.730159 0.865079 0.400000 sr} bdef
+c54
+  51   51 1036 4491 PO
+0 sg
+  51   51 1036 4491 FO
+/c55 { 0.746032 0.873016 0.400000 sr} bdef
+c55
+  51   51 1019 4510 PO
+0 sg
+  51   51 1019 4510 FO
+/c56 { 0.761905 0.880952 0.400000 sr} bdef
+c56
+  51   51 1001 4524 PO
+0 sg
+  51   51 1001 4524 FO
+/c57 { 0.777778 0.888889 0.400000 sr} bdef
+c57
+  51   51  977 4536 PO
+0 sg
+  51   51  977 4536 FO
+/c58 { 0.793651 0.896825 0.400000 sr} bdef
+c58
+  51   51  954 4544 PO
+0 sg
+  51   51  954 4544 FO
+/c59 { 0.809524 0.904762 0.400000 sr} bdef
+c59
+  51   51  937 4554 PO
+0 sg
+  51   51  937 4554 FO
+/c60 { 0.825397 0.912698 0.400000 sr} bdef
+c60
+  51   51  926 4562 PO
+0 sg
+  51   51  926 4562 FO
+/c61 { 0.841270 0.920635 0.400000 sr} bdef
+c61
+  51   51  917 4569 PO
+0 sg
+  51   51  917 4569 FO
+/c62 { 0.857143 0.928571 0.400000 sr} bdef
+c62
+  51   51  910 4575 PO
+0 sg
+  51   51  910 4575 FO
+/c63 { 0.873016 0.936508 0.400000 sr} bdef
+c63
+  51   51  906 4581 PO
+0 sg
+  51   51  906 4581 FO
+/c64 { 0.888889 0.944444 0.400000 sr} bdef
+c64
+  51   51  902 4584 PO
+0 sg
+  51   51  902 4584 FO
+/c65 { 0.904762 0.952381 0.400000 sr} bdef
+c65
+  51   51  901 4588 PO
+0 sg
+  51   51  901 4588 FO
+/c66 { 0.920635 0.960317 0.400000 sr} bdef
+c66
+  51   51  899 4593 PO
+0 sg
+  51   51  899 4593 FO
+/c67 { 0.936508 0.968254 0.400000 sr} bdef
+c67
+  51   51  899 4594 PO
+0 sg
+  51   51  899 4594 FO
+/c68 { 0.952381 0.976190 0.400000 sr} bdef
+c68
+  51   51  899 4596 PO
+0 sg
+  51   51  899 4596 FO
+/c69 { 0.968254 0.984127 0.400000 sr} bdef
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+/c70 { 0.984127 0.992063 0.400000 sr} bdef
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+/c71 { 1.000000 1.000000 0.400000 sr} bdef
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5676  755 PO
+0 sg
+  51   51 5676  755 FO
+c9
+  51   51 5486  804 PO
+0 sg
+  51   51 5486  804 FO
+c10
+  51   51 5109  908 PO
+0 sg
+  51   51 5109  908 FO
+c11
+  51   51 4582 1108 PO
+0 sg
+  51   51 4582 1108 FO
+c12
+  51   51 4261 1402 PO
+0 sg
+  51   51 4261 1402 FO
+c13
+  51   51 3740 1814 PO
+0 sg
+  51   51 3740 1814 FO
+c14
+  51   51 3407 2250 PO
+0 sg
+  51   51 3407 2250 FO
+c15
+  51   51 3293 2560 PO
+0 sg
+  51   51 3293 2560 FO
+c16
+  51   51 3192 2781 PO
+0 sg
+  51   51 3192 2781 FO
+c17
+  51   51 3144 2964 PO
+0 sg
+  51   51 3144 2964 FO
+c18
+  51   51 3096 3107 PO
+0 sg
+  51   51 3096 3107 FO
+c19
+  51   51 3033 3245 PO
+0 sg
+  51   51 3033 3245 FO
+c20
+  51   51 2986 3361 PO
+0 sg
+  51   51 2986 3361 FO
+c21
+  51   51 2955 3457 PO
+0 sg
+  51   51 2955 3457 FO
+c22
+  51   51 2927 3551 PO
+0 sg
+  51   51 2927 3551 FO
+c23
+  51   51 2904 3631 PO
+0 sg
+  51   51 2904 3631 FO
+c24
+  51   51 2909 3696 PO
+0 sg
+  51   51 2909 3696 FO
+c25
+  51   51 2950 3747 PO
+0 sg
+  51   51 2950 3747 FO
+c26
+  51   51 2990 3783 PO
+0 sg
+  51   51 2990 3783 FO
+c27
+  51   51 2984 3829 PO
+0 sg
+  51   51 2984 3829 FO
+c28
+  51   51 2933 3865 PO
+0 sg
+  51   51 2933 3865 FO
+c29
+  51   51 2876 3888 PO
+0 sg
+  51   51 2876 3888 FO
+c30
+  51   51 2765 3910 PO
+0 sg
+  51   51 2765 3910 FO
+c31
+  51   51 2589 3950 PO
+0 sg
+  51   51 2589 3950 FO
+c32
+  51   51 2454 3995 PO
+0 sg
+  51   51 2454 3995 FO
+c33
+  51   51 2330 4042 PO
+0 sg
+  51   51 2330 4042 FO
+c34
+  51   51 2254 4082 PO
+0 sg
+  51   51 2254 4082 FO
+c35
+  51   51 2148 4117 PO
+0 sg
+  51   51 2148 4117 FO
+c36
+  51   51 2005 4142 PO
+0 sg
+  51   51 2005 4142 FO
+c37
+  51   51 1869 4165 PO
+0 sg
+  51   51 1869 4165 FO
+c38
+  51   51 1735 4186 PO
+0 sg
+  51   51 1735 4186 FO
+c39
+  51   51 1636 4199 PO
+0 sg
+  51   51 1636 4199 FO
+c40
+  51   51 1547 4220 PO
+0 sg
+  51   51 1547 4220 FO
+c41
+  51   51 1467 4247 PO
+0 sg
+  51   51 1467 4247 FO
+c42
+  51   51 1389 4275 PO
+0 sg
+  51   51 1389 4275 FO
+c43
+  51   51 1280 4296 PO
+0 sg
+  51   51 1280 4296 FO
+c44
+  51   51 1181 4330 PO
+0 sg
+  51   51 1181 4330 FO
+c45
+  51   51 1115 4377 PO
+0 sg
+  51   51 1115 4377 FO
+c46
+  51   51 1100 4404 PO
+0 sg
+  51   51 1100 4404 FO
+c47
+  51   51 1124 4418 PO
+0 sg
+  51   51 1124 4418 FO
+c48
+  51   51 1150 4432 PO
+0 sg
+  51   51 1150 4432 FO
+c49
+  51   51 1153 4446 PO
+0 sg
+  51   51 1153 4446 FO
+c50
+  51   51 1130 4457 PO
+0 sg
+  51   51 1130 4457 FO
+c51
+  51   51 1104 4470 PO
+0 sg
+  51   51 1104 4470 FO
+c52
+  51   51 1080 4487 PO
+0 sg
+  51   51 1080 4487 FO
+c53
+  51   51 1052 4504 PO
+0 sg
+  51   51 1052 4504 FO
+c54
+  51   51 1026 4512 PO
+0 sg
+  51   51 1026 4512 FO
+c55
+  51   51 1001 4520 PO
+0 sg
+  51   51 1001 4520 FO
+c56
+  51   51  978 4525 PO
+0 sg
+  51   51  978 4525 FO
+c57
+  51   51  961 4532 PO
+0 sg
+  51   51  961 4532 FO
+c58
+  51   51  948 4540 PO
+0 sg
+  51   51  948 4540 FO
+c59
+  51   51  938 4550 PO
+0 sg
+  51   51  938 4550 FO
+c60
+  51   51  929 4559 PO
+0 sg
+  51   51  929 4559 FO
+c61
+  51   51  921 4567 PO
+0 sg
+  51   51  921 4567 FO
+c62
+  51   51  914 4574 PO
+0 sg
+  51   51  914 4574 FO
+c63
+  51   51  908 4579 PO
+0 sg
+  51   51  908 4579 FO
+c64
+  51   51  904 4586 PO
+0 sg
+  51   51  904 4586 FO
+c65
+  51   51  902 4593 PO
+0 sg
+  51   51  902 4593 FO
+c66
+  51   51  900 4596 PO
+0 sg
+  51   51  900 4596 FO
+c67
+  51   51  899 4599 PO
+0 sg
+  51   51  899 4599 FO
+c68
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c69
+  51   51  899 4607 PO
+0 sg
+  51   51  899 4607 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5462  765 PO
+0 sg
+  51   51 5462  765 FO
+c9
+  51   51 5246  807 PO
+0 sg
+  51   51 5246  807 FO
+c10
+  51   51 4643  894 PO
+0 sg
+  51   51 4643  894 FO
+c11
+  51   51 4158 1133 PO
+0 sg
+  51   51 4158 1133 FO
+c12
+  51   51 3870 1453 PO
+0 sg
+  51   51 3870 1453 FO
+c13
+  51   51 3548 1728 PO
+0 sg
+  51   51 3548 1728 FO
+c14
+  51   51 3330 2045 PO
+0 sg
+  51   51 3330 2045 FO
+c15
+  51   51 3202 2368 PO
+0 sg
+  51   51 3202 2368 FO
+c16
+  51   51 3121 2664 PO
+0 sg
+  51   51 3121 2664 FO
+c17
+  51   51 3034 2919 PO
+0 sg
+  51   51 3034 2919 FO
+c18
+  51   51 2902 3153 PO
+0 sg
+  51   51 2902 3153 FO
+c19
+  51   51 2770 3358 PO
+0 sg
+  51   51 2770 3358 FO
+c20
+  51   51 2640 3516 PO
+0 sg
+  51   51 2640 3516 FO
+c21
+  51   51 2480 3650 PO
+0 sg
+  51   51 2480 3650 FO
+c22
+  51   51 2339 3755 PO
+0 sg
+  51   51 2339 3755 FO
+c23
+  51   51 2234 3829 PO
+0 sg
+  51   51 2234 3829 FO
+c24
+  51   51 2164 3892 PO
+0 sg
+  51   51 2164 3892 FO
+c25
+  51   51 2114 3935 PO
+0 sg
+  51   51 2114 3935 FO
+c26
+  51   51 2055 3973 PO
+0 sg
+  51   51 2055 3973 FO
+c27
+  51   51 1968 4011 PO
+0 sg
+  51   51 1968 4011 FO
+c28
+  51   51 1882 4046 PO
+0 sg
+  51   51 1882 4046 FO
+c29
+  51   51 1791 4072 PO
+0 sg
+  51   51 1791 4072 FO
+c30
+  51   51 1711 4101 PO
+0 sg
+  51   51 1711 4101 FO
+c31
+  51   51 1651 4135 PO
+0 sg
+  51   51 1651 4135 FO
+c32
+  51   51 1603 4161 PO
+0 sg
+  51   51 1603 4161 FO
+c33
+  51   51 1594 4167 PO
+0 sg
+  51   51 1594 4167 FO
+c34
+  51   51 1549 4168 PO
+0 sg
+  51   51 1549 4168 FO
+c35
+  51   51 1470 4174 PO
+0 sg
+  51   51 1470 4174 FO
+c36
+  51   51 1404 4162 PO
+0 sg
+  51   51 1404 4162 FO
+c37
+  51   51 1362 4180 PO
+0 sg
+  51   51 1362 4180 FO
+c38
+  51   51 1323 4236 PO
+0 sg
+  51   51 1323 4236 FO
+c39
+  51   51 1305 4272 PO
+0 sg
+  51   51 1305 4272 FO
+c40
+  51   51 1310 4288 PO
+0 sg
+  51   51 1310 4288 FO
+c41
+  51   51 1332 4290 PO
+0 sg
+  51   51 1332 4290 FO
+c42
+  51   51 1362 4275 PO
+0 sg
+  51   51 1362 4275 FO
+c43
+  51   51 1382 4274 PO
+0 sg
+  51   51 1382 4274 FO
+c44
+  51   51 1373 4286 PO
+0 sg
+  51   51 1373 4286 FO
+c45
+  51   51 1353 4303 PO
+0 sg
+  51   51 1353 4303 FO
+c46
+  51   51 1329 4323 PO
+0 sg
+  51   51 1329 4323 FO
+c47
+  51   51 1311 4343 PO
+0 sg
+  51   51 1311 4343 FO
+c48
+  51   51 1299 4361 PO
+0 sg
+  51   51 1299 4361 FO
+c49
+  51   51 1285 4384 PO
+0 sg
+  51   51 1285 4384 FO
+c50
+  51   51 1257 4408 PO
+0 sg
+  51   51 1257 4408 FO
+c51
+  51   51 1211 4432 PO
+0 sg
+  51   51 1211 4432 FO
+c52
+  51   51 1166 4454 PO
+0 sg
+  51   51 1166 4454 FO
+c53
+  51   51 1116 4479 PO
+0 sg
+  51   51 1116 4479 FO
+c54
+  51   51 1071 4500 PO
+0 sg
+  51   51 1071 4500 FO
+c55
+  51   51 1025 4521 PO
+0 sg
+  51   51 1025 4521 FO
+c56
+  51   51  983 4540 PO
+0 sg
+  51   51  983 4540 FO
+c57
+  51   51  952 4553 PO
+0 sg
+  51   51  952 4553 FO
+c58
+  51   51  931 4562 PO
+0 sg
+  51   51  931 4562 FO
+c59
+  51   51  918 4567 PO
+0 sg
+  51   51  918 4567 FO
+c60
+  51   51  911 4570 PO
+0 sg
+  51   51  911 4570 FO
+c61
+  51   51  907 4574 PO
+0 sg
+  51   51  907 4574 FO
+c62
+  51   51  903 4582 PO
+0 sg
+  51   51  903 4582 FO
+c63
+  51   51  901 4586 PO
+0 sg
+  51   51  901 4586 FO
+c64
+  51   51  900 4590 PO
+0 sg
+  51   51  900 4590 FO
+c65
+  51   51  899 4596 PO
+0 sg
+  51   51  899 4596 FO
+c66
+  51   51  899 4599 PO
+0 sg
+  51   51  899 4599 FO
+c67
+  51   51  899 4599 PO
+0 sg
+  51   51  899 4599 FO
+c68
+  51   51  899 4609 PO
+0 sg
+  51   51  899 4609 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5559  760 PO
+0 sg
+  51   51 5559  760 FO
+c9
+  51   51 5506  760 PO
+0 sg
+  51   51 5506  760 FO
+c10
+  51   51 5023  889 PO
+0 sg
+  51   51 5023  889 FO
+c11
+  51   51 4777 1084 PO
+0 sg
+  51   51 4777 1084 FO
+c12
+  51   51 4474 1283 PO
+0 sg
+  51   51 4474 1283 FO
+c13
+  51   51 4416 1464 PO
+0 sg
+  51   51 4416 1464 FO
+c14
+  51   51 4398 1643 PO
+0 sg
+  51   51 4398 1643 FO
+c15
+  51   51 4313 1810 PO
+0 sg
+  51   51 4313 1810 FO
+c16
+  51   51 4190 1991 PO
+0 sg
+  51   51 4190 1991 FO
+c17
+  51   51 3965 2196 PO
+0 sg
+  51   51 3965 2196 FO
+c18
+  51   51 3745 2434 PO
+0 sg
+  51   51 3745 2434 FO
+c19
+  51   51 3527 2700 PO
+0 sg
+  51   51 3527 2700 FO
+c20
+  51   51 3360 2954 PO
+0 sg
+  51   51 3360 2954 FO
+c21
+  51   51 3306 3146 PO
+0 sg
+  51   51 3306 3146 FO
+c22
+  51   51 3291 3274 PO
+0 sg
+  51   51 3291 3274 FO
+c23
+  51   51 3292 3369 PO
+0 sg
+  51   51 3292 3369 FO
+c24
+  51   51 3292 3427 PO
+0 sg
+  51   51 3292 3427 FO
+c25
+  51   51 3253 3461 PO
+0 sg
+  51   51 3253 3461 FO
+c26
+  51   51 3221 3477 PO
+0 sg
+  51   51 3221 3477 FO
+c27
+  51   51 3190 3494 PO
+0 sg
+  51   51 3190 3494 FO
+c28
+  51   51 3118 3525 PO
+0 sg
+  51   51 3118 3525 FO
+c29
+  51   51 3062 3545 PO
+0 sg
+  51   51 3062 3545 FO
+c30
+  51   51 3000 3569 PO
+0 sg
+  51   51 3000 3569 FO
+c31
+  51   51 2952 3608 PO
+0 sg
+  51   51 2952 3608 FO
+c32
+  51   51 2911 3660 PO
+0 sg
+  51   51 2911 3660 FO
+c33
+  51   51 2882 3708 PO
+0 sg
+  51   51 2882 3708 FO
+c34
+  51   51 2814 3741 PO
+0 sg
+  51   51 2814 3741 FO
+c35
+  51   51 2709 3779 PO
+0 sg
+  51   51 2709 3779 FO
+c36
+  51   51 2568 3833 PO
+0 sg
+  51   51 2568 3833 FO
+c37
+  51   51 2407 3887 PO
+0 sg
+  51   51 2407 3887 FO
+c38
+  51   51 2254 3929 PO
+0 sg
+  51   51 2254 3929 FO
+c39
+  51   51 2128 3954 PO
+0 sg
+  51   51 2128 3954 FO
+c40
+  51   51 2017 3985 PO
+0 sg
+  51   51 2017 3985 FO
+c41
+  51   51 1923 4024 PO
+0 sg
+  51   51 1923 4024 FO
+c42
+  51   51 1829 4060 PO
+0 sg
+  51   51 1829 4060 FO
+c43
+  51   51 1736 4103 PO
+0 sg
+  51   51 1736 4103 FO
+c44
+  51   51 1646 4151 PO
+0 sg
+  51   51 1646 4151 FO
+c45
+  51   51 1574 4194 PO
+0 sg
+  51   51 1574 4194 FO
+c46
+  51   51 1506 4234 PO
+0 sg
+  51   51 1506 4234 FO
+c47
+  51   51 1431 4281 PO
+0 sg
+  51   51 1431 4281 FO
+c48
+  51   51 1358 4326 PO
+0 sg
+  51   51 1358 4326 FO
+c49
+  51   51 1300 4373 PO
+0 sg
+  51   51 1300 4373 FO
+c50
+  51   51 1248 4415 PO
+0 sg
+  51   51 1248 4415 FO
+c51
+  51   51 1208 4445 PO
+0 sg
+  51   51 1208 4445 FO
+c52
+  51   51 1169 4468 PO
+0 sg
+  51   51 1169 4468 FO
+c53
+  51   51 1117 4491 PO
+0 sg
+  51   51 1117 4491 FO
+c54
+  51   51 1062 4505 PO
+0 sg
+  51   51 1062 4505 FO
+c55
+  51   51 1017 4514 PO
+0 sg
+  51   51 1017 4514 FO
+c56
+  51   51  986 4517 PO
+0 sg
+  51   51  986 4517 FO
+c57
+  51   51  968 4522 PO
+0 sg
+  51   51  968 4522 FO
+c58
+  51   51  955 4530 PO
+0 sg
+  51   51  955 4530 FO
+c59
+  51   51  943 4543 PO
+0 sg
+  51   51  943 4543 FO
+c60
+  51   51  932 4557 PO
+0 sg
+  51   51  932 4557 FO
+c61
+  51   51  921 4566 PO
+0 sg
+  51   51  921 4566 FO
+c62
+  51   51  913 4572 PO
+0 sg
+  51   51  913 4572 FO
+c63
+  51   51  907 4579 PO
+0 sg
+  51   51  907 4579 FO
+c64
+  51   51  904 4588 PO
+0 sg
+  51   51  904 4588 FO
+c65
+  51   51  901 4596 PO
+0 sg
+  51   51  901 4596 FO
+c66
+  51   51  899 4604 PO
+0 sg
+  51   51  899 4604 FO
+c67
+  51   51  899 4606 PO
+0 sg
+  51   51  899 4606 FO
+c68
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5027  769 PO
+0 sg
+  51   51 5027  769 FO
+c9
+  51   51 5188  772 PO
+0 sg
+  51   51 5188  772 FO
+c10
+  51   51 4850  944 PO
+0 sg
+  51   51 4850  944 FO
+c11
+  51   51 4615 1167 PO
+0 sg
+  51   51 4615 1167 FO
+c12
+  51   51 4217 1419 PO
+0 sg
+  51   51 4217 1419 FO
+c13
+  51   51 3782 1798 PO
+0 sg
+  51   51 3782 1798 FO
+c14
+  51   51 3523 2059 PO
+0 sg
+  51   51 3523 2059 FO
+c15
+  51   51 3194 2385 PO
+0 sg
+  51   51 3194 2385 FO
+c16
+  51   51 2944 2709 PO
+0 sg
+  51   51 2944 2709 FO
+c17
+  51   51 2742 2981 PO
+0 sg
+  51   51 2742 2981 FO
+c18
+  51   51 2624 3179 PO
+0 sg
+  51   51 2624 3179 FO
+c19
+  51   51 2487 3362 PO
+0 sg
+  51   51 2487 3362 FO
+c20
+  51   51 2355 3513 PO
+0 sg
+  51   51 2355 3513 FO
+c21
+  51   51 2191 3662 PO
+0 sg
+  51   51 2191 3662 FO
+c22
+  51   51 2066 3772 PO
+0 sg
+  51   51 2066 3772 FO
+c23
+  51   51 1942 3843 PO
+0 sg
+  51   51 1942 3843 FO
+c24
+  51   51 1808 3864 PO
+0 sg
+  51   51 1808 3864 FO
+c25
+  51   51 1736 3800 PO
+0 sg
+  51   51 1736 3800 FO
+c26
+  51   51 1641 3771 PO
+0 sg
+  51   51 1641 3771 FO
+c27
+  51   51 1538 3847 PO
+0 sg
+  51   51 1538 3847 FO
+c28
+  51   51 1466 3945 PO
+0 sg
+  51   51 1466 3945 FO
+c29
+  51   51 1473 3921 PO
+0 sg
+  51   51 1473 3921 FO
+c30
+  51   51 1512 3846 PO
+0 sg
+  51   51 1512 3846 FO
+c31
+  51   51 1626 3798 PO
+0 sg
+  51   51 1626 3798 FO
+c32
+  51   51 1760 3808 PO
+0 sg
+  51   51 1760 3808 FO
+c33
+  51   51 1863 3828 PO
+0 sg
+  51   51 1863 3828 FO
+c34
+  51   51 1965 3854 PO
+0 sg
+  51   51 1965 3854 FO
+c35
+  51   51 1974 3890 PO
+0 sg
+  51   51 1974 3890 FO
+c36
+  51   51 1874 3928 PO
+0 sg
+  51   51 1874 3928 FO
+c37
+  51   51 1765 3982 PO
+0 sg
+  51   51 1765 3982 FO
+c38
+  51   51 1705 4027 PO
+0 sg
+  51   51 1705 4027 FO
+c39
+  51   51 1647 4067 PO
+0 sg
+  51   51 1647 4067 FO
+c40
+  51   51 1591 4125 PO
+0 sg
+  51   51 1591 4125 FO
+c41
+  51   51 1533 4183 PO
+0 sg
+  51   51 1533 4183 FO
+c42
+  51   51 1474 4236 PO
+0 sg
+  51   51 1474 4236 FO
+c43
+  51   51 1421 4277 PO
+0 sg
+  51   51 1421 4277 FO
+c44
+  51   51 1375 4311 PO
+0 sg
+  51   51 1375 4311 FO
+c45
+  51   51 1324 4350 PO
+0 sg
+  51   51 1324 4350 FO
+c46
+  51   51 1272 4384 PO
+0 sg
+  51   51 1272 4384 FO
+c47
+  51   51 1226 4409 PO
+0 sg
+  51   51 1226 4409 FO
+c48
+  51   51 1191 4430 PO
+0 sg
+  51   51 1191 4430 FO
+c49
+  51   51 1160 4445 PO
+0 sg
+  51   51 1160 4445 FO
+c50
+  51   51 1128 4455 PO
+0 sg
+  51   51 1128 4455 FO
+c51
+  51   51 1103 4466 PO
+0 sg
+  51   51 1103 4466 FO
+c52
+  51   51 1082 4477 PO
+0 sg
+  51   51 1082 4477 FO
+c53
+  51   51 1061 4483 PO
+0 sg
+  51   51 1061 4483 FO
+c54
+  51   51 1039 4493 PO
+0 sg
+  51   51 1039 4493 FO
+c55
+  51   51 1017 4506 PO
+0 sg
+  51   51 1017 4506 FO
+c56
+  51   51 1000 4517 PO
+0 sg
+  51   51 1000 4517 FO
+c57
+  51   51  982 4527 PO
+0 sg
+  51   51  982 4527 FO
+c58
+  51   51  965 4538 PO
+0 sg
+  51   51  965 4538 FO
+c59
+  51   51  948 4548 PO
+0 sg
+  51   51  948 4548 FO
+c60
+  51   51  936 4557 PO
+0 sg
+  51   51  936 4557 FO
+c61
+  51   51  923 4564 PO
+0 sg
+  51   51  923 4564 FO
+c62
+  51   51  914 4573 PO
+0 sg
+  51   51  914 4573 FO
+c63
+  51   51  909 4582 PO
+0 sg
+  51   51  909 4582 FO
+c64
+  51   51  904 4592 PO
+0 sg
+  51   51  904 4592 FO
+c65
+  51   51  901 4598 PO
+0 sg
+  51   51  901 4598 FO
+c66
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c67
+  51   51  899 4605 PO
+0 sg
+  51   51  899 4605 FO
+c68
+  51   51  899 4600 PO
+0 sg
+  51   51  899 4600 FO
+c69
+  51   51  899 4607 PO
+0 sg
+  51   51  899 4607 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5592  758 PO
+0 sg
+  51   51 5592  758 FO
+c9
+  51   51 5123  800 PO
+0 sg
+  51   51 5123  800 FO
+c10
+  51   51 4748  955 PO
+0 sg
+  51   51 4748  955 FO
+c11
+  51   51 4841 1169 PO
+0 sg
+  51   51 4841 1169 FO
+c12
+  51   51 4894 1335 PO
+0 sg
+  51   51 4894 1335 FO
+c13
+  51   51 4733 1534 PO
+0 sg
+  51   51 4733 1534 FO
+c14
+  51   51 4579 1714 PO
+0 sg
+  51   51 4579 1714 FO
+c15
+  51   51 4411 1885 PO
+0 sg
+  51   51 4411 1885 FO
+c16
+  51   51 4191 2046 PO
+0 sg
+  51   51 4191 2046 FO
+c17
+  51   51 4049 2241 PO
+0 sg
+  51   51 4049 2241 FO
+c18
+  51   51 3938 2442 PO
+0 sg
+  51   51 3938 2442 FO
+c19
+  51   51 3818 2658 PO
+0 sg
+  51   51 3818 2658 FO
+c20
+  51   51 3720 2850 PO
+0 sg
+  51   51 3720 2850 FO
+c21
+  51   51 3666 2996 PO
+0 sg
+  51   51 3666 2996 FO
+c22
+  51   51 3541 3122 PO
+0 sg
+  51   51 3541 3122 FO
+c23
+  51   51 3426 3214 PO
+0 sg
+  51   51 3426 3214 FO
+c24
+  51   51 3312 3289 PO
+0 sg
+  51   51 3312 3289 FO
+c25
+  51   51 3217 3336 PO
+0 sg
+  51   51 3217 3336 FO
+c26
+  51   51 3122 3367 PO
+0 sg
+  51   51 3122 3367 FO
+c27
+  51   51 3073 3377 PO
+0 sg
+  51   51 3073 3377 FO
+c28
+  51   51 3027 3413 PO
+0 sg
+  51   51 3027 3413 FO
+c29
+  51   51 2981 3471 PO
+0 sg
+  51   51 2981 3471 FO
+c30
+  51   51 2938 3516 PO
+0 sg
+  51   51 2938 3516 FO
+c31
+  51   51 2837 3569 PO
+0 sg
+  51   51 2837 3569 FO
+c32
+  51   51 2755 3605 PO
+0 sg
+  51   51 2755 3605 FO
+c33
+  51   51 2692 3643 PO
+0 sg
+  51   51 2692 3643 FO
+c34
+  51   51 2648 3681 PO
+0 sg
+  51   51 2648 3681 FO
+c35
+  51   51 2558 3733 PO
+0 sg
+  51   51 2558 3733 FO
+c36
+  51   51 2464 3800 PO
+0 sg
+  51   51 2464 3800 FO
+c37
+  51   51 2373 3858 PO
+0 sg
+  51   51 2373 3858 FO
+c38
+  51   51 2307 3911 PO
+0 sg
+  51   51 2307 3911 FO
+c39
+  51   51 2235 3973 PO
+0 sg
+  51   51 2235 3973 FO
+c40
+  51   51 2125 4035 PO
+0 sg
+  51   51 2125 4035 FO
+c41
+  51   51 1995 4099 PO
+0 sg
+  51   51 1995 4099 FO
+c42
+  51   51 1858 4163 PO
+0 sg
+  51   51 1858 4163 FO
+c43
+  51   51 1752 4198 PO
+0 sg
+  51   51 1752 4198 FO
+c44
+  51   51 1697 4216 PO
+0 sg
+  51   51 1697 4216 FO
+c45
+  51   51 1660 4236 PO
+0 sg
+  51   51 1660 4236 FO
+c46
+  51   51 1629 4268 PO
+0 sg
+  51   51 1629 4268 FO
+c47
+  51   51 1585 4307 PO
+0 sg
+  51   51 1585 4307 FO
+c48
+  51   51 1537 4343 PO
+0 sg
+  51   51 1537 4343 FO
+c49
+  51   51 1476 4373 PO
+0 sg
+  51   51 1476 4373 FO
+c50
+  51   51 1406 4399 PO
+0 sg
+  51   51 1406 4399 FO
+c51
+  51   51 1331 4424 PO
+0 sg
+  51   51 1331 4424 FO
+c52
+  51   51 1264 4446 PO
+0 sg
+  51   51 1264 4446 FO
+c53
+  51   51 1207 4467 PO
+0 sg
+  51   51 1207 4467 FO
+c54
+  51   51 1159 4486 PO
+0 sg
+  51   51 1159 4486 FO
+c55
+  51   51 1107 4502 PO
+0 sg
+  51   51 1107 4502 FO
+c56
+  51   51 1060 4518 PO
+0 sg
+  51   51 1060 4518 FO
+c57
+  51   51 1019 4529 PO
+0 sg
+  51   51 1019 4529 FO
+c58
+  51   51  987 4536 PO
+0 sg
+  51   51  987 4536 FO
+c59
+  51   51  964 4546 PO
+0 sg
+  51   51  964 4546 FO
+c60
+  51   51  946 4555 PO
+0 sg
+  51   51  946 4555 FO
+c61
+  51   51  933 4563 PO
+0 sg
+  51   51  933 4563 FO
+c62
+  51   51  923 4573 PO
+0 sg
+  51   51  923 4573 FO
+c63
+  51   51  912 4581 PO
+0 sg
+  51   51  912 4581 FO
+c64
+  51   51  905 4590 PO
+0 sg
+  51   51  905 4590 FO
+c65
+  51   51  901 4593 PO
+0 sg
+  51   51  901 4593 FO
+c66
+  51   51  900 4599 PO
+0 sg
+  51   51  900 4599 FO
+c67
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c68
+  51   51  899 4611 PO
+0 sg
+  51   51  899 4611 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5166  775 PO
+0 sg
+  51   51 5166  775 FO
+c9
+  51   51 5016  804 PO
+0 sg
+  51   51 5016  804 FO
+c10
+  51   51 3774 1049 PO
+0 sg
+  51   51 3774 1049 FO
+c11
+  51   51 3731 1278 PO
+0 sg
+  51   51 3731 1278 FO
+c12
+  51   51 4040 1534 PO
+0 sg
+  51   51 4040 1534 FO
+c13
+  51   51 4058 1809 PO
+0 sg
+  51   51 4058 1809 FO
+c14
+  51   51 3942 2113 PO
+0 sg
+  51   51 3942 2113 FO
+c15
+  51   51 3802 2368 PO
+0 sg
+  51   51 3802 2368 FO
+c16
+  51   51 3706 2564 PO
+0 sg
+  51   51 3706 2564 FO
+c17
+  51   51 3490 2783 PO
+0 sg
+  51   51 3490 2783 FO
+c18
+  51   51 3297 3009 PO
+0 sg
+  51   51 3297 3009 FO
+c19
+  51   51 3085 3256 PO
+0 sg
+  51   51 3085 3256 FO
+c20
+  51   51 2892 3465 PO
+0 sg
+  51   51 2892 3465 FO
+c21
+  51   51 2739 3623 PO
+0 sg
+  51   51 2739 3623 FO
+c22
+  51   51 2594 3750 PO
+0 sg
+  51   51 2594 3750 FO
+c23
+  51   51 2479 3841 PO
+0 sg
+  51   51 2479 3841 FO
+c24
+  51   51 2326 3907 PO
+0 sg
+  51   51 2326 3907 FO
+c25
+  51   51 2267 3950 PO
+0 sg
+  51   51 2267 3950 FO
+c26
+  51   51 2268 3972 PO
+0 sg
+  51   51 2268 3972 FO
+c27
+  51   51 2344 3944 PO
+0 sg
+  51   51 2344 3944 FO
+c28
+  51   51 2319 3957 PO
+0 sg
+  51   51 2319 3957 FO
+c29
+  51   51 2354 3924 PO
+0 sg
+  51   51 2354 3924 FO
+c30
+  51   51 2461 3868 PO
+0 sg
+  51   51 2461 3868 FO
+c31
+  51   51 2611 3820 PO
+0 sg
+  51   51 2611 3820 FO
+c32
+  51   51 2703 3815 PO
+0 sg
+  51   51 2703 3815 FO
+c33
+  51   51 2582 3863 PO
+0 sg
+  51   51 2582 3863 FO
+c34
+  51   51 2420 3912 PO
+0 sg
+  51   51 2420 3912 FO
+c35
+  51   51 2299 3957 PO
+0 sg
+  51   51 2299 3957 FO
+c36
+  51   51 2167 4019 PO
+0 sg
+  51   51 2167 4019 FO
+c37
+  51   51 1998 4097 PO
+0 sg
+  51   51 1998 4097 FO
+c38
+  51   51 1877 4154 PO
+0 sg
+  51   51 1877 4154 FO
+c39
+  51   51 1795 4195 PO
+0 sg
+  51   51 1795 4195 FO
+c40
+  51   51 1715 4233 PO
+0 sg
+  51   51 1715 4233 FO
+c41
+  51   51 1624 4265 PO
+0 sg
+  51   51 1624 4265 FO
+c42
+  51   51 1539 4299 PO
+0 sg
+  51   51 1539 4299 FO
+c43
+  51   51 1476 4323 PO
+0 sg
+  51   51 1476 4323 FO
+c44
+  51   51 1435 4337 PO
+0 sg
+  51   51 1435 4337 FO
+c45
+  51   51 1411 4343 PO
+0 sg
+  51   51 1411 4343 FO
+c46
+  51   51 1390 4352 PO
+0 sg
+  51   51 1390 4352 FO
+c47
+  51   51 1358 4367 PO
+0 sg
+  51   51 1358 4367 FO
+c48
+  51   51 1314 4383 PO
+0 sg
+  51   51 1314 4383 FO
+c49
+  51   51 1260 4401 PO
+0 sg
+  51   51 1260 4401 FO
+c50
+  51   51 1210 4423 PO
+0 sg
+  51   51 1210 4423 FO
+c51
+  51   51 1156 4441 PO
+0 sg
+  51   51 1156 4441 FO
+c52
+  51   51 1107 4457 PO
+0 sg
+  51   51 1107 4457 FO
+c53
+  51   51 1060 4478 PO
+0 sg
+  51   51 1060 4478 FO
+c54
+  51   51 1023 4495 PO
+0 sg
+  51   51 1023 4495 FO
+c55
+  51   51  992 4510 PO
+0 sg
+  51   51  992 4510 FO
+c56
+  51   51  967 4524 PO
+0 sg
+  51   51  967 4524 FO
+c57
+  51   51  946 4535 PO
+0 sg
+  51   51  946 4535 FO
+c58
+  51   51  931 4545 PO
+0 sg
+  51   51  931 4545 FO
+c59
+  51   51  920 4554 PO
+0 sg
+  51   51  920 4554 FO
+c60
+  51   51  913 4567 PO
+0 sg
+  51   51  913 4567 FO
+c61
+  51   51  907 4572 PO
+0 sg
+  51   51  907 4572 FO
+c62
+  51   51  903 4579 PO
+0 sg
+  51   51  903 4579 FO
+c63
+  51   51  901 4587 PO
+0 sg
+  51   51  901 4587 FO
+c64
+  51   51  900 4596 PO
+0 sg
+  51   51  900 4596 FO
+c65
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c66
+  51   51  899 4602 PO
+0 sg
+  51   51  899 4602 FO
+c67
+  51   51  899 4605 PO
+0 sg
+  51   51  899 4605 FO
+c68
+  51   51  899 4589 PO
+0 sg
+  51   51  899 4589 FO
+c69
+  51   51  899 4612 PO
+0 sg
+  51   51  899 4612 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 3784  823 PO
+0 sg
+  51   51 3784  823 FO
+c9
+  51   51 3339  955 PO
+0 sg
+  51   51 3339  955 FO
+c10
+  51   51 3741 1117 PO
+0 sg
+  51   51 3741 1117 FO
+c11
+  51   51 4351 1327 PO
+0 sg
+  51   51 4351 1327 FO
+c12
+  51   51 4539 1516 PO
+0 sg
+  51   51 4539 1516 FO
+c13
+  51   51 4620 1718 PO
+0 sg
+  51   51 4620 1718 FO
+c14
+  51   51 4448 1963 PO
+0 sg
+  51   51 4448 1963 FO
+c15
+  51   51 4166 2196 PO
+0 sg
+  51   51 4166 2196 FO
+c16
+  51   51 3870 2436 PO
+0 sg
+  51   51 3870 2436 FO
+c17
+  51   51 3628 2632 PO
+0 sg
+  51   51 3628 2632 FO
+c18
+  51   51 3449 2798 PO
+0 sg
+  51   51 3449 2798 FO
+c19
+  51   51 3222 2948 PO
+0 sg
+  51   51 3222 2948 FO
+c20
+  51   51 2985 3137 PO
+0 sg
+  51   51 2985 3137 FO
+c21
+  51   51 2785 3303 PO
+0 sg
+  51   51 2785 3303 FO
+c22
+  51   51 2608 3420 PO
+0 sg
+  51   51 2608 3420 FO
+c23
+  51   51 2476 3531 PO
+0 sg
+  51   51 2476 3531 FO
+c24
+  51   51 2328 3642 PO
+0 sg
+  51   51 2328 3642 FO
+c25
+  51   51 2191 3766 PO
+0 sg
+  51   51 2191 3766 FO
+c26
+  51   51 2110 3867 PO
+0 sg
+  51   51 2110 3867 FO
+c27
+  51   51 2092 3935 PO
+0 sg
+  51   51 2092 3935 FO
+c28
+  51   51 2127 3978 PO
+0 sg
+  51   51 2127 3978 FO
+c29
+  51   51 2134 4023 PO
+0 sg
+  51   51 2134 4023 FO
+c30
+  51   51 2121 4060 PO
+0 sg
+  51   51 2121 4060 FO
+c31
+  51   51 2136 4071 PO
+0 sg
+  51   51 2136 4071 FO
+c32
+  51   51 2207 4049 PO
+0 sg
+  51   51 2207 4049 FO
+c33
+  51   51 2264 4034 PO
+0 sg
+  51   51 2264 4034 FO
+c34
+  51   51 2244 4053 PO
+0 sg
+  51   51 2244 4053 FO
+c35
+  51   51 2213 4061 PO
+0 sg
+  51   51 2213 4061 FO
+c36
+  51   51 2189 4071 PO
+0 sg
+  51   51 2189 4071 FO
+c37
+  51   51 2183 4096 PO
+0 sg
+  51   51 2183 4096 FO
+c38
+  51   51 2161 4133 PO
+0 sg
+  51   51 2161 4133 FO
+c39
+  51   51 2089 4165 PO
+0 sg
+  51   51 2089 4165 FO
+c40
+  51   51 2001 4199 PO
+0 sg
+  51   51 2001 4199 FO
+c41
+  51   51 1907 4232 PO
+0 sg
+  51   51 1907 4232 FO
+c42
+  51   51 1819 4255 PO
+0 sg
+  51   51 1819 4255 FO
+c43
+  51   51 1751 4273 PO
+0 sg
+  51   51 1751 4273 FO
+c44
+  51   51 1714 4287 PO
+0 sg
+  51   51 1714 4287 FO
+c45
+  51   51 1670 4309 PO
+0 sg
+  51   51 1670 4309 FO
+c46
+  51   51 1622 4328 PO
+0 sg
+  51   51 1622 4328 FO
+c47
+  51   51 1555 4342 PO
+0 sg
+  51   51 1555 4342 FO
+c48
+  51   51 1471 4358 PO
+0 sg
+  51   51 1471 4358 FO
+c49
+  51   51 1384 4380 PO
+0 sg
+  51   51 1384 4380 FO
+c50
+  51   51 1299 4411 PO
+0 sg
+  51   51 1299 4411 FO
+c51
+  51   51 1217 4439 PO
+0 sg
+  51   51 1217 4439 FO
+c52
+  51   51 1143 4460 PO
+0 sg
+  51   51 1143 4460 FO
+c53
+  51   51 1069 4487 PO
+0 sg
+  51   51 1069 4487 FO
+c54
+  51   51 1016 4512 PO
+0 sg
+  51   51 1016 4512 FO
+c55
+  51   51  979 4529 PO
+0 sg
+  51   51  979 4529 FO
+c56
+  51   51  954 4537 PO
+0 sg
+  51   51  954 4537 FO
+c57
+  51   51  942 4543 PO
+0 sg
+  51   51  942 4543 FO
+c58
+  51   51  937 4546 PO
+0 sg
+  51   51  937 4546 FO
+c59
+  51   51  933 4551 PO
+0 sg
+  51   51  933 4551 FO
+c60
+  51   51  927 4555 PO
+0 sg
+  51   51  927 4555 FO
+c61
+  51   51  923 4562 PO
+0 sg
+  51   51  923 4562 FO
+c62
+  51   51  917 4566 PO
+0 sg
+  51   51  917 4566 FO
+c63
+  51   51  914 4573 PO
+0 sg
+  51   51  914 4573 FO
+c64
+  51   51  910 4584 PO
+0 sg
+  51   51  910 4584 FO
+c65
+  51   51  906 4592 PO
+0 sg
+  51   51  906 4592 FO
+c66
+  51   51  902 4598 PO
+0 sg
+  51   51  902 4598 FO
+c67
+  51   51  900 4599 PO
+0 sg
+  51   51  900 4599 FO
+c68
+  51   51  899 4602 PO
+0 sg
+  51   51  899 4602 FO
+c69
+  51   51  899 4606 PO
+0 sg
+  51   51  899 4606 FO
+c70
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4935  777 PO
+0 sg
+  51   51 4935  777 FO
+c9
+  51   51 4036  880 PO
+0 sg
+  51   51 4036  880 FO
+c10
+  51   51 3454 1126 PO
+0 sg
+  51   51 3454 1126 FO
+c11
+  51   51 3333 1556 PO
+0 sg
+  51   51 3333 1556 FO
+c12
+  51   51 3035 2125 PO
+0 sg
+  51   51 3035 2125 FO
+c13
+  51   51 3031 2552 PO
+0 sg
+  51   51 3031 2552 FO
+c14
+  51   51 3056 2869 PO
+0 sg
+  51   51 3056 2869 FO
+c15
+  51   51 3088 3028 PO
+0 sg
+  51   51 3088 3028 FO
+c16
+  51   51 3162 3099 PO
+0 sg
+  51   51 3162 3099 FO
+c17
+  51   51 3086 3266 PO
+0 sg
+  51   51 3086 3266 FO
+c18
+  51   51 3044 3442 PO
+0 sg
+  51   51 3044 3442 FO
+c19
+  51   51 3007 3590 PO
+0 sg
+  51   51 3007 3590 FO
+c20
+  51   51 2922 3721 PO
+0 sg
+  51   51 2922 3721 FO
+c21
+  51   51 2830 3843 PO
+0 sg
+  51   51 2830 3843 FO
+c22
+  51   51 2775 3931 PO
+0 sg
+  51   51 2775 3931 FO
+c23
+  51   51 2720 3984 PO
+0 sg
+  51   51 2720 3984 FO
+c24
+  51   51 2574 4038 PO
+0 sg
+  51   51 2574 4038 FO
+c25
+  51   51 2389 4099 PO
+0 sg
+  51   51 2389 4099 FO
+c26
+  51   51 2197 4167 PO
+0 sg
+  51   51 2197 4167 FO
+c27
+  51   51 2054 4217 PO
+0 sg
+  51   51 2054 4217 FO
+c28
+  51   51 1940 4248 PO
+0 sg
+  51   51 1940 4248 FO
+c29
+  51   51 1827 4279 PO
+0 sg
+  51   51 1827 4279 FO
+c30
+  51   51 1762 4297 PO
+0 sg
+  51   51 1762 4297 FO
+c31
+  51   51 1722 4303 PO
+0 sg
+  51   51 1722 4303 FO
+c32
+  51   51 1701 4302 PO
+0 sg
+  51   51 1701 4302 FO
+c33
+  51   51 1700 4297 PO
+0 sg
+  51   51 1700 4297 FO
+c34
+  51   51 1684 4296 PO
+0 sg
+  51   51 1684 4296 FO
+c35
+  51   51 1636 4306 PO
+0 sg
+  51   51 1636 4306 FO
+c36
+  51   51 1574 4319 PO
+0 sg
+  51   51 1574 4319 FO
+c37
+  51   51 1518 4334 PO
+0 sg
+  51   51 1518 4334 FO
+c38
+  51   51 1463 4342 PO
+0 sg
+  51   51 1463 4342 FO
+c39
+  51   51 1451 4321 PO
+0 sg
+  51   51 1451 4321 FO
+c40
+  51   51 1440 4310 PO
+0 sg
+  51   51 1440 4310 FO
+c41
+  51   51 1462 4289 PO
+0 sg
+  51   51 1462 4289 FO
+c42
+  51   51 1488 4282 PO
+0 sg
+  51   51 1488 4282 FO
+c43
+  51   51 1480 4290 PO
+0 sg
+  51   51 1480 4290 FO
+c44
+  51   51 1439 4309 PO
+0 sg
+  51   51 1439 4309 FO
+c45
+  51   51 1364 4344 PO
+0 sg
+  51   51 1364 4344 FO
+c46
+  51   51 1290 4368 PO
+0 sg
+  51   51 1290 4368 FO
+c47
+  51   51 1238 4383 PO
+0 sg
+  51   51 1238 4383 FO
+c48
+  51   51 1196 4404 PO
+0 sg
+  51   51 1196 4404 FO
+c49
+  51   51 1147 4425 PO
+0 sg
+  51   51 1147 4425 FO
+c50
+  51   51 1100 4444 PO
+0 sg
+  51   51 1100 4444 FO
+c51
+  51   51 1062 4464 PO
+0 sg
+  51   51 1062 4464 FO
+c52
+  51   51 1032 4484 PO
+0 sg
+  51   51 1032 4484 FO
+c53
+  51   51 1003 4507 PO
+0 sg
+  51   51 1003 4507 FO
+c54
+  51   51  981 4523 PO
+0 sg
+  51   51  981 4523 FO
+c55
+  51   51  959 4537 PO
+0 sg
+  51   51  959 4537 FO
+c56
+  51   51  943 4546 PO
+0 sg
+  51   51  943 4546 FO
+c57
+  51   51  931 4554 PO
+0 sg
+  51   51  931 4554 FO
+c58
+  51   51  921 4558 PO
+0 sg
+  51   51  921 4558 FO
+c59
+  51   51  914 4560 PO
+0 sg
+  51   51  914 4560 FO
+c60
+  51   51  909 4563 PO
+0 sg
+  51   51  909 4563 FO
+c61
+  51   51  905 4570 PO
+0 sg
+  51   51  905 4570 FO
+c62
+  51   51  902 4571 PO
+0 sg
+  51   51  902 4571 FO
+c63
+  51   51  900 4570 PO
+0 sg
+  51   51  900 4570 FO
+c64
+  51   51  900 4578 PO
+0 sg
+  51   51  900 4578 FO
+c65
+  51   51  899 4586 PO
+0 sg
+  51   51  899 4586 FO
+c66
+  51   51  899 4590 PO
+0 sg
+  51   51  899 4590 FO
+c67
+  51   51  899 4597 PO
+0 sg
+  51   51  899 4597 FO
+c68
+  51   51  899 4603 PO
+0 sg
+  51   51  899 4603 FO
+c69
+  51   51  899 4606 PO
+0 sg
+  51   51  899 4606 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4735  782 PO
+0 sg
+  51   51 4735  782 FO
+c9
+  51   51 4548  832 PO
+0 sg
+  51   51 4548  832 FO
+c10
+  51   51 4036 1056 PO
+0 sg
+  51   51 4036 1056 FO
+c11
+  51   51 3391 1419 PO
+0 sg
+  51   51 3391 1419 FO
+c12
+  51   51 3105 1862 PO
+0 sg
+  51   51 3105 1862 FO
+c13
+  51   51 2888 2352 PO
+0 sg
+  51   51 2888 2352 FO
+c14
+  51   51 2857 2711 PO
+0 sg
+  51   51 2857 2711 FO
+c15
+  51   51 2894 2976 PO
+0 sg
+  51   51 2894 2976 FO
+c16
+  51   51 2915 3169 PO
+0 sg
+  51   51 2915 3169 FO
+c17
+  51   51 2946 3286 PO
+0 sg
+  51   51 2946 3286 FO
+c18
+  51   51 2962 3359 PO
+0 sg
+  51   51 2962 3359 FO
+c19
+  51   51 3064 3450 PO
+0 sg
+  51   51 3064 3450 FO
+c20
+  51   51 3149 3520 PO
+0 sg
+  51   51 3149 3520 FO
+c21
+  51   51 3177 3569 PO
+0 sg
+  51   51 3177 3569 FO
+c22
+  51   51 3191 3594 PO
+0 sg
+  51   51 3191 3594 FO
+c23
+  51   51 3175 3627 PO
+0 sg
+  51   51 3175 3627 FO
+c24
+  51   51 3099 3681 PO
+0 sg
+  51   51 3099 3681 FO
+c25
+  51   51 2996 3736 PO
+0 sg
+  51   51 2996 3736 FO
+c26
+  51   51 2823 3806 PO
+0 sg
+  51   51 2823 3806 FO
+c27
+  51   51 2650 3874 PO
+0 sg
+  51   51 2650 3874 FO
+c28
+  51   51 2469 3940 PO
+0 sg
+  51   51 2469 3940 FO
+c29
+  51   51 2306 3998 PO
+0 sg
+  51   51 2306 3998 FO
+c30
+  51   51 2173 4051 PO
+0 sg
+  51   51 2173 4051 FO
+c31
+  51   51 2085 4092 PO
+0 sg
+  51   51 2085 4092 FO
+c32
+  51   51 2061 4109 PO
+0 sg
+  51   51 2061 4109 FO
+c33
+  51   51 2027 4116 PO
+0 sg
+  51   51 2027 4116 FO
+c34
+  51   51 1989 4127 PO
+0 sg
+  51   51 1989 4127 FO
+c35
+  51   51 1978 4125 PO
+0 sg
+  51   51 1978 4125 FO
+c36
+  51   51 1979 4114 PO
+0 sg
+  51   51 1979 4114 FO
+c37
+  51   51 1980 4115 PO
+0 sg
+  51   51 1980 4115 FO
+c38
+  51   51 1983 4126 PO
+0 sg
+  51   51 1983 4126 FO
+c39
+  51   51 1919 4154 PO
+0 sg
+  51   51 1919 4154 FO
+c40
+  51   51 1823 4180 PO
+0 sg
+  51   51 1823 4180 FO
+c41
+  51   51 1715 4209 PO
+0 sg
+  51   51 1715 4209 FO
+c42
+  51   51 1624 4242 PO
+0 sg
+  51   51 1624 4242 FO
+c43
+  51   51 1556 4284 PO
+0 sg
+  51   51 1556 4284 FO
+c44
+  51   51 1488 4320 PO
+0 sg
+  51   51 1488 4320 FO
+c45
+  51   51 1400 4353 PO
+0 sg
+  51   51 1400 4353 FO
+c46
+  51   51 1295 4383 PO
+0 sg
+  51   51 1295 4383 FO
+c47
+  51   51 1198 4411 PO
+0 sg
+  51   51 1198 4411 FO
+c48
+  51   51 1125 4434 PO
+0 sg
+  51   51 1125 4434 FO
+c49
+  51   51 1074 4458 PO
+0 sg
+  51   51 1074 4458 FO
+c50
+  51   51 1043 4477 PO
+0 sg
+  51   51 1043 4477 FO
+c51
+  51   51 1026 4487 PO
+0 sg
+  51   51 1026 4487 FO
+c52
+  51   51 1015 4488 PO
+0 sg
+  51   51 1015 4488 FO
+c53
+  51   51 1017 4492 PO
+0 sg
+  51   51 1017 4492 FO
+c54
+  51   51 1015 4502 PO
+0 sg
+  51   51 1015 4502 FO
+c55
+  51   51 1002 4507 PO
+0 sg
+  51   51 1002 4507 FO
+c56
+  51   51  987 4514 PO
+0 sg
+  51   51  987 4514 FO
+c57
+  51   51  971 4521 PO
+0 sg
+  51   51  971 4521 FO
+c58
+  51   51  958 4532 PO
+0 sg
+  51   51  958 4532 FO
+c59
+  51   51  944 4546 PO
+0 sg
+  51   51  944 4546 FO
+c60
+  51   51  932 4560 PO
+0 sg
+  51   51  932 4560 FO
+c61
+  51   51  920 4571 PO
+0 sg
+  51   51  920 4571 FO
+c62
+  51   51  911 4580 PO
+0 sg
+  51   51  911 4580 FO
+c63
+  51   51  905 4588 PO
+0 sg
+  51   51  905 4588 FO
+c64
+  51   51  901 4595 PO
+0 sg
+  51   51  901 4595 FO
+c65
+  51   51  899 4593 PO
+0 sg
+  51   51  899 4593 FO
+c66
+  51   51  899 4598 PO
+0 sg
+  51   51  899 4598 FO
+c67
+  51   51  899 4599 PO
+0 sg
+  51   51  899 4599 FO
+c68
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5456  755 PO
+0 sg
+  51   51 5456  755 FO
+c9
+  51   51 4672  816 PO
+0 sg
+  51   51 4672  816 FO
+c10
+  51   51 3767 1014 PO
+0 sg
+  51   51 3767 1014 FO
+c11
+  51   51 3265 1384 PO
+0 sg
+  51   51 3265 1384 FO
+c12
+  51   51 3223 1797 PO
+0 sg
+  51   51 3223 1797 FO
+c13
+  51   51 3206 2216 PO
+0 sg
+  51   51 3206 2216 FO
+c14
+  51   51 3129 2674 PO
+0 sg
+  51   51 3129 2674 FO
+c15
+  51   51 2983 3019 PO
+0 sg
+  51   51 2983 3019 FO
+c16
+  51   51 2774 3253 PO
+0 sg
+  51   51 2774 3253 FO
+c17
+  51   51 2615 3467 PO
+0 sg
+  51   51 2615 3467 FO
+c18
+  51   51 2493 3611 PO
+0 sg
+  51   51 2493 3611 FO
+c19
+  51   51 2357 3708 PO
+0 sg
+  51   51 2357 3708 FO
+c20
+  51   51 2198 3761 PO
+0 sg
+  51   51 2198 3761 FO
+c21
+  51   51 2105 3828 PO
+0 sg
+  51   51 2105 3828 FO
+c22
+  51   51 2050 3920 PO
+0 sg
+  51   51 2050 3920 FO
+c23
+  51   51 2002 3995 PO
+0 sg
+  51   51 2002 3995 FO
+c24
+  51   51 1969 4044 PO
+0 sg
+  51   51 1969 4044 FO
+c25
+  51   51 1953 4057 PO
+0 sg
+  51   51 1953 4057 FO
+c26
+  51   51 1950 4045 PO
+0 sg
+  51   51 1950 4045 FO
+c27
+  51   51 1969 4042 PO
+0 sg
+  51   51 1969 4042 FO
+c28
+  51   51 1957 4056 PO
+0 sg
+  51   51 1957 4056 FO
+c29
+  51   51 1927 4073 PO
+0 sg
+  51   51 1927 4073 FO
+c30
+  51   51 1902 4101 PO
+0 sg
+  51   51 1902 4101 FO
+c31
+  51   51 1870 4119 PO
+0 sg
+  51   51 1870 4119 FO
+c32
+  51   51 1813 4146 PO
+0 sg
+  51   51 1813 4146 FO
+c33
+  51   51 1736 4178 PO
+0 sg
+  51   51 1736 4178 FO
+c34
+  51   51 1687 4215 PO
+0 sg
+  51   51 1687 4215 FO
+c35
+  51   51 1657 4247 PO
+0 sg
+  51   51 1657 4247 FO
+c36
+  51   51 1622 4270 PO
+0 sg
+  51   51 1622 4270 FO
+c37
+  51   51 1558 4280 PO
+0 sg
+  51   51 1558 4280 FO
+c38
+  51   51 1489 4287 PO
+0 sg
+  51   51 1489 4287 FO
+c39
+  51   51 1409 4306 PO
+0 sg
+  51   51 1409 4306 FO
+c40
+  51   51 1340 4326 PO
+0 sg
+  51   51 1340 4326 FO
+c41
+  51   51 1293 4342 PO
+0 sg
+  51   51 1293 4342 FO
+c42
+  51   51 1264 4355 PO
+0 sg
+  51   51 1264 4355 FO
+c43
+  51   51 1225 4370 PO
+0 sg
+  51   51 1225 4370 FO
+c44
+  51   51 1182 4392 PO
+0 sg
+  51   51 1182 4392 FO
+c45
+  51   51 1146 4407 PO
+0 sg
+  51   51 1146 4407 FO
+c46
+  51   51 1112 4424 PO
+0 sg
+  51   51 1112 4424 FO
+c47
+  51   51 1090 4423 PO
+0 sg
+  51   51 1090 4423 FO
+c48
+  51   51 1085 4422 PO
+0 sg
+  51   51 1085 4422 FO
+c49
+  51   51 1078 4433 PO
+0 sg
+  51   51 1078 4433 FO
+c50
+  51   51 1071 4448 PO
+0 sg
+  51   51 1071 4448 FO
+c51
+  51   51 1053 4467 PO
+0 sg
+  51   51 1053 4467 FO
+c52
+  51   51 1031 4488 PO
+0 sg
+  51   51 1031 4488 FO
+c53
+  51   51 1012 4505 PO
+0 sg
+  51   51 1012 4505 FO
+c54
+  51   51  997 4518 PO
+0 sg
+  51   51  997 4518 FO
+c55
+  51   51  983 4528 PO
+0 sg
+  51   51  983 4528 FO
+c56
+  51   51  966 4539 PO
+0 sg
+  51   51  966 4539 FO
+c57
+  51   51  949 4550 PO
+0 sg
+  51   51  949 4550 FO
+c58
+  51   51  934 4559 PO
+0 sg
+  51   51  934 4559 FO
+c59
+  51   51  920 4566 PO
+0 sg
+  51   51  920 4566 FO
+c60
+  51   51  912 4567 PO
+0 sg
+  51   51  912 4567 FO
+c61
+  51   51  907 4568 PO
+0 sg
+  51   51  907 4568 FO
+c62
+  51   51  905 4578 PO
+0 sg
+  51   51  905 4578 FO
+c63
+  51   51  903 4588 PO
+0 sg
+  51   51  903 4588 FO
+c64
+  51   51  901 4592 PO
+0 sg
+  51   51  901 4592 FO
+c65
+  51   51  899 4593 PO
+0 sg
+  51   51  899 4593 FO
+c66
+  51   51  899 4592 PO
+0 sg
+  51   51  899 4592 FO
+c67
+  51   51  899 4598 PO
+0 sg
+  51   51  899 4598 FO
+c68
+  51   51  899 4610 PO
+0 sg
+  51   51  899 4610 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5196  763 PO
+0 sg
+  51   51 5196  763 FO
+c9
+  51   51 4569  793 PO
+0 sg
+  51   51 4569  793 FO
+c10
+  51   51 4173  955 PO
+0 sg
+  51   51 4173  955 FO
+c11
+  51   51 4149 1170 PO
+0 sg
+  51   51 4149 1170 FO
+c12
+  51   51 3988 1486 PO
+0 sg
+  51   51 3988 1486 FO
+c13
+  51   51 4044 1779 PO
+0 sg
+  51   51 4044 1779 FO
+c14
+  51   51 3957 2073 PO
+0 sg
+  51   51 3957 2073 FO
+c15
+  51   51 3741 2422 PO
+0 sg
+  51   51 3741 2422 FO
+c16
+  51   51 3594 2744 PO
+0 sg
+  51   51 3594 2744 FO
+c17
+  51   51 3543 2994 PO
+0 sg
+  51   51 3543 2994 FO
+c18
+  51   51 3524 3158 PO
+0 sg
+  51   51 3524 3158 FO
+c19
+  51   51 3574 3242 PO
+0 sg
+  51   51 3574 3242 FO
+c20
+  51   51 3754 3271 PO
+0 sg
+  51   51 3754 3271 FO
+c21
+  51   51 3887 3260 PO
+0 sg
+  51   51 3887 3260 FO
+c22
+  51   51 3872 3274 PO
+0 sg
+  51   51 3872 3274 FO
+c23
+  51   51 3727 3320 PO
+0 sg
+  51   51 3727 3320 FO
+c24
+  51   51 3591 3370 PO
+0 sg
+  51   51 3591 3370 FO
+c25
+  51   51 3377 3456 PO
+0 sg
+  51   51 3377 3456 FO
+c26
+  51   51 3142 3563 PO
+0 sg
+  51   51 3142 3563 FO
+c27
+  51   51 2932 3670 PO
+0 sg
+  51   51 2932 3670 FO
+c28
+  51   51 2801 3722 PO
+0 sg
+  51   51 2801 3722 FO
+c29
+  51   51 2764 3747 PO
+0 sg
+  51   51 2764 3747 FO
+c30
+  51   51 2764 3765 PO
+0 sg
+  51   51 2764 3765 FO
+c31
+  51   51 2756 3782 PO
+0 sg
+  51   51 2756 3782 FO
+c32
+  51   51 2677 3815 PO
+0 sg
+  51   51 2677 3815 FO
+c33
+  51   51 2601 3853 PO
+0 sg
+  51   51 2601 3853 FO
+c34
+  51   51 2530 3897 PO
+0 sg
+  51   51 2530 3897 FO
+c35
+  51   51 2451 3940 PO
+0 sg
+  51   51 2451 3940 FO
+c36
+  51   51 2312 3988 PO
+0 sg
+  51   51 2312 3988 FO
+c37
+  51   51 2165 4040 PO
+0 sg
+  51   51 2165 4040 FO
+c38
+  51   51 2011 4095 PO
+0 sg
+  51   51 2011 4095 FO
+c39
+  51   51 1897 4150 PO
+0 sg
+  51   51 1897 4150 FO
+c40
+  51   51 1806 4197 PO
+0 sg
+  51   51 1806 4197 FO
+c41
+  51   51 1710 4230 PO
+0 sg
+  51   51 1710 4230 FO
+c42
+  51   51 1617 4258 PO
+0 sg
+  51   51 1617 4258 FO
+c43
+  51   51 1530 4282 PO
+0 sg
+  51   51 1530 4282 FO
+c44
+  51   51 1464 4310 PO
+0 sg
+  51   51 1464 4310 FO
+c45
+  51   51 1420 4330 PO
+0 sg
+  51   51 1420 4330 FO
+c46
+  51   51 1379 4351 PO
+0 sg
+  51   51 1379 4351 FO
+c47
+  51   51 1331 4380 PO
+0 sg
+  51   51 1331 4380 FO
+c48
+  51   51 1261 4409 PO
+0 sg
+  51   51 1261 4409 FO
+c49
+  51   51 1192 4431 PO
+0 sg
+  51   51 1192 4431 FO
+c50
+  51   51 1147 4446 PO
+0 sg
+  51   51 1147 4446 FO
+c51
+  51   51 1120 4454 PO
+0 sg
+  51   51 1120 4454 FO
+c52
+  51   51 1100 4458 PO
+0 sg
+  51   51 1100 4458 FO
+c53
+  51   51 1080 4466 PO
+0 sg
+  51   51 1080 4466 FO
+c54
+  51   51 1061 4485 PO
+0 sg
+  51   51 1061 4485 FO
+c55
+  51   51 1037 4506 PO
+0 sg
+  51   51 1037 4506 FO
+c56
+  51   51 1010 4526 PO
+0 sg
+  51   51 1010 4526 FO
+c57
+  51   51  981 4543 PO
+0 sg
+  51   51  981 4543 FO
+c58
+  51   51  952 4558 PO
+0 sg
+  51   51  952 4558 FO
+c59
+  51   51  929 4570 PO
+0 sg
+  51   51  929 4570 FO
+c60
+  51   51  914 4572 PO
+0 sg
+  51   51  914 4572 FO
+c61
+  51   51  907 4578 PO
+0 sg
+  51   51  907 4578 FO
+c62
+  51   51  903 4588 PO
+0 sg
+  51   51  903 4588 FO
+c63
+  51   51  902 4597 PO
+0 sg
+  51   51  902 4597 FO
+c64
+  51   51  900 4604 PO
+0 sg
+  51   51  900 4604 FO
+c65
+  51   51  899 4608 PO
+0 sg
+  51   51  899 4608 FO
+c66
+  51   51  899 4613 PO
+0 sg
+  51   51  899 4613 FO
+c67
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5342  764 PO
+0 sg
+  51   51 5342  764 FO
+c9
+  51   51 4391  837 PO
+0 sg
+  51   51 4391  837 FO
+c10
+  51   51 4055 1024 PO
+0 sg
+  51   51 4055 1024 FO
+c11
+  51   51 3947 1320 PO
+0 sg
+  51   51 3947 1320 FO
+c12
+  51   51 3764 1731 PO
+0 sg
+  51   51 3764 1731 FO
+c13
+  51   51 3542 2183 PO
+0 sg
+  51   51 3542 2183 FO
+c14
+  51   51 3425 2559 PO
+0 sg
+  51   51 3425 2559 FO
+c15
+  51   51 3332 2884 PO
+0 sg
+  51   51 3332 2884 FO
+c16
+  51   51 3214 3144 PO
+0 sg
+  51   51 3214 3144 FO
+c17
+  51   51 2995 3404 PO
+0 sg
+  51   51 2995 3404 FO
+c18
+  51   51 2845 3576 PO
+0 sg
+  51   51 2845 3576 FO
+c19
+  51   51 2745 3672 PO
+0 sg
+  51   51 2745 3672 FO
+c20
+  51   51 2679 3703 PO
+0 sg
+  51   51 2679 3703 FO
+c21
+  51   51 2695 3672 PO
+0 sg
+  51   51 2695 3672 FO
+c22
+  51   51 2711 3648 PO
+0 sg
+  51   51 2711 3648 FO
+c23
+  51   51 2744 3631 PO
+0 sg
+  51   51 2744 3631 FO
+c24
+  51   51 2799 3611 PO
+0 sg
+  51   51 2799 3611 FO
+c25
+  51   51 2839 3595 PO
+0 sg
+  51   51 2839 3595 FO
+c26
+  51   51 2900 3570 PO
+0 sg
+  51   51 2900 3570 FO
+c27
+  51   51 2952 3507 PO
+0 sg
+  51   51 2952 3507 FO
+c28
+  51   51 2867 3484 PO
+0 sg
+  51   51 2867 3484 FO
+c29
+  51   51 2637 3499 PO
+0 sg
+  51   51 2637 3499 FO
+c30
+  51   51 2483 3548 PO
+0 sg
+  51   51 2483 3548 FO
+c31
+  51   51 2318 3638 PO
+0 sg
+  51   51 2318 3638 FO
+c32
+  51   51 2167 3711 PO
+0 sg
+  51   51 2167 3711 FO
+c33
+  51   51 1975 3790 PO
+0 sg
+  51   51 1975 3790 FO
+c34
+  51   51 1840 3874 PO
+0 sg
+  51   51 1840 3874 FO
+c35
+  51   51 1796 3973 PO
+0 sg
+  51   51 1796 3973 FO
+c36
+  51   51 1767 4061 PO
+0 sg
+  51   51 1767 4061 FO
+c37
+  51   51 1716 4105 PO
+0 sg
+  51   51 1716 4105 FO
+c38
+  51   51 1633 4160 PO
+0 sg
+  51   51 1633 4160 FO
+c39
+  51   51 1527 4211 PO
+0 sg
+  51   51 1527 4211 FO
+c40
+  51   51 1451 4249 PO
+0 sg
+  51   51 1451 4249 FO
+c41
+  51   51 1401 4281 PO
+0 sg
+  51   51 1401 4281 FO
+c42
+  51   51 1351 4313 PO
+0 sg
+  51   51 1351 4313 FO
+c43
+  51   51 1303 4342 PO
+0 sg
+  51   51 1303 4342 FO
+c44
+  51   51 1263 4373 PO
+0 sg
+  51   51 1263 4373 FO
+c45
+  51   51 1219 4402 PO
+0 sg
+  51   51 1219 4402 FO
+c46
+  51   51 1173 4424 PO
+0 sg
+  51   51 1173 4424 FO
+c47
+  51   51 1128 4447 PO
+0 sg
+  51   51 1128 4447 FO
+c48
+  51   51 1091 4466 PO
+0 sg
+  51   51 1091 4466 FO
+c49
+  51   51 1056 4485 PO
+0 sg
+  51   51 1056 4485 FO
+c50
+  51   51 1023 4500 PO
+0 sg
+  51   51 1023 4500 FO
+c51
+  51   51  994 4513 PO
+0 sg
+  51   51  994 4513 FO
+c52
+  51   51  973 4518 PO
+0 sg
+  51   51  973 4518 FO
+c53
+  51   51  957 4521 PO
+0 sg
+  51   51  957 4521 FO
+c54
+  51   51  946 4519 PO
+0 sg
+  51   51  946 4519 FO
+c55
+  51   51  935 4518 PO
+0 sg
+  51   51  935 4518 FO
+c56
+  51   51  930 4522 PO
+0 sg
+  51   51  930 4522 FO
+c57
+  51   51  926 4530 PO
+0 sg
+  51   51  926 4530 FO
+c58
+  51   51  922 4541 PO
+0 sg
+  51   51  922 4541 FO
+c59
+  51   51  915 4546 PO
+0 sg
+  51   51  915 4546 FO
+c60
+  51   51  913 4547 PO
+0 sg
+  51   51  913 4547 FO
+c61
+  51   51  912 4559 PO
+0 sg
+  51   51  912 4559 FO
+c62
+  51   51  910 4570 PO
+0 sg
+  51   51  910 4570 FO
+c63
+  51   51  905 4579 PO
+0 sg
+  51   51  905 4579 FO
+c64
+  51   51  902 4589 PO
+0 sg
+  51   51  902 4589 FO
+c65
+  51   51  900 4595 PO
+0 sg
+  51   51  900 4595 FO
+c66
+  51   51  899 4596 PO
+0 sg
+  51   51  899 4596 FO
+c67
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c68
+  51   51  899 4602 PO
+0 sg
+  51   51  899 4602 FO
+c69
+  51   51  899 4613 PO
+0 sg
+  51   51  899 4613 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5616  758 PO
+0 sg
+  51   51 5616  758 FO
+c9
+  51   51 5432  775 PO
+0 sg
+  51   51 5432  775 FO
+c10
+  51   51 5249  906 PO
+0 sg
+  51   51 5249  906 FO
+c11
+  51   51 4829 1086 PO
+0 sg
+  51   51 4829 1086 FO
+c12
+  51   51 4377 1351 PO
+0 sg
+  51   51 4377 1351 FO
+c13
+  51   51 3861 1688 PO
+0 sg
+  51   51 3861 1688 FO
+c14
+  51   51 3504 2132 PO
+0 sg
+  51   51 3504 2132 FO
+c15
+  51   51 3450 2471 PO
+0 sg
+  51   51 3450 2471 FO
+c16
+  51   51 3448 2764 PO
+0 sg
+  51   51 3448 2764 FO
+c17
+  51   51 3499 2972 PO
+0 sg
+  51   51 3499 2972 FO
+c18
+  51   51 3592 3060 PO
+0 sg
+  51   51 3592 3060 FO
+c19
+  51   51 3677 3108 PO
+0 sg
+  51   51 3677 3108 FO
+c20
+  51   51 3759 3104 PO
+0 sg
+  51   51 3759 3104 FO
+c21
+  51   51 3684 3107 PO
+0 sg
+  51   51 3684 3107 FO
+c22
+  51   51 3555 3119 PO
+0 sg
+  51   51 3555 3119 FO
+c23
+  51   51 3426 3153 PO
+0 sg
+  51   51 3426 3153 FO
+c24
+  51   51 3350 3206 PO
+0 sg
+  51   51 3350 3206 FO
+c25
+  51   51 3297 3290 PO
+0 sg
+  51   51 3297 3290 FO
+c26
+  51   51 3328 3338 PO
+0 sg
+  51   51 3328 3338 FO
+c27
+  51   51 3347 3380 PO
+0 sg
+  51   51 3347 3380 FO
+c28
+  51   51 3421 3399 PO
+0 sg
+  51   51 3421 3399 FO
+c29
+  51   51 3393 3422 PO
+0 sg
+  51   51 3393 3422 FO
+c30
+  51   51 3247 3476 PO
+0 sg
+  51   51 3247 3476 FO
+c31
+  51   51 3017 3556 PO
+0 sg
+  51   51 3017 3556 FO
+c32
+  51   51 2884 3641 PO
+0 sg
+  51   51 2884 3641 FO
+c33
+  51   51 2743 3711 PO
+0 sg
+  51   51 2743 3711 FO
+c34
+  51   51 2635 3767 PO
+0 sg
+  51   51 2635 3767 FO
+c35
+  51   51 2535 3831 PO
+0 sg
+  51   51 2535 3831 FO
+c36
+  51   51 2412 3907 PO
+0 sg
+  51   51 2412 3907 FO
+c37
+  51   51 2304 3995 PO
+0 sg
+  51   51 2304 3995 FO
+c38
+  51   51 2188 4058 PO
+0 sg
+  51   51 2188 4058 FO
+c39
+  51   51 2060 4100 PO
+0 sg
+  51   51 2060 4100 FO
+c40
+  51   51 1955 4139 PO
+0 sg
+  51   51 1955 4139 FO
+c41
+  51   51 1849 4175 PO
+0 sg
+  51   51 1849 4175 FO
+c42
+  51   51 1773 4205 PO
+0 sg
+  51   51 1773 4205 FO
+c43
+  51   51 1713 4242 PO
+0 sg
+  51   51 1713 4242 FO
+c44
+  51   51 1638 4278 PO
+0 sg
+  51   51 1638 4278 FO
+c45
+  51   51 1536 4320 PO
+0 sg
+  51   51 1536 4320 FO
+c46
+  51   51 1422 4360 PO
+0 sg
+  51   51 1422 4360 FO
+c47
+  51   51 1326 4394 PO
+0 sg
+  51   51 1326 4394 FO
+c48
+  51   51 1241 4415 PO
+0 sg
+  51   51 1241 4415 FO
+c49
+  51   51 1171 4437 PO
+0 sg
+  51   51 1171 4437 FO
+c50
+  51   51 1116 4457 PO
+0 sg
+  51   51 1116 4457 FO
+c51
+  51   51 1074 4475 PO
+0 sg
+  51   51 1074 4475 FO
+c52
+  51   51 1038 4490 PO
+0 sg
+  51   51 1038 4490 FO
+c53
+  51   51 1003 4503 PO
+0 sg
+  51   51 1003 4503 FO
+c54
+  51   51  978 4514 PO
+0 sg
+  51   51  978 4514 FO
+c55
+  51   51  956 4525 PO
+0 sg
+  51   51  956 4525 FO
+c56
+  51   51  940 4534 PO
+0 sg
+  51   51  940 4534 FO
+c57
+  51   51  930 4542 PO
+0 sg
+  51   51  930 4542 FO
+c58
+  51   51  921 4551 PO
+0 sg
+  51   51  921 4551 FO
+c59
+  51   51  915 4561 PO
+0 sg
+  51   51  915 4561 FO
+c60
+  51   51  910 4571 PO
+0 sg
+  51   51  910 4571 FO
+c61
+  51   51  906 4578 PO
+0 sg
+  51   51  906 4578 FO
+c62
+  51   51  903 4586 PO
+0 sg
+  51   51  903 4586 FO
+c63
+  51   51  901 4593 PO
+0 sg
+  51   51  901 4593 FO
+c64
+  51   51  900 4593 PO
+0 sg
+  51   51  900 4593 FO
+c65
+  51   51  899 4597 PO
+0 sg
+  51   51  899 4597 FO
+c66
+  51   51  899 4598 PO
+0 sg
+  51   51  899 4598 FO
+c67
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c68
+  51   51  899 4605 PO
+0 sg
+  51   51  899 4605 FO
+c69
+  51   51  899 4612 PO
+0 sg
+  51   51  899 4612 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5372  767 PO
+0 sg
+  51   51 5372  767 FO
+c9
+  51   51 4878  804 PO
+0 sg
+  51   51 4878  804 FO
+c10
+  51   51 4098  912 PO
+0 sg
+  51   51 4098  912 FO
+c11
+  51   51 3697 1333 PO
+0 sg
+  51   51 3697 1333 FO
+c12
+  51   51 3677 1826 PO
+0 sg
+  51   51 3677 1826 FO
+c13
+  51   51 3617 2229 PO
+0 sg
+  51   51 3617 2229 FO
+c14
+  51   51 3572 2540 PO
+0 sg
+  51   51 3572 2540 FO
+c15
+  51   51 3614 2806 PO
+0 sg
+  51   51 3614 2806 FO
+c16
+  51   51 3535 3048 PO
+0 sg
+  51   51 3535 3048 FO
+c17
+  51   51 3500 3233 PO
+0 sg
+  51   51 3500 3233 FO
+c18
+  51   51 3413 3427 PO
+0 sg
+  51   51 3413 3427 FO
+c19
+  51   51 3340 3588 PO
+0 sg
+  51   51 3340 3588 FO
+c20
+  51   51 3314 3674 PO
+0 sg
+  51   51 3314 3674 FO
+c21
+  51   51 3255 3704 PO
+0 sg
+  51   51 3255 3704 FO
+c22
+  51   51 3244 3702 PO
+0 sg
+  51   51 3244 3702 FO
+c23
+  51   51 3253 3681 PO
+0 sg
+  51   51 3253 3681 FO
+c24
+  51   51 3227 3670 PO
+0 sg
+  51   51 3227 3670 FO
+c25
+  51   51 3101 3718 PO
+0 sg
+  51   51 3101 3718 FO
+c26
+  51   51 3041 3774 PO
+0 sg
+  51   51 3041 3774 FO
+c27
+  51   51 2957 3841 PO
+0 sg
+  51   51 2957 3841 FO
+c28
+  51   51 2926 3851 PO
+0 sg
+  51   51 2926 3851 FO
+c29
+  51   51 2809 3852 PO
+0 sg
+  51   51 2809 3852 FO
+c30
+  51   51 2643 3852 PO
+0 sg
+  51   51 2643 3852 FO
+c31
+  51   51 2398 3893 PO
+0 sg
+  51   51 2398 3893 FO
+c32
+  51   51 2118 3969 PO
+0 sg
+  51   51 2118 3969 FO
+c33
+  51   51 1972 4041 PO
+0 sg
+  51   51 1972 4041 FO
+c34
+  51   51 1875 4105 PO
+0 sg
+  51   51 1875 4105 FO
+c35
+  51   51 1787 4147 PO
+0 sg
+  51   51 1787 4147 FO
+c36
+  51   51 1686 4183 PO
+0 sg
+  51   51 1686 4183 FO
+c37
+  51   51 1623 4214 PO
+0 sg
+  51   51 1623 4214 FO
+c38
+  51   51 1560 4246 PO
+0 sg
+  51   51 1560 4246 FO
+c39
+  51   51 1491 4282 PO
+0 sg
+  51   51 1491 4282 FO
+c40
+  51   51 1425 4309 PO
+0 sg
+  51   51 1425 4309 FO
+c41
+  51   51 1400 4316 PO
+0 sg
+  51   51 1400 4316 FO
+c42
+  51   51 1382 4320 PO
+0 sg
+  51   51 1382 4320 FO
+c43
+  51   51 1350 4331 PO
+0 sg
+  51   51 1350 4331 FO
+c44
+  51   51 1304 4344 PO
+0 sg
+  51   51 1304 4344 FO
+c45
+  51   51 1249 4367 PO
+0 sg
+  51   51 1249 4367 FO
+c46
+  51   51 1195 4394 PO
+0 sg
+  51   51 1195 4394 FO
+c47
+  51   51 1152 4416 PO
+0 sg
+  51   51 1152 4416 FO
+c48
+  51   51 1119 4437 PO
+0 sg
+  51   51 1119 4437 FO
+c49
+  51   51 1088 4456 PO
+0 sg
+  51   51 1088 4456 FO
+c50
+  51   51 1060 4471 PO
+0 sg
+  51   51 1060 4471 FO
+c51
+  51   51 1033 4484 PO
+0 sg
+  51   51 1033 4484 FO
+c52
+  51   51 1005 4497 PO
+0 sg
+  51   51 1005 4497 FO
+c53
+  51   51  981 4510 PO
+0 sg
+  51   51  981 4510 FO
+c54
+  51   51  964 4519 PO
+0 sg
+  51   51  964 4519 FO
+c55
+  51   51  948 4530 PO
+0 sg
+  51   51  948 4530 FO
+c56
+  51   51  934 4537 PO
+0 sg
+  51   51  934 4537 FO
+c57
+  51   51  925 4549 PO
+0 sg
+  51   51  925 4549 FO
+c58
+  51   51  916 4560 PO
+0 sg
+  51   51  916 4560 FO
+c59
+  51   51  910 4571 PO
+0 sg
+  51   51  910 4571 FO
+c60
+  51   51  904 4579 PO
+0 sg
+  51   51  904 4579 FO
+c61
+  51   51  902 4586 PO
+0 sg
+  51   51  902 4586 FO
+c62
+  51   51  901 4594 PO
+0 sg
+  51   51  901 4594 FO
+c63
+  51   51  900 4600 PO
+0 sg
+  51   51  900 4600 FO
+c64
+  51   51  899 4597 PO
+0 sg
+  51   51  899 4597 FO
+c65
+  51   51  899 4598 PO
+0 sg
+  51   51  899 4598 FO
+c66
+  51   51  899 4603 PO
+0 sg
+  51   51  899 4603 FO
+c67
+  51   51  899 4603 PO
+0 sg
+  51   51  899 4603 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5375  782 PO
+0 sg
+  51   51 5375  782 FO
+c9
+  51   51 4945  837 PO
+0 sg
+  51   51 4945  837 FO
+c10
+  51   51 4608 1010 PO
+0 sg
+  51   51 4608 1010 FO
+c11
+  51   51 4179 1275 PO
+0 sg
+  51   51 4179 1275 FO
+c12
+  51   51 3595 1626 PO
+0 sg
+  51   51 3595 1626 FO
+c13
+  51   51 3279 2032 PO
+0 sg
+  51   51 3279 2032 FO
+c14
+  51   51 3168 2400 PO
+0 sg
+  51   51 3168 2400 FO
+c15
+  51   51 2976 2809 PO
+0 sg
+  51   51 2976 2809 FO
+c16
+  51   51 2757 3198 PO
+0 sg
+  51   51 2757 3198 FO
+c17
+  51   51 2504 3579 PO
+0 sg
+  51   51 2504 3579 FO
+c18
+  51   51 2385 3792 PO
+0 sg
+  51   51 2385 3792 FO
+c19
+  51   51 2336 3819 PO
+0 sg
+  51   51 2336 3819 FO
+c20
+  51   51 2253 3843 PO
+0 sg
+  51   51 2253 3843 FO
+c21
+  51   51 2177 3909 PO
+0 sg
+  51   51 2177 3909 FO
+c22
+  51   51 2156 3944 PO
+0 sg
+  51   51 2156 3944 FO
+c23
+  51   51 2121 3985 PO
+0 sg
+  51   51 2121 3985 FO
+c24
+  51   51 2138 3984 PO
+0 sg
+  51   51 2138 3984 FO
+c25
+  51   51 2225 3941 PO
+0 sg
+  51   51 2225 3941 FO
+c26
+  51   51 2298 3929 PO
+0 sg
+  51   51 2298 3929 FO
+c27
+  51   51 2310 3960 PO
+0 sg
+  51   51 2310 3960 FO
+c28
+  51   51 2283 3992 PO
+0 sg
+  51   51 2283 3992 FO
+c29
+  51   51 2248 4029 PO
+0 sg
+  51   51 2248 4029 FO
+c30
+  51   51 2200 4074 PO
+0 sg
+  51   51 2200 4074 FO
+c31
+  51   51 2137 4106 PO
+0 sg
+  51   51 2137 4106 FO
+c32
+  51   51 2044 4146 PO
+0 sg
+  51   51 2044 4146 FO
+c33
+  51   51 1986 4152 PO
+0 sg
+  51   51 1986 4152 FO
+c34
+  51   51 1961 4145 PO
+0 sg
+  51   51 1961 4145 FO
+c35
+  51   51 1932 4152 PO
+0 sg
+  51   51 1932 4152 FO
+c36
+  51   51 1915 4158 PO
+0 sg
+  51   51 1915 4158 FO
+c37
+  51   51 1917 4171 PO
+0 sg
+  51   51 1917 4171 FO
+c38
+  51   51 1894 4187 PO
+0 sg
+  51   51 1894 4187 FO
+c39
+  51   51 1883 4192 PO
+0 sg
+  51   51 1883 4192 FO
+c40
+  51   51 1857 4206 PO
+0 sg
+  51   51 1857 4206 FO
+c41
+  51   51 1778 4234 PO
+0 sg
+  51   51 1778 4234 FO
+c42
+  51   51 1682 4266 PO
+0 sg
+  51   51 1682 4266 FO
+c43
+  51   51 1597 4291 PO
+0 sg
+  51   51 1597 4291 FO
+c44
+  51   51 1524 4315 PO
+0 sg
+  51   51 1524 4315 FO
+c45
+  51   51 1459 4335 PO
+0 sg
+  51   51 1459 4335 FO
+c46
+  51   51 1390 4358 PO
+0 sg
+  51   51 1390 4358 FO
+c47
+  51   51 1318 4382 PO
+0 sg
+  51   51 1318 4382 FO
+c48
+  51   51 1258 4404 PO
+0 sg
+  51   51 1258 4404 FO
+c49
+  51   51 1208 4427 PO
+0 sg
+  51   51 1208 4427 FO
+c50
+  51   51 1164 4446 PO
+0 sg
+  51   51 1164 4446 FO
+c51
+  51   51 1123 4464 PO
+0 sg
+  51   51 1123 4464 FO
+c52
+  51   51 1091 4480 PO
+0 sg
+  51   51 1091 4480 FO
+c53
+  51   51 1062 4487 PO
+0 sg
+  51   51 1062 4487 FO
+c54
+  51   51 1031 4497 PO
+0 sg
+  51   51 1031 4497 FO
+c55
+  51   51 1004 4516 PO
+0 sg
+  51   51 1004 4516 FO
+c56
+  51   51  983 4534 PO
+0 sg
+  51   51  983 4534 FO
+c57
+  51   51  959 4549 PO
+0 sg
+  51   51  959 4549 FO
+c58
+  51   51  938 4564 PO
+0 sg
+  51   51  938 4564 FO
+c59
+  51   51  923 4575 PO
+0 sg
+  51   51  923 4575 FO
+c60
+  51   51  912 4584 PO
+0 sg
+  51   51  912 4584 FO
+c61
+  51   51  906 4589 PO
+0 sg
+  51   51  906 4589 FO
+c62
+  51   51  903 4591 PO
+0 sg
+  51   51  903 4591 FO
+c63
+  51   51  901 4589 PO
+0 sg
+  51   51  901 4589 FO
+c64
+  51   51  900 4581 PO
+0 sg
+  51   51  900 4581 FO
+c65
+  51   51  900 4587 PO
+0 sg
+  51   51  900 4587 FO
+c66
+  51   51  899 4591 PO
+0 sg
+  51   51  899 4591 FO
+c67
+  51   51  899 4594 PO
+0 sg
+  51   51  899 4594 FO
+c68
+  51   51  899 4608 PO
+0 sg
+  51   51  899 4608 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4908  765 PO
+0 sg
+  51   51 4908  765 FO
+c9
+  51   51 4315  886 PO
+0 sg
+  51   51 4315  886 FO
+c10
+  51   51 3955 1199 PO
+0 sg
+  51   51 3955 1199 FO
+c11
+  51   51 4153 1484 PO
+0 sg
+  51   51 4153 1484 FO
+c12
+  51   51 3950 1855 PO
+0 sg
+  51   51 3950 1855 FO
+c13
+  51   51 3899 2198 PO
+0 sg
+  51   51 3899 2198 FO
+c14
+  51   51 3820 2442 PO
+0 sg
+  51   51 3820 2442 FO
+c15
+  51   51 3600 2729 PO
+0 sg
+  51   51 3600 2729 FO
+c16
+  51   51 3413 3022 PO
+0 sg
+  51   51 3413 3022 FO
+c17
+  51   51 3349 3263 PO
+0 sg
+  51   51 3349 3263 FO
+c18
+  51   51 3271 3439 PO
+0 sg
+  51   51 3271 3439 FO
+c19
+  51   51 3223 3541 PO
+0 sg
+  51   51 3223 3541 FO
+c20
+  51   51 3208 3612 PO
+0 sg
+  51   51 3208 3612 FO
+c21
+  51   51 3155 3663 PO
+0 sg
+  51   51 3155 3663 FO
+c22
+  51   51 3025 3711 PO
+0 sg
+  51   51 3025 3711 FO
+c23
+  51   51 2861 3782 PO
+0 sg
+  51   51 2861 3782 FO
+c24
+  51   51 2701 3856 PO
+0 sg
+  51   51 2701 3856 FO
+c25
+  51   51 2527 3924 PO
+0 sg
+  51   51 2527 3924 FO
+c26
+  51   51 2357 3980 PO
+0 sg
+  51   51 2357 3980 FO
+c27
+  51   51 2199 4062 PO
+0 sg
+  51   51 2199 4062 FO
+c28
+  51   51 2059 4148 PO
+0 sg
+  51   51 2059 4148 FO
+c29
+  51   51 1932 4234 PO
+0 sg
+  51   51 1932 4234 FO
+c30
+  51   51 1865 4267 PO
+0 sg
+  51   51 1865 4267 FO
+c31
+  51   51 1774 4295 PO
+0 sg
+  51   51 1774 4295 FO
+c32
+  51   51 1689 4312 PO
+0 sg
+  51   51 1689 4312 FO
+c33
+  51   51 1553 4336 PO
+0 sg
+  51   51 1553 4336 FO
+c34
+  51   51 1453 4359 PO
+0 sg
+  51   51 1453 4359 FO
+c35
+  51   51 1443 4341 PO
+0 sg
+  51   51 1443 4341 FO
+c36
+  51   51 1469 4327 PO
+0 sg
+  51   51 1469 4327 FO
+c37
+  51   51 1462 4329 PO
+0 sg
+  51   51 1462 4329 FO
+c38
+  51   51 1424 4346 PO
+0 sg
+  51   51 1424 4346 FO
+c39
+  51   51 1363 4370 PO
+0 sg
+  51   51 1363 4370 FO
+c40
+  51   51 1293 4394 PO
+0 sg
+  51   51 1293 4394 FO
+c41
+  51   51 1215 4419 PO
+0 sg
+  51   51 1215 4419 FO
+c42
+  51   51 1141 4439 PO
+0 sg
+  51   51 1141 4439 FO
+c43
+  51   51 1100 4443 PO
+0 sg
+  51   51 1100 4443 FO
+c44
+  51   51 1088 4432 PO
+0 sg
+  51   51 1088 4432 FO
+c45
+  51   51 1084 4433 PO
+0 sg
+  51   51 1084 4433 FO
+c46
+  51   51 1073 4446 PO
+0 sg
+  51   51 1073 4446 FO
+c47
+  51   51 1049 4460 PO
+0 sg
+  51   51 1049 4460 FO
+c48
+  51   51 1030 4470 PO
+0 sg
+  51   51 1030 4470 FO
+c49
+  51   51 1011 4484 PO
+0 sg
+  51   51 1011 4484 FO
+c50
+  51   51  992 4499 PO
+0 sg
+  51   51  992 4499 FO
+c51
+  51   51  972 4513 PO
+0 sg
+  51   51  972 4513 FO
+c52
+  51   51  957 4525 PO
+0 sg
+  51   51  957 4525 FO
+c53
+  51   51  948 4534 PO
+0 sg
+  51   51  948 4534 FO
+c54
+  51   51  940 4536 PO
+0 sg
+  51   51  940 4536 FO
+c55
+  51   51  936 4537 PO
+0 sg
+  51   51  936 4537 FO
+c56
+  51   51  933 4539 PO
+0 sg
+  51   51  933 4539 FO
+c57
+  51   51  928 4544 PO
+0 sg
+  51   51  928 4544 FO
+c58
+  51   51  922 4553 PO
+0 sg
+  51   51  922 4553 FO
+c59
+  51   51  915 4565 PO
+0 sg
+  51   51  915 4565 FO
+c60
+  51   51  909 4574 PO
+0 sg
+  51   51  909 4574 FO
+c61
+  51   51  905 4579 PO
+0 sg
+  51   51  905 4579 FO
+c62
+  51   51  903 4588 PO
+0 sg
+  51   51  903 4588 FO
+c63
+  51   51  901 4595 PO
+0 sg
+  51   51  901 4595 FO
+c64
+  51   51  899 4599 PO
+0 sg
+  51   51  899 4599 FO
+c65
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c66
+  51   51  899 4600 PO
+0 sg
+  51   51  899 4600 FO
+c67
+  51   51  899 4607 PO
+0 sg
+  51   51  899 4607 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4447  804 PO
+0 sg
+  51   51 4447  804 FO
+c9
+  51   51 3352  992 PO
+0 sg
+  51   51 3352  992 FO
+c10
+  51   51 3332 1307 PO
+0 sg
+  51   51 3332 1307 FO
+c11
+  51   51 2996 1687 PO
+0 sg
+  51   51 2996 1687 FO
+c12
+  51   51 3022 2109 PO
+0 sg
+  51   51 3022 2109 FO
+c13
+  51   51 3065 2441 PO
+0 sg
+  51   51 3065 2441 FO
+c14
+  51   51 3104 2754 PO
+0 sg
+  51   51 3104 2754 FO
+c15
+  51   51 3074 3014 PO
+0 sg
+  51   51 3074 3014 FO
+c16
+  51   51 3092 3153 PO
+0 sg
+  51   51 3092 3153 FO
+c17
+  51   51 3128 3229 PO
+0 sg
+  51   51 3128 3229 FO
+c18
+  51   51 3018 3302 PO
+0 sg
+  51   51 3018 3302 FO
+c19
+  51   51 2782 3403 PO
+0 sg
+  51   51 2782 3403 FO
+c20
+  51   51 2579 3529 PO
+0 sg
+  51   51 2579 3529 FO
+c21
+  51   51 2386 3653 PO
+0 sg
+  51   51 2386 3653 FO
+c22
+  51   51 2216 3782 PO
+0 sg
+  51   51 2216 3782 FO
+c23
+  51   51 2068 3885 PO
+0 sg
+  51   51 2068 3885 FO
+c24
+  51   51 1945 3942 PO
+0 sg
+  51   51 1945 3942 FO
+c25
+  51   51 1813 4016 PO
+0 sg
+  51   51 1813 4016 FO
+c26
+  51   51 1716 4093 PO
+0 sg
+  51   51 1716 4093 FO
+c27
+  51   51 1626 4172 PO
+0 sg
+  51   51 1626 4172 FO
+c28
+  51   51 1571 4214 PO
+0 sg
+  51   51 1571 4214 FO
+c29
+  51   51 1536 4235 PO
+0 sg
+  51   51 1536 4235 FO
+c30
+  51   51 1532 4264 PO
+0 sg
+  51   51 1532 4264 FO
+c31
+  51   51 1553 4290 PO
+0 sg
+  51   51 1553 4290 FO
+c32
+  51   51 1523 4328 PO
+0 sg
+  51   51 1523 4328 FO
+c33
+  51   51 1513 4360 PO
+0 sg
+  51   51 1513 4360 FO
+c34
+  51   51 1473 4373 PO
+0 sg
+  51   51 1473 4373 FO
+c35
+  51   51 1421 4377 PO
+0 sg
+  51   51 1421 4377 FO
+c36
+  51   51 1404 4374 PO
+0 sg
+  51   51 1404 4374 FO
+c37
+  51   51 1409 4363 PO
+0 sg
+  51   51 1409 4363 FO
+c38
+  51   51 1436 4356 PO
+0 sg
+  51   51 1436 4356 FO
+c39
+  51   51 1453 4358 PO
+0 sg
+  51   51 1453 4358 FO
+c40
+  51   51 1446 4368 PO
+0 sg
+  51   51 1446 4368 FO
+c41
+  51   51 1424 4375 PO
+0 sg
+  51   51 1424 4375 FO
+c42
+  51   51 1406 4381 PO
+0 sg
+  51   51 1406 4381 FO
+c43
+  51   51 1372 4389 PO
+0 sg
+  51   51 1372 4389 FO
+c44
+  51   51 1329 4402 PO
+0 sg
+  51   51 1329 4402 FO
+c45
+  51   51 1287 4416 PO
+0 sg
+  51   51 1287 4416 FO
+c46
+  51   51 1249 4427 PO
+0 sg
+  51   51 1249 4427 FO
+c47
+  51   51 1212 4439 PO
+0 sg
+  51   51 1212 4439 FO
+c48
+  51   51 1170 4454 PO
+0 sg
+  51   51 1170 4454 FO
+c49
+  51   51 1128 4470 PO
+0 sg
+  51   51 1128 4470 FO
+c50
+  51   51 1088 4485 PO
+0 sg
+  51   51 1088 4485 FO
+c51
+  51   51 1045 4498 PO
+0 sg
+  51   51 1045 4498 FO
+c52
+  51   51 1012 4513 PO
+0 sg
+  51   51 1012 4513 FO
+c53
+  51   51  975 4528 PO
+0 sg
+  51   51  975 4528 FO
+c54
+  51   51  950 4541 PO
+0 sg
+  51   51  950 4541 FO
+c55
+  51   51  933 4557 PO
+0 sg
+  51   51  933 4557 FO
+c56
+  51   51  923 4565 PO
+0 sg
+  51   51  923 4565 FO
+c57
+  51   51  917 4568 PO
+0 sg
+  51   51  917 4568 FO
+c58
+  51   51  913 4573 PO
+0 sg
+  51   51  913 4573 FO
+c59
+  51   51  911 4576 PO
+0 sg
+  51   51  911 4576 FO
+c60
+  51   51  907 4579 PO
+0 sg
+  51   51  907 4579 FO
+c61
+  51   51  905 4584 PO
+0 sg
+  51   51  905 4584 FO
+c62
+  51   51  904 4592 PO
+0 sg
+  51   51  904 4592 FO
+c63
+  51   51  902 4596 PO
+0 sg
+  51   51  902 4596 FO
+c64
+  51   51  900 4600 PO
+0 sg
+  51   51  900 4600 FO
+c65
+  51   51  899 4600 PO
+0 sg
+  51   51  899 4600 FO
+c66
+  51   51  899 4604 PO
+0 sg
+  51   51  899 4604 FO
+c67
+  51   51  899 4609 PO
+0 sg
+  51   51  899 4609 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4404  805 PO
+0 sg
+  51   51 4404  805 FO
+c9
+  51   51 3305  918 PO
+0 sg
+  51   51 3305  918 FO
+c10
+  51   51 2729 1335 PO
+0 sg
+  51   51 2729 1335 FO
+c11
+  51   51 2957 1812 PO
+0 sg
+  51   51 2957 1812 FO
+c12
+  51   51 3240 2113 PO
+0 sg
+  51   51 3240 2113 FO
+c13
+  51   51 3370 2404 PO
+0 sg
+  51   51 3370 2404 FO
+c14
+  51   51 3556 2581 PO
+0 sg
+  51   51 3556 2581 FO
+c15
+  51   51 3523 2781 PO
+0 sg
+  51   51 3523 2781 FO
+c16
+  51   51 3392 3047 PO
+0 sg
+  51   51 3392 3047 FO
+c17
+  51   51 3275 3271 PO
+0 sg
+  51   51 3275 3271 FO
+c18
+  51   51 3156 3443 PO
+0 sg
+  51   51 3156 3443 FO
+c19
+  51   51 2992 3590 PO
+0 sg
+  51   51 2992 3590 FO
+c20
+  51   51 2794 3710 PO
+0 sg
+  51   51 2794 3710 FO
+c21
+  51   51 2596 3808 PO
+0 sg
+  51   51 2596 3808 FO
+c22
+  51   51 2463 3892 PO
+0 sg
+  51   51 2463 3892 FO
+c23
+  51   51 2396 3926 PO
+0 sg
+  51   51 2396 3926 FO
+c24
+  51   51 2281 3960 PO
+0 sg
+  51   51 2281 3960 FO
+c25
+  51   51 2106 4012 PO
+0 sg
+  51   51 2106 4012 FO
+c26
+  51   51 1937 4082 PO
+0 sg
+  51   51 1937 4082 FO
+c27
+  51   51 1862 4106 PO
+0 sg
+  51   51 1862 4106 FO
+c28
+  51   51 1806 4131 PO
+0 sg
+  51   51 1806 4131 FO
+c29
+  51   51 1824 4141 PO
+0 sg
+  51   51 1824 4141 FO
+c30
+  51   51 1726 4216 PO
+0 sg
+  51   51 1726 4216 FO
+c31
+  51   51 1641 4270 PO
+0 sg
+  51   51 1641 4270 FO
+c32
+  51   51 1626 4297 PO
+0 sg
+  51   51 1626 4297 FO
+c33
+  51   51 1597 4320 PO
+0 sg
+  51   51 1597 4320 FO
+c34
+  51   51 1492 4339 PO
+0 sg
+  51   51 1492 4339 FO
+c35
+  51   51 1371 4340 PO
+0 sg
+  51   51 1371 4340 FO
+c36
+  51   51 1287 4330 PO
+0 sg
+  51   51 1287 4330 FO
+c37
+  51   51 1251 4341 PO
+0 sg
+  51   51 1251 4341 FO
+c38
+  51   51 1250 4319 PO
+0 sg
+  51   51 1250 4319 FO
+c39
+  51   51 1285 4298 PO
+0 sg
+  51   51 1285 4298 FO
+c40
+  51   51 1310 4290 PO
+0 sg
+  51   51 1310 4290 FO
+c41
+  51   51 1304 4294 PO
+0 sg
+  51   51 1304 4294 FO
+c42
+  51   51 1267 4303 PO
+0 sg
+  51   51 1267 4303 FO
+c43
+  51   51 1229 4321 PO
+0 sg
+  51   51 1229 4321 FO
+c44
+  51   51 1181 4350 PO
+0 sg
+  51   51 1181 4350 FO
+c45
+  51   51 1135 4386 PO
+0 sg
+  51   51 1135 4386 FO
+c46
+  51   51 1103 4412 PO
+0 sg
+  51   51 1103 4412 FO
+c47
+  51   51 1078 4435 PO
+0 sg
+  51   51 1078 4435 FO
+c48
+  51   51 1055 4459 PO
+0 sg
+  51   51 1055 4459 FO
+c49
+  51   51 1028 4483 PO
+0 sg
+  51   51 1028 4483 FO
+c50
+  51   51 1008 4501 PO
+0 sg
+  51   51 1008 4501 FO
+c51
+  51   51  988 4517 PO
+0 sg
+  51   51  988 4517 FO
+c52
+  51   51  972 4530 PO
+0 sg
+  51   51  972 4530 FO
+c53
+  51   51  959 4540 PO
+0 sg
+  51   51  959 4540 FO
+c54
+  51   51  944 4552 PO
+0 sg
+  51   51  944 4552 FO
+c55
+  51   51  928 4562 PO
+0 sg
+  51   51  928 4562 FO
+c56
+  51   51  918 4571 PO
+0 sg
+  51   51  918 4571 FO
+c57
+  51   51  911 4574 PO
+0 sg
+  51   51  911 4574 FO
+c58
+  51   51  906 4577 PO
+0 sg
+  51   51  906 4577 FO
+c59
+  51   51  905 4579 PO
+0 sg
+  51   51  905 4579 FO
+c60
+  51   51  903 4584 PO
+0 sg
+  51   51  903 4584 FO
+c61
+  51   51  901 4597 PO
+0 sg
+  51   51  901 4597 FO
+c62
+  51   51  900 4597 PO
+0 sg
+  51   51  900 4597 FO
+c63
+  51   51  899 4599 PO
+0 sg
+  51   51  899 4599 FO
+c64
+  51   51  899 4606 PO
+0 sg
+  51   51  899 4606 FO
+c65
+  51   51  899 4593 PO
+0 sg
+  51   51  899 4593 FO
+c66
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c67
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5114  776 PO
+0 sg
+  51   51 5114  776 FO
+c9
+  51   51 3679  966 PO
+0 sg
+  51   51 3679  966 FO
+c10
+  51   51 3592 1398 PO
+0 sg
+  51   51 3592 1398 FO
+c11
+  51   51 3486 1863 PO
+0 sg
+  51   51 3486 1863 FO
+c12
+  51   51 3597 2049 PO
+0 sg
+  51   51 3597 2049 FO
+c13
+  51   51 3749 2212 PO
+0 sg
+  51   51 3749 2212 FO
+c14
+  51   51 3950 2321 PO
+0 sg
+  51   51 3950 2321 FO
+c15
+  51   51 4062 2406 PO
+0 sg
+  51   51 4062 2406 FO
+c16
+  51   51 4161 2503 PO
+0 sg
+  51   51 4161 2503 FO
+c17
+  51   51 4171 2592 PO
+0 sg
+  51   51 4171 2592 FO
+c18
+  51   51 4203 2685 PO
+0 sg
+  51   51 4203 2685 FO
+c19
+  51   51 4114 2788 PO
+0 sg
+  51   51 4114 2788 FO
+c20
+  51   51 3906 2906 PO
+0 sg
+  51   51 3906 2906 FO
+c21
+  51   51 3723 3057 PO
+0 sg
+  51   51 3723 3057 FO
+c22
+  51   51 3475 3205 PO
+0 sg
+  51   51 3475 3205 FO
+c23
+  51   51 3287 3326 PO
+0 sg
+  51   51 3287 3326 FO
+c24
+  51   51 3061 3469 PO
+0 sg
+  51   51 3061 3469 FO
+c25
+  51   51 2963 3559 PO
+0 sg
+  51   51 2963 3559 FO
+c26
+  51   51 2881 3630 PO
+0 sg
+  51   51 2881 3630 FO
+c27
+  51   51 2724 3720 PO
+0 sg
+  51   51 2724 3720 FO
+c28
+  51   51 2571 3820 PO
+0 sg
+  51   51 2571 3820 FO
+c29
+  51   51 2477 3914 PO
+0 sg
+  51   51 2477 3914 FO
+c30
+  51   51 2365 3999 PO
+0 sg
+  51   51 2365 3999 FO
+c31
+  51   51 2198 4099 PO
+0 sg
+  51   51 2198 4099 FO
+c32
+  51   51 2027 4173 PO
+0 sg
+  51   51 2027 4173 FO
+c33
+  51   51 1898 4235 PO
+0 sg
+  51   51 1898 4235 FO
+c34
+  51   51 1731 4300 PO
+0 sg
+  51   51 1731 4300 FO
+c35
+  51   51 1599 4329 PO
+0 sg
+  51   51 1599 4329 FO
+c36
+  51   51 1508 4329 PO
+0 sg
+  51   51 1508 4329 FO
+c37
+  51   51 1449 4315 PO
+0 sg
+  51   51 1449 4315 FO
+c38
+  51   51 1413 4301 PO
+0 sg
+  51   51 1413 4301 FO
+c39
+  51   51 1394 4297 PO
+0 sg
+  51   51 1394 4297 FO
+c40
+  51   51 1375 4292 PO
+0 sg
+  51   51 1375 4292 FO
+c41
+  51   51 1356 4305 PO
+0 sg
+  51   51 1356 4305 FO
+c42
+  51   51 1334 4323 PO
+0 sg
+  51   51 1334 4323 FO
+c43
+  51   51 1314 4335 PO
+0 sg
+  51   51 1314 4335 FO
+c44
+  51   51 1299 4339 PO
+0 sg
+  51   51 1299 4339 FO
+c45
+  51   51 1279 4352 PO
+0 sg
+  51   51 1279 4352 FO
+c46
+  51   51 1262 4365 PO
+0 sg
+  51   51 1262 4365 FO
+c47
+  51   51 1243 4384 PO
+0 sg
+  51   51 1243 4384 FO
+c48
+  51   51 1226 4401 PO
+0 sg
+  51   51 1226 4401 FO
+c49
+  51   51 1202 4427 PO
+0 sg
+  51   51 1202 4427 FO
+c50
+  51   51 1167 4446 PO
+0 sg
+  51   51 1167 4446 FO
+c51
+  51   51 1125 4470 PO
+0 sg
+  51   51 1125 4470 FO
+c52
+  51   51 1077 4492 PO
+0 sg
+  51   51 1077 4492 FO
+c53
+  51   51 1030 4508 PO
+0 sg
+  51   51 1030 4508 FO
+c54
+  51   51  995 4517 PO
+0 sg
+  51   51  995 4517 FO
+c55
+  51   51  967 4525 PO
+0 sg
+  51   51  967 4525 FO
+c56
+  51   51  948 4534 PO
+0 sg
+  51   51  948 4534 FO
+c57
+  51   51  933 4541 PO
+0 sg
+  51   51  933 4541 FO
+c58
+  51   51  922 4543 PO
+0 sg
+  51   51  922 4543 FO
+c59
+  51   51  914 4548 PO
+0 sg
+  51   51  914 4548 FO
+c60
+  51   51  909 4554 PO
+0 sg
+  51   51  909 4554 FO
+c61
+  51   51  905 4565 PO
+0 sg
+  51   51  905 4565 FO
+c62
+  51   51  903 4573 PO
+0 sg
+  51   51  903 4573 FO
+c63
+  51   51  902 4581 PO
+0 sg
+  51   51  902 4581 FO
+c64
+  51   51  901 4591 PO
+0 sg
+  51   51  901 4591 FO
+c65
+  51   51  900 4593 PO
+0 sg
+  51   51  900 4593 FO
+c66
+  51   51  899 4595 PO
+0 sg
+  51   51  899 4595 FO
+c67
+  51   51  899 4585 PO
+0 sg
+  51   51  899 4585 FO
+c68
+  51   51  899 4596 PO
+0 sg
+  51   51  899 4596 FO
+c69
+  51   51  899 4611 PO
+0 sg
+  51   51  899 4611 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5343  778 PO
+0 sg
+  51   51 5343  778 FO
+c9
+  51   51 5173  845 PO
+0 sg
+  51   51 5173  845 FO
+c10
+  51   51 4851  958 PO
+0 sg
+  51   51 4851  958 FO
+c11
+  51   51 4325 1263 PO
+0 sg
+  51   51 4325 1263 FO
+c12
+  51   51 4130 1606 PO
+0 sg
+  51   51 4130 1606 FO
+c13
+  51   51 4018 1941 PO
+0 sg
+  51   51 4018 1941 FO
+c14
+  51   51 4072 2252 PO
+0 sg
+  51   51 4072 2252 FO
+c15
+  51   51 4185 2453 PO
+0 sg
+  51   51 4185 2453 FO
+c16
+  51   51 4204 2645 PO
+0 sg
+  51   51 4204 2645 FO
+c17
+  51   51 4216 2814 PO
+0 sg
+  51   51 4216 2814 FO
+c18
+  51   51 4192 2953 PO
+0 sg
+  51   51 4192 2953 FO
+c19
+  51   51 4158 3047 PO
+0 sg
+  51   51 4158 3047 FO
+c20
+  51   51 4137 3113 PO
+0 sg
+  51   51 4137 3113 FO
+c21
+  51   51 4147 3156 PO
+0 sg
+  51   51 4147 3156 FO
+c22
+  51   51 4113 3202 PO
+0 sg
+  51   51 4113 3202 FO
+c23
+  51   51 4056 3246 PO
+0 sg
+  51   51 4056 3246 FO
+c24
+  51   51 3932 3293 PO
+0 sg
+  51   51 3932 3293 FO
+c25
+  51   51 3675 3345 PO
+0 sg
+  51   51 3675 3345 FO
+c26
+  51   51 3351 3401 PO
+0 sg
+  51   51 3351 3401 FO
+c27
+  51   51 2979 3481 PO
+0 sg
+  51   51 2979 3481 FO
+c28
+  51   51 2702 3557 PO
+0 sg
+  51   51 2702 3557 FO
+c29
+  51   51 2418 3677 PO
+0 sg
+  51   51 2418 3677 FO
+c30
+  51   51 2186 3794 PO
+0 sg
+  51   51 2186 3794 FO
+c31
+  51   51 1946 3890 PO
+0 sg
+  51   51 1946 3890 FO
+c32
+  51   51 1716 3994 PO
+0 sg
+  51   51 1716 3994 FO
+c33
+  51   51 1581 4085 PO
+0 sg
+  51   51 1581 4085 FO
+c34
+  51   51 1492 4153 PO
+0 sg
+  51   51 1492 4153 FO
+c35
+  51   51 1419 4198 PO
+0 sg
+  51   51 1419 4198 FO
+c36
+  51   51 1355 4226 PO
+0 sg
+  51   51 1355 4226 FO
+c37
+  51   51 1290 4245 PO
+0 sg
+  51   51 1290 4245 FO
+c38
+  51   51 1222 4274 PO
+0 sg
+  51   51 1222 4274 FO
+c39
+  51   51 1175 4309 PO
+0 sg
+  51   51 1175 4309 FO
+c40
+  51   51 1150 4339 PO
+0 sg
+  51   51 1150 4339 FO
+c41
+  51   51 1119 4367 PO
+0 sg
+  51   51 1119 4367 FO
+c42
+  51   51 1108 4379 PO
+0 sg
+  51   51 1108 4379 FO
+c43
+  51   51 1108 4387 PO
+0 sg
+  51   51 1108 4387 FO
+c44
+  51   51 1126 4385 PO
+0 sg
+  51   51 1126 4385 FO
+c45
+  51   51 1132 4392 PO
+0 sg
+  51   51 1132 4392 FO
+c46
+  51   51 1115 4417 PO
+0 sg
+  51   51 1115 4417 FO
+c47
+  51   51 1089 4446 PO
+0 sg
+  51   51 1089 4446 FO
+c48
+  51   51 1059 4476 PO
+0 sg
+  51   51 1059 4476 FO
+c49
+  51   51 1030 4501 PO
+0 sg
+  51   51 1030 4501 FO
+c50
+  51   51 1010 4517 PO
+0 sg
+  51   51 1010 4517 FO
+c51
+  51   51  997 4526 PO
+0 sg
+  51   51  997 4526 FO
+c52
+  51   51  983 4534 PO
+0 sg
+  51   51  983 4534 FO
+c53
+  51   51  968 4545 PO
+0 sg
+  51   51  968 4545 FO
+c54
+  51   51  950 4552 PO
+0 sg
+  51   51  950 4552 FO
+c55
+  51   51  935 4562 PO
+0 sg
+  51   51  935 4562 FO
+c56
+  51   51  925 4560 PO
+0 sg
+  51   51  925 4560 FO
+c57
+  51   51  920 4554 PO
+0 sg
+  51   51  920 4554 FO
+c58
+  51   51  916 4535 PO
+0 sg
+  51   51  916 4535 FO
+c59
+  51   51  913 4537 PO
+0 sg
+  51   51  913 4537 FO
+c60
+  51   51  907 4555 PO
+0 sg
+  51   51  907 4555 FO
+c61
+  51   51  902 4572 PO
+0 sg
+  51   51  902 4572 FO
+c62
+  51   51  901 4579 PO
+0 sg
+  51   51  901 4579 FO
+c63
+  51   51  900 4589 PO
+0 sg
+  51   51  900 4589 FO
+c64
+  51   51  900 4598 PO
+0 sg
+  51   51  900 4598 FO
+c65
+  51   51  899 4599 PO
+0 sg
+  51   51  899 4599 FO
+c66
+  51   51  899 4596 PO
+0 sg
+  51   51  899 4596 FO
+c67
+  51   51  899 4593 PO
+0 sg
+  51   51  899 4593 FO
+c68
+  51   51  899 4605 PO
+0 sg
+  51   51  899 4605 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4768  792 PO
+0 sg
+  51   51 4768  792 FO
+c9
+  51   51 4814  873 PO
+0 sg
+  51   51 4814  873 FO
+c10
+  51   51 4700 1022 PO
+0 sg
+  51   51 4700 1022 FO
+c11
+  51   51 4228 1316 PO
+0 sg
+  51   51 4228 1316 FO
+c12
+  51   51 3933 1733 PO
+0 sg
+  51   51 3933 1733 FO
+c13
+  51   51 3991 2081 PO
+0 sg
+  51   51 3991 2081 FO
+c14
+  51   51 4063 2269 PO
+0 sg
+  51   51 4063 2269 FO
+c15
+  51   51 4171 2438 PO
+0 sg
+  51   51 4171 2438 FO
+c16
+  51   51 4412 2464 PO
+0 sg
+  51   51 4412 2464 FO
+c17
+  51   51 4594 2479 PO
+0 sg
+  51   51 4594 2479 FO
+c18
+  51   51 4642 2490 PO
+0 sg
+  51   51 4642 2490 FO
+c19
+  51   51 4639 2515 PO
+0 sg
+  51   51 4639 2515 FO
+c20
+  51   51 4520 2603 PO
+0 sg
+  51   51 4520 2603 FO
+c21
+  51   51 4400 2723 PO
+0 sg
+  51   51 4400 2723 FO
+c22
+  51   51 4340 2844 PO
+0 sg
+  51   51 4340 2844 FO
+c23
+  51   51 4216 2934 PO
+0 sg
+  51   51 4216 2934 FO
+c24
+  51   51 4085 3004 PO
+0 sg
+  51   51 4085 3004 FO
+c25
+  51   51 3914 3065 PO
+0 sg
+  51   51 3914 3065 FO
+c26
+  51   51 3691 3136 PO
+0 sg
+  51   51 3691 3136 FO
+c27
+  51   51 3405 3240 PO
+0 sg
+  51   51 3405 3240 FO
+c28
+  51   51 3113 3378 PO
+0 sg
+  51   51 3113 3378 FO
+c29
+  51   51 2955 3507 PO
+0 sg
+  51   51 2955 3507 FO
+c30
+  51   51 2924 3607 PO
+0 sg
+  51   51 2924 3607 FO
+c31
+  51   51 2910 3678 PO
+0 sg
+  51   51 2910 3678 FO
+c32
+  51   51 2775 3746 PO
+0 sg
+  51   51 2775 3746 FO
+c33
+  51   51 2626 3827 PO
+0 sg
+  51   51 2626 3827 FO
+c34
+  51   51 2502 3908 PO
+0 sg
+  51   51 2502 3908 FO
+c35
+  51   51 2401 3974 PO
+0 sg
+  51   51 2401 3974 FO
+c36
+  51   51 2301 4017 PO
+0 sg
+  51   51 2301 4017 FO
+c37
+  51   51 2144 4051 PO
+0 sg
+  51   51 2144 4051 FO
+c38
+  51   51 1977 4085 PO
+0 sg
+  51   51 1977 4085 FO
+c39
+  51   51 1827 4123 PO
+0 sg
+  51   51 1827 4123 FO
+c40
+  51   51 1675 4156 PO
+0 sg
+  51   51 1675 4156 FO
+c41
+  51   51 1564 4178 PO
+0 sg
+  51   51 1564 4178 FO
+c42
+  51   51 1473 4197 PO
+0 sg
+  51   51 1473 4197 FO
+c43
+  51   51 1398 4227 PO
+0 sg
+  51   51 1398 4227 FO
+c44
+  51   51 1345 4262 PO
+0 sg
+  51   51 1345 4262 FO
+c45
+  51   51 1305 4297 PO
+0 sg
+  51   51 1305 4297 FO
+c46
+  51   51 1271 4336 PO
+0 sg
+  51   51 1271 4336 FO
+c47
+  51   51 1233 4374 PO
+0 sg
+  51   51 1233 4374 FO
+c48
+  51   51 1183 4413 PO
+0 sg
+  51   51 1183 4413 FO
+c49
+  51   51 1133 4442 PO
+0 sg
+  51   51 1133 4442 FO
+c50
+  51   51 1089 4471 PO
+0 sg
+  51   51 1089 4471 FO
+c51
+  51   51 1053 4490 PO
+0 sg
+  51   51 1053 4490 FO
+c52
+  51   51 1031 4496 PO
+0 sg
+  51   51 1031 4496 FO
+c53
+  51   51 1013 4498 PO
+0 sg
+  51   51 1013 4498 FO
+c54
+  51   51  997 4502 PO
+0 sg
+  51   51  997 4502 FO
+c55
+  51   51  981 4511 PO
+0 sg
+  51   51  981 4511 FO
+c56
+  51   51  967 4519 PO
+0 sg
+  51   51  967 4519 FO
+c57
+  51   51  955 4523 PO
+0 sg
+  51   51  955 4523 FO
+c58
+  51   51  946 4534 PO
+0 sg
+  51   51  946 4534 FO
+c59
+  51   51  937 4546 PO
+0 sg
+  51   51  937 4546 FO
+c60
+  51   51  931 4557 PO
+0 sg
+  51   51  931 4557 FO
+c61
+  51   51  923 4567 PO
+0 sg
+  51   51  923 4567 FO
+c62
+  51   51  914 4574 PO
+0 sg
+  51   51  914 4574 FO
+c63
+  51   51  908 4581 PO
+0 sg
+  51   51  908 4581 FO
+c64
+  51   51  903 4586 PO
+0 sg
+  51   51  903 4586 FO
+c65
+  51   51  901 4590 PO
+0 sg
+  51   51  901 4590 FO
+c66
+  51   51  899 4598 PO
+0 sg
+  51   51  899 4598 FO
+c67
+  51   51  899 4602 PO
+0 sg
+  51   51  899 4602 FO
+c68
+  51   51  899 4606 PO
+0 sg
+  51   51  899 4606 FO
+c69
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5280  774 PO
+0 sg
+  51   51 5280  774 FO
+c9
+  51   51 4291  800 PO
+0 sg
+  51   51 4291  800 FO
+c10
+  51   51 3818  981 PO
+0 sg
+  51   51 3818  981 FO
+c11
+  51   51 4112 1370 PO
+0 sg
+  51   51 4112 1370 FO
+c12
+  51   51 4241 1713 PO
+0 sg
+  51   51 4241 1713 FO
+c13
+  51   51 4337 2036 PO
+0 sg
+  51   51 4337 2036 FO
+c14
+  51   51 4219 2297 PO
+0 sg
+  51   51 4219 2297 FO
+c15
+  51   51 4060 2573 PO
+0 sg
+  51   51 4060 2573 FO
+c16
+  51   51 3965 2790 PO
+0 sg
+  51   51 3965 2790 FO
+c17
+  51   51 3920 2976 PO
+0 sg
+  51   51 3920 2976 FO
+c18
+  51   51 4004 3076 PO
+0 sg
+  51   51 4004 3076 FO
+c19
+  51   51 4143 3087 PO
+0 sg
+  51   51 4143 3087 FO
+c20
+  51   51 4200 3109 PO
+0 sg
+  51   51 4200 3109 FO
+c21
+  51   51 4202 3136 PO
+0 sg
+  51   51 4202 3136 FO
+c22
+  51   51 4036 3160 PO
+0 sg
+  51   51 4036 3160 FO
+c23
+  51   51 3780 3203 PO
+0 sg
+  51   51 3780 3203 FO
+c24
+  51   51 3454 3299 PO
+0 sg
+  51   51 3454 3299 FO
+c25
+  51   51 3129 3372 PO
+0 sg
+  51   51 3129 3372 FO
+c26
+  51   51 2858 3493 PO
+0 sg
+  51   51 2858 3493 FO
+c27
+  51   51 2582 3612 PO
+0 sg
+  51   51 2582 3612 FO
+c28
+  51   51 2381 3682 PO
+0 sg
+  51   51 2381 3682 FO
+c29
+  51   51 2214 3779 PO
+0 sg
+  51   51 2214 3779 FO
+c30
+  51   51 2060 3885 PO
+0 sg
+  51   51 2060 3885 FO
+c31
+  51   51 1942 3981 PO
+0 sg
+  51   51 1942 3981 FO
+c32
+  51   51 1865 4048 PO
+0 sg
+  51   51 1865 4048 FO
+c33
+  51   51 1816 4104 PO
+0 sg
+  51   51 1816 4104 FO
+c34
+  51   51 1732 4162 PO
+0 sg
+  51   51 1732 4162 FO
+c35
+  51   51 1640 4228 PO
+0 sg
+  51   51 1640 4228 FO
+c36
+  51   51 1547 4293 PO
+0 sg
+  51   51 1547 4293 FO
+c37
+  51   51 1467 4330 PO
+0 sg
+  51   51 1467 4330 FO
+c38
+  51   51 1413 4351 PO
+0 sg
+  51   51 1413 4351 FO
+c39
+  51   51 1352 4362 PO
+0 sg
+  51   51 1352 4362 FO
+c40
+  51   51 1288 4378 PO
+0 sg
+  51   51 1288 4378 FO
+c41
+  51   51 1231 4394 PO
+0 sg
+  51   51 1231 4394 FO
+c42
+  51   51 1183 4407 PO
+0 sg
+  51   51 1183 4407 FO
+c43
+  51   51 1156 4419 PO
+0 sg
+  51   51 1156 4419 FO
+c44
+  51   51 1134 4431 PO
+0 sg
+  51   51 1134 4431 FO
+c45
+  51   51 1116 4444 PO
+0 sg
+  51   51 1116 4444 FO
+c46
+  51   51 1099 4457 PO
+0 sg
+  51   51 1099 4457 FO
+c47
+  51   51 1075 4474 PO
+0 sg
+  51   51 1075 4474 FO
+c48
+  51   51 1062 4482 PO
+0 sg
+  51   51 1062 4482 FO
+c49
+  51   51 1046 4488 PO
+0 sg
+  51   51 1046 4488 FO
+c50
+  51   51 1026 4497 PO
+0 sg
+  51   51 1026 4497 FO
+c51
+  51   51 1008 4508 PO
+0 sg
+  51   51 1008 4508 FO
+c52
+  51   51  988 4518 PO
+0 sg
+  51   51  988 4518 FO
+c53
+  51   51  967 4524 PO
+0 sg
+  51   51  967 4524 FO
+c54
+  51   51  950 4529 PO
+0 sg
+  51   51  950 4529 FO
+c55
+  51   51  934 4539 PO
+0 sg
+  51   51  934 4539 FO
+c56
+  51   51  923 4544 PO
+0 sg
+  51   51  923 4544 FO
+c57
+  51   51  915 4544 PO
+0 sg
+  51   51  915 4544 FO
+c58
+  51   51  910 4536 PO
+0 sg
+  51   51  910 4536 FO
+c59
+  51   51  907 4540 PO
+0 sg
+  51   51  907 4540 FO
+c60
+  51   51  905 4550 PO
+0 sg
+  51   51  905 4550 FO
+c61
+  51   51  903 4563 PO
+0 sg
+  51   51  903 4563 FO
+c62
+  51   51  902 4579 PO
+0 sg
+  51   51  902 4579 FO
+c63
+  51   51  901 4591 PO
+0 sg
+  51   51  901 4591 FO
+c64
+  51   51  899 4595 PO
+0 sg
+  51   51  899 4595 FO
+c65
+  51   51  899 4596 PO
+0 sg
+  51   51  899 4596 FO
+c66
+  51   51  899 4603 PO
+0 sg
+  51   51  899 4603 FO
+c67
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5253  766 PO
+0 sg
+  51   51 5253  766 FO
+c9
+  51   51 4436  823 PO
+0 sg
+  51   51 4436  823 FO
+c10
+  51   51 3648 1085 PO
+0 sg
+  51   51 3648 1085 FO
+c11
+  51   51 3393 1541 PO
+0 sg
+  51   51 3393 1541 FO
+c12
+  51   51 3342 1932 PO
+0 sg
+  51   51 3342 1932 FO
+c13
+  51   51 3124 2387 PO
+0 sg
+  51   51 3124 2387 FO
+c14
+  51   51 3069 2804 PO
+0 sg
+  51   51 3069 2804 FO
+c15
+  51   51 3101 3082 PO
+0 sg
+  51   51 3101 3082 FO
+c16
+  51   51 3123 3248 PO
+0 sg
+  51   51 3123 3248 FO
+c17
+  51   51 2994 3298 PO
+0 sg
+  51   51 2994 3298 FO
+c18
+  51   51 2811 3341 PO
+0 sg
+  51   51 2811 3341 FO
+c19
+  51   51 2484 3524 PO
+0 sg
+  51   51 2484 3524 FO
+c20
+  51   51 2146 3692 PO
+0 sg
+  51   51 2146 3692 FO
+c21
+  51   51 1919 3839 PO
+0 sg
+  51   51 1919 3839 FO
+c22
+  51   51 1856 3897 PO
+0 sg
+  51   51 1856 3897 FO
+c23
+  51   51 1861 3870 PO
+0 sg
+  51   51 1861 3870 FO
+c24
+  51   51 1847 3815 PO
+0 sg
+  51   51 1847 3815 FO
+c25
+  51   51 1783 3814 PO
+0 sg
+  51   51 1783 3814 FO
+c26
+  51   51 1740 3797 PO
+0 sg
+  51   51 1740 3797 FO
+c27
+  51   51 1749 3834 PO
+0 sg
+  51   51 1749 3834 FO
+c28
+  51   51 1834 3898 PO
+0 sg
+  51   51 1834 3898 FO
+c29
+  51   51 1910 3942 PO
+0 sg
+  51   51 1910 3942 FO
+c30
+  51   51 1980 3962 PO
+0 sg
+  51   51 1980 3962 FO
+c31
+  51   51 2004 3992 PO
+0 sg
+  51   51 2004 3992 FO
+c32
+  51   51 1998 4026 PO
+0 sg
+  51   51 1998 4026 FO
+c33
+  51   51 1919 4064 PO
+0 sg
+  51   51 1919 4064 FO
+c34
+  51   51 1818 4101 PO
+0 sg
+  51   51 1818 4101 FO
+c35
+  51   51 1710 4137 PO
+0 sg
+  51   51 1710 4137 FO
+c36
+  51   51 1616 4169 PO
+0 sg
+  51   51 1616 4169 FO
+c37
+  51   51 1539 4205 PO
+0 sg
+  51   51 1539 4205 FO
+c38
+  51   51 1472 4252 PO
+0 sg
+  51   51 1472 4252 FO
+c39
+  51   51 1415 4302 PO
+0 sg
+  51   51 1415 4302 FO
+c40
+  51   51 1363 4343 PO
+0 sg
+  51   51 1363 4343 FO
+c41
+  51   51 1327 4381 PO
+0 sg
+  51   51 1327 4381 FO
+c42
+  51   51 1295 4413 PO
+0 sg
+  51   51 1295 4413 FO
+c43
+  51   51 1264 4436 PO
+0 sg
+  51   51 1264 4436 FO
+c44
+  51   51 1223 4452 PO
+0 sg
+  51   51 1223 4452 FO
+c45
+  51   51 1185 4458 PO
+0 sg
+  51   51 1185 4458 FO
+c46
+  51   51 1161 4461 PO
+0 sg
+  51   51 1161 4461 FO
+c47
+  51   51 1154 4467 PO
+0 sg
+  51   51 1154 4467 FO
+c48
+  51   51 1144 4473 PO
+0 sg
+  51   51 1144 4473 FO
+c49
+  51   51 1140 4475 PO
+0 sg
+  51   51 1140 4475 FO
+c50
+  51   51 1131 4480 PO
+0 sg
+  51   51 1131 4480 FO
+c51
+  51   51 1119 4480 PO
+0 sg
+  51   51 1119 4480 FO
+c52
+  51   51 1087 4492 PO
+0 sg
+  51   51 1087 4492 FO
+c53
+  51   51 1048 4508 PO
+0 sg
+  51   51 1048 4508 FO
+c54
+  51   51 1013 4525 PO
+0 sg
+  51   51 1013 4525 FO
+c55
+  51   51  980 4538 PO
+0 sg
+  51   51  980 4538 FO
+c56
+  51   51  956 4547 PO
+0 sg
+  51   51  956 4547 FO
+c57
+  51   51  938 4547 PO
+0 sg
+  51   51  938 4547 FO
+c58
+  51   51  925 4548 PO
+0 sg
+  51   51  925 4548 FO
+c59
+  51   51  916 4553 PO
+0 sg
+  51   51  916 4553 FO
+c60
+  51   51  908 4567 PO
+0 sg
+  51   51  908 4567 FO
+c61
+  51   51  902 4577 PO
+0 sg
+  51   51  902 4577 FO
+c62
+  51   51  900 4588 PO
+0 sg
+  51   51  900 4588 FO
+c63
+  51   51  899 4598 PO
+0 sg
+  51   51  899 4598 FO
+c64
+  51   51  899 4593 PO
+0 sg
+  51   51  899 4593 FO
+c65
+  51   51  899 4598 PO
+0 sg
+  51   51  899 4598 FO
+c66
+  51   51  899 4602 PO
+0 sg
+  51   51  899 4602 FO
+c67
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5291  765 PO
+0 sg
+  51   51 5291  765 FO
+c9
+  51   51 4920  842 PO
+0 sg
+  51   51 4920  842 FO
+c10
+  51   51 4786 1058 PO
+0 sg
+  51   51 4786 1058 FO
+c11
+  51   51 4155 1327 PO
+0 sg
+  51   51 4155 1327 FO
+c12
+  51   51 3764 1692 PO
+0 sg
+  51   51 3764 1692 FO
+c13
+  51   51 3410 2082 PO
+0 sg
+  51   51 3410 2082 FO
+c14
+  51   51 3337 2440 PO
+0 sg
+  51   51 3337 2440 FO
+c15
+  51   51 3302 2764 PO
+0 sg
+  51   51 3302 2764 FO
+c16
+  51   51 3282 3005 PO
+0 sg
+  51   51 3282 3005 FO
+c17
+  51   51 3220 3178 PO
+0 sg
+  51   51 3220 3178 FO
+c18
+  51   51 3286 3269 PO
+0 sg
+  51   51 3286 3269 FO
+c19
+  51   51 3406 3339 PO
+0 sg
+  51   51 3406 3339 FO
+c20
+  51   51 3457 3413 PO
+0 sg
+  51   51 3457 3413 FO
+c21
+  51   51 3393 3483 PO
+0 sg
+  51   51 3393 3483 FO
+c22
+  51   51 3219 3565 PO
+0 sg
+  51   51 3219 3565 FO
+c23
+  51   51 3016 3653 PO
+0 sg
+  51   51 3016 3653 FO
+c24
+  51   51 2784 3758 PO
+0 sg
+  51   51 2784 3758 FO
+c25
+  51   51 2581 3886 PO
+0 sg
+  51   51 2581 3886 FO
+c26
+  51   51 2411 4014 PO
+0 sg
+  51   51 2411 4014 FO
+c27
+  51   51 2288 4114 PO
+0 sg
+  51   51 2288 4114 FO
+c28
+  51   51 2241 4165 PO
+0 sg
+  51   51 2241 4165 FO
+c29
+  51   51 2178 4189 PO
+0 sg
+  51   51 2178 4189 FO
+c30
+  51   51 2029 4210 PO
+0 sg
+  51   51 2029 4210 FO
+c31
+  51   51 1879 4221 PO
+0 sg
+  51   51 1879 4221 FO
+c32
+  51   51 1813 4201 PO
+0 sg
+  51   51 1813 4201 FO
+c33
+  51   51 1809 4178 PO
+0 sg
+  51   51 1809 4178 FO
+c34
+  51   51 1752 4179 PO
+0 sg
+  51   51 1752 4179 FO
+c35
+  51   51 1674 4190 PO
+0 sg
+  51   51 1674 4190 FO
+c36
+  51   51 1534 4253 PO
+0 sg
+  51   51 1534 4253 FO
+c37
+  51   51 1482 4286 PO
+0 sg
+  51   51 1482 4286 FO
+c38
+  51   51 1474 4303 PO
+0 sg
+  51   51 1474 4303 FO
+c39
+  51   51 1452 4328 PO
+0 sg
+  51   51 1452 4328 FO
+c40
+  51   51 1407 4350 PO
+0 sg
+  51   51 1407 4350 FO
+c41
+  51   51 1357 4364 PO
+0 sg
+  51   51 1357 4364 FO
+c42
+  51   51 1326 4372 PO
+0 sg
+  51   51 1326 4372 FO
+c43
+  51   51 1303 4385 PO
+0 sg
+  51   51 1303 4385 FO
+c44
+  51   51 1272 4399 PO
+0 sg
+  51   51 1272 4399 FO
+c45
+  51   51 1258 4400 PO
+0 sg
+  51   51 1258 4400 FO
+c46
+  51   51 1242 4414 PO
+0 sg
+  51   51 1242 4414 FO
+c47
+  51   51 1227 4422 PO
+0 sg
+  51   51 1227 4422 FO
+c48
+  51   51 1215 4420 PO
+0 sg
+  51   51 1215 4420 FO
+c49
+  51   51 1205 4424 PO
+0 sg
+  51   51 1205 4424 FO
+c50
+  51   51 1179 4436 PO
+0 sg
+  51   51 1179 4436 FO
+c51
+  51   51 1144 4449 PO
+0 sg
+  51   51 1144 4449 FO
+c52
+  51   51 1115 4466 PO
+0 sg
+  51   51 1115 4466 FO
+c53
+  51   51 1086 4484 PO
+0 sg
+  51   51 1086 4484 FO
+c54
+  51   51 1057 4504 PO
+0 sg
+  51   51 1057 4504 FO
+c55
+  51   51 1020 4521 PO
+0 sg
+  51   51 1020 4521 FO
+c56
+  51   51  992 4537 PO
+0 sg
+  51   51  992 4537 FO
+c57
+  51   51  972 4552 PO
+0 sg
+  51   51  972 4552 FO
+c58
+  51   51  953 4566 PO
+0 sg
+  51   51  953 4566 FO
+c59
+  51   51  934 4577 PO
+0 sg
+  51   51  934 4577 FO
+c60
+  51   51  918 4584 PO
+0 sg
+  51   51  918 4584 FO
+c61
+  51   51  908 4590 PO
+0 sg
+  51   51  908 4590 FO
+c62
+  51   51  903 4594 PO
+0 sg
+  51   51  903 4594 FO
+c63
+  51   51  900 4599 PO
+0 sg
+  51   51  900 4599 FO
+c64
+  51   51  899 4602 PO
+0 sg
+  51   51  899 4602 FO
+c65
+  51   51  899 4596 PO
+0 sg
+  51   51  899 4596 FO
+c66
+  51   51  899 4572 PO
+0 sg
+  51   51  899 4572 FO
+c67
+  51   51  899 4589 PO
+0 sg
+  51   51  899 4589 FO
+c68
+  51   51  899 4591 PO
+0 sg
+  51   51  899 4591 FO
+c69
+  51   51  899 4608 PO
+0 sg
+  51   51  899 4608 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4879  789 PO
+0 sg
+  51   51 4879  789 FO
+c9
+  51   51 4820  984 PO
+0 sg
+  51   51 4820  984 FO
+c10
+  51   51 4645 1082 PO
+0 sg
+  51   51 4645 1082 FO
+c11
+  51   51 4431 1248 PO
+0 sg
+  51   51 4431 1248 FO
+c12
+  51   51 4119 1540 PO
+0 sg
+  51   51 4119 1540 FO
+c13
+  51   51 3963 1853 PO
+0 sg
+  51   51 3963 1853 FO
+c14
+  51   51 3857 2184 PO
+0 sg
+  51   51 3857 2184 FO
+c15
+  51   51 3804 2473 PO
+0 sg
+  51   51 3804 2473 FO
+c16
+  51   51 3773 2691 PO
+0 sg
+  51   51 3773 2691 FO
+c17
+  51   51 3699 2864 PO
+0 sg
+  51   51 3699 2864 FO
+c18
+  51   51 3570 3062 PO
+0 sg
+  51   51 3570 3062 FO
+c19
+  51   51 3381 3232 PO
+0 sg
+  51   51 3381 3232 FO
+c20
+  51   51 3155 3348 PO
+0 sg
+  51   51 3155 3348 FO
+c21
+  51   51 2982 3446 PO
+0 sg
+  51   51 2982 3446 FO
+c22
+  51   51 2849 3517 PO
+0 sg
+  51   51 2849 3517 FO
+c23
+  51   51 2745 3569 PO
+0 sg
+  51   51 2745 3569 FO
+c24
+  51   51 2560 3650 PO
+0 sg
+  51   51 2560 3650 FO
+c25
+  51   51 2363 3734 PO
+0 sg
+  51   51 2363 3734 FO
+c26
+  51   51 2165 3805 PO
+0 sg
+  51   51 2165 3805 FO
+c27
+  51   51 1936 3889 PO
+0 sg
+  51   51 1936 3889 FO
+c28
+  51   51 1755 3974 PO
+0 sg
+  51   51 1755 3974 FO
+c29
+  51   51 1601 4056 PO
+0 sg
+  51   51 1601 4056 FO
+c30
+  51   51 1484 4144 PO
+0 sg
+  51   51 1484 4144 FO
+c31
+  51   51 1419 4208 PO
+0 sg
+  51   51 1419 4208 FO
+c32
+  51   51 1315 4255 PO
+0 sg
+  51   51 1315 4255 FO
+c33
+  51   51 1248 4263 PO
+0 sg
+  51   51 1248 4263 FO
+c34
+  51   51 1207 4292 PO
+0 sg
+  51   51 1207 4292 FO
+c35
+  51   51 1202 4287 PO
+0 sg
+  51   51 1202 4287 FO
+c36
+  51   51 1199 4306 PO
+0 sg
+  51   51 1199 4306 FO
+c37
+  51   51 1196 4297 PO
+0 sg
+  51   51 1196 4297 FO
+c38
+  51   51 1169 4301 PO
+0 sg
+  51   51 1169 4301 FO
+c39
+  51   51 1130 4296 PO
+0 sg
+  51   51 1130 4296 FO
+c40
+  51   51 1102 4304 PO
+0 sg
+  51   51 1102 4304 FO
+c41
+  51   51 1091 4324 PO
+0 sg
+  51   51 1091 4324 FO
+c42
+  51   51 1078 4346 PO
+0 sg
+  51   51 1078 4346 FO
+c43
+  51   51 1070 4373 PO
+0 sg
+  51   51 1070 4373 FO
+c44
+  51   51 1067 4397 PO
+0 sg
+  51   51 1067 4397 FO
+c45
+  51   51 1068 4416 PO
+0 sg
+  51   51 1068 4416 FO
+c46
+  51   51 1061 4434 PO
+0 sg
+  51   51 1061 4434 FO
+c47
+  51   51 1057 4454 PO
+0 sg
+  51   51 1057 4454 FO
+c48
+  51   51 1047 4475 PO
+0 sg
+  51   51 1047 4475 FO
+c49
+  51   51 1033 4491 PO
+0 sg
+  51   51 1033 4491 FO
+c50
+  51   51 1018 4499 PO
+0 sg
+  51   51 1018 4499 FO
+c51
+  51   51 1004 4504 PO
+0 sg
+  51   51 1004 4504 FO
+c52
+  51   51  992 4508 PO
+0 sg
+  51   51  992 4508 FO
+c53
+  51   51  983 4513 PO
+0 sg
+  51   51  983 4513 FO
+c54
+  51   51  975 4521 PO
+0 sg
+  51   51  975 4521 FO
+c55
+  51   51  961 4533 PO
+0 sg
+  51   51  961 4533 FO
+c56
+  51   51  947 4546 PO
+0 sg
+  51   51  947 4546 FO
+c57
+  51   51  936 4557 PO
+0 sg
+  51   51  936 4557 FO
+c58
+  51   51  925 4565 PO
+0 sg
+  51   51  925 4565 FO
+c59
+  51   51  917 4571 PO
+0 sg
+  51   51  917 4571 FO
+c60
+  51   51  911 4575 PO
+0 sg
+  51   51  911 4575 FO
+c61
+  51   51  906 4577 PO
+0 sg
+  51   51  906 4577 FO
+c62
+  51   51  903 4579 PO
+0 sg
+  51   51  903 4579 FO
+c63
+  51   51  901 4582 PO
+0 sg
+  51   51  901 4582 FO
+c64
+  51   51  900 4587 PO
+0 sg
+  51   51  900 4587 FO
+c65
+  51   51  899 4592 PO
+0 sg
+  51   51  899 4592 FO
+c66
+  51   51  899 4587 PO
+0 sg
+  51   51  899 4587 FO
+c67
+  51   51  899 4595 PO
+0 sg
+  51   51  899 4595 FO
+c68
+  51   51  899 4608 PO
+0 sg
+  51   51  899 4608 FO
+c69
+  51   51  899 4614 PO
+0 sg
+  51   51  899 4614 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4337  803 PO
+0 sg
+  51   51 4337  803 FO
+c9
+  51   51 3798  905 PO
+0 sg
+  51   51 3798  905 FO
+c10
+  51   51 3885 1175 PO
+0 sg
+  51   51 3885 1175 FO
+c11
+  51   51 4084 1404 PO
+0 sg
+  51   51 4084 1404 FO
+c12
+  51   51 4087 1625 PO
+0 sg
+  51   51 4087 1625 FO
+c13
+  51   51 3957 1868 PO
+0 sg
+  51   51 3957 1868 FO
+c14
+  51   51 3658 2116 PO
+0 sg
+  51   51 3658 2116 FO
+c15
+  51   51 3434 2413 PO
+0 sg
+  51   51 3434 2413 FO
+c16
+  51   51 3273 2675 PO
+0 sg
+  51   51 3273 2675 FO
+c17
+  51   51 3127 2941 PO
+0 sg
+  51   51 3127 2941 FO
+c18
+  51   51 3004 3120 PO
+0 sg
+  51   51 3004 3120 FO
+c19
+  51   51 2842 3304 PO
+0 sg
+  51   51 2842 3304 FO
+c20
+  51   51 2687 3512 PO
+0 sg
+  51   51 2687 3512 FO
+c21
+  51   51 2543 3681 PO
+0 sg
+  51   51 2543 3681 FO
+c22
+  51   51 2422 3797 PO
+0 sg
+  51   51 2422 3797 FO
+c23
+  51   51 2293 3877 PO
+0 sg
+  51   51 2293 3877 FO
+c24
+  51   51 2210 3961 PO
+0 sg
+  51   51 2210 3961 FO
+c25
+  51   51 2167 4017 PO
+0 sg
+  51   51 2167 4017 FO
+c26
+  51   51 2098 4029 PO
+0 sg
+  51   51 2098 4029 FO
+c27
+  51   51 1978 4031 PO
+0 sg
+  51   51 1978 4031 FO
+c28
+  51   51 1841 4042 PO
+0 sg
+  51   51 1841 4042 FO
+c29
+  51   51 1713 4077 PO
+0 sg
+  51   51 1713 4077 FO
+c30
+  51   51 1631 4126 PO
+0 sg
+  51   51 1631 4126 FO
+c31
+  51   51 1573 4176 PO
+0 sg
+  51   51 1573 4176 FO
+c32
+  51   51 1527 4227 PO
+0 sg
+  51   51 1527 4227 FO
+c33
+  51   51 1477 4255 PO
+0 sg
+  51   51 1477 4255 FO
+c34
+  51   51 1428 4280 PO
+0 sg
+  51   51 1428 4280 FO
+c35
+  51   51 1351 4308 PO
+0 sg
+  51   51 1351 4308 FO
+c36
+  51   51 1329 4258 PO
+0 sg
+  51   51 1329 4258 FO
+c37
+  51   51 1326 4199 PO
+0 sg
+  51   51 1326 4199 FO
+c38
+  51   51 1300 4154 PO
+0 sg
+  51   51 1300 4154 FO
+c39
+  51   51 1265 4151 PO
+0 sg
+  51   51 1265 4151 FO
+c40
+  51   51 1214 4202 PO
+0 sg
+  51   51 1214 4202 FO
+c41
+  51   51 1164 4272 PO
+0 sg
+  51   51 1164 4272 FO
+c42
+  51   51 1145 4335 PO
+0 sg
+  51   51 1145 4335 FO
+c43
+  51   51 1121 4378 PO
+0 sg
+  51   51 1121 4378 FO
+c44
+  51   51 1100 4411 PO
+0 sg
+  51   51 1100 4411 FO
+c45
+  51   51 1081 4434 PO
+0 sg
+  51   51 1081 4434 FO
+c46
+  51   51 1076 4424 PO
+0 sg
+  51   51 1076 4424 FO
+c47
+  51   51 1077 4422 PO
+0 sg
+  51   51 1077 4422 FO
+c48
+  51   51 1075 4437 PO
+0 sg
+  51   51 1075 4437 FO
+c49
+  51   51 1054 4455 PO
+0 sg
+  51   51 1054 4455 FO
+c50
+  51   51 1033 4470 PO
+0 sg
+  51   51 1033 4470 FO
+c51
+  51   51 1017 4485 PO
+0 sg
+  51   51 1017 4485 FO
+c52
+  51   51  998 4506 PO
+0 sg
+  51   51  998 4506 FO
+c53
+  51   51  979 4521 PO
+0 sg
+  51   51  979 4521 FO
+c54
+  51   51  965 4535 PO
+0 sg
+  51   51  965 4535 FO
+c55
+  51   51  954 4543 PO
+0 sg
+  51   51  954 4543 FO
+c56
+  51   51  945 4549 PO
+0 sg
+  51   51  945 4549 FO
+c57
+  51   51  932 4559 PO
+0 sg
+  51   51  932 4559 FO
+c58
+  51   51  921 4569 PO
+0 sg
+  51   51  921 4569 FO
+c59
+  51   51  914 4577 PO
+0 sg
+  51   51  914 4577 FO
+c60
+  51   51  909 4583 PO
+0 sg
+  51   51  909 4583 FO
+c61
+  51   51  905 4590 PO
+0 sg
+  51   51  905 4590 FO
+c62
+  51   51  903 4595 PO
+0 sg
+  51   51  903 4595 FO
+c63
+  51   51  900 4593 PO
+0 sg
+  51   51  900 4593 FO
+c64
+  51   51  899 4595 PO
+0 sg
+  51   51  899 4595 FO
+c65
+  51   51  899 4597 PO
+0 sg
+  51   51  899 4597 FO
+c66
+  51   51  899 4604 PO
+0 sg
+  51   51  899 4604 FO
+c67
+  51   51  899 4607 PO
+0 sg
+  51   51  899 4607 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5396  767 PO
+0 sg
+  51   51 5396  767 FO
+c9
+  51   51 5329  821 PO
+0 sg
+  51   51 5329  821 FO
+c10
+  51   51 4415 1022 PO
+0 sg
+  51   51 4415 1022 FO
+c11
+  51   51 4424 1272 PO
+0 sg
+  51   51 4424 1272 FO
+c12
+  51   51 4656 1446 PO
+0 sg
+  51   51 4656 1446 FO
+c13
+  51   51 4662 1611 PO
+0 sg
+  51   51 4662 1611 FO
+c14
+  51   51 4522 1723 PO
+0 sg
+  51   51 4522 1723 FO
+c15
+  51   51 4340 1878 PO
+0 sg
+  51   51 4340 1878 FO
+c16
+  51   51 4299 2039 PO
+0 sg
+  51   51 4299 2039 FO
+c17
+  51   51 4233 2206 PO
+0 sg
+  51   51 4233 2206 FO
+c18
+  51   51 4101 2357 PO
+0 sg
+  51   51 4101 2357 FO
+c19
+  51   51 4023 2480 PO
+0 sg
+  51   51 4023 2480 FO
+c20
+  51   51 3866 2607 PO
+0 sg
+  51   51 3866 2607 FO
+c21
+  51   51 3668 2770 PO
+0 sg
+  51   51 3668 2770 FO
+c22
+  51   51 3492 2961 PO
+0 sg
+  51   51 3492 2961 FO
+c23
+  51   51 3318 3129 PO
+0 sg
+  51   51 3318 3129 FO
+c24
+  51   51 3182 3280 PO
+0 sg
+  51   51 3182 3280 FO
+c25
+  51   51 3013 3426 PO
+0 sg
+  51   51 3013 3426 FO
+c26
+  51   51 2877 3557 PO
+0 sg
+  51   51 2877 3557 FO
+c27
+  51   51 2769 3642 PO
+0 sg
+  51   51 2769 3642 FO
+c28
+  51   51 2670 3705 PO
+0 sg
+  51   51 2670 3705 FO
+c29
+  51   51 2477 3794 PO
+0 sg
+  51   51 2477 3794 FO
+c30
+  51   51 2277 3873 PO
+0 sg
+  51   51 2277 3873 FO
+c31
+  51   51 2099 3907 PO
+0 sg
+  51   51 2099 3907 FO
+c32
+  51   51 2001 3934 PO
+0 sg
+  51   51 2001 3934 FO
+c33
+  51   51 1917 3965 PO
+0 sg
+  51   51 1917 3965 FO
+c34
+  51   51 1867 3997 PO
+0 sg
+  51   51 1867 3997 FO
+c35
+  51   51 1843 4023 PO
+0 sg
+  51   51 1843 4023 FO
+c36
+  51   51 1822 4023 PO
+0 sg
+  51   51 1822 4023 FO
+c37
+  51   51 1780 4020 PO
+0 sg
+  51   51 1780 4020 FO
+c38
+  51   51 1723 4035 PO
+0 sg
+  51   51 1723 4035 FO
+c39
+  51   51 1616 4058 PO
+0 sg
+  51   51 1616 4058 FO
+c40
+  51   51 1513 4087 PO
+0 sg
+  51   51 1513 4087 FO
+c41
+  51   51 1440 4123 PO
+0 sg
+  51   51 1440 4123 FO
+c42
+  51   51 1385 4160 PO
+0 sg
+  51   51 1385 4160 FO
+c43
+  51   51 1361 4185 PO
+0 sg
+  51   51 1361 4185 FO
+c44
+  51   51 1353 4211 PO
+0 sg
+  51   51 1353 4211 FO
+c45
+  51   51 1335 4248 PO
+0 sg
+  51   51 1335 4248 FO
+c46
+  51   51 1320 4278 PO
+0 sg
+  51   51 1320 4278 FO
+c47
+  51   51 1301 4303 PO
+0 sg
+  51   51 1301 4303 FO
+c48
+  51   51 1286 4329 PO
+0 sg
+  51   51 1286 4329 FO
+c49
+  51   51 1267 4355 PO
+0 sg
+  51   51 1267 4355 FO
+c50
+  51   51 1246 4376 PO
+0 sg
+  51   51 1246 4376 FO
+c51
+  51   51 1216 4400 PO
+0 sg
+  51   51 1216 4400 FO
+c52
+  51   51 1183 4426 PO
+0 sg
+  51   51 1183 4426 FO
+c53
+  51   51 1149 4450 PO
+0 sg
+  51   51 1149 4450 FO
+c54
+  51   51 1115 4470 PO
+0 sg
+  51   51 1115 4470 FO
+c55
+  51   51 1082 4491 PO
+0 sg
+  51   51 1082 4491 FO
+c56
+  51   51 1055 4508 PO
+0 sg
+  51   51 1055 4508 FO
+c57
+  51   51 1026 4523 PO
+0 sg
+  51   51 1026 4523 FO
+c58
+  51   51  998 4538 PO
+0 sg
+  51   51  998 4538 FO
+c59
+  51   51  968 4550 PO
+0 sg
+  51   51  968 4550 FO
+c60
+  51   51  946 4560 PO
+0 sg
+  51   51  946 4560 FO
+c61
+  51   51  927 4569 PO
+0 sg
+  51   51  927 4569 FO
+c62
+  51   51  916 4578 PO
+0 sg
+  51   51  916 4578 FO
+c63
+  51   51  908 4588 PO
+0 sg
+  51   51  908 4588 FO
+c64
+  51   51  902 4594 PO
+0 sg
+  51   51  902 4594 FO
+c65
+  51   51  900 4600 PO
+0 sg
+  51   51  900 4600 FO
+c66
+  51   51  899 4607 PO
+0 sg
+  51   51  899 4607 FO
+c67
+  51   51  899 4609 PO
+0 sg
+  51   51  899 4609 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4556  766 PO
+0 sg
+  51   51 4556  766 FO
+c9
+  51   51 3617  877 PO
+0 sg
+  51   51 3617  877 FO
+c10
+  51   51 4041 1082 PO
+0 sg
+  51   51 4041 1082 FO
+c11
+  51   51 4417 1266 PO
+0 sg
+  51   51 4417 1266 FO
+c12
+  51   51 4514 1402 PO
+0 sg
+  51   51 4514 1402 FO
+c13
+  51   51 4507 1621 PO
+0 sg
+  51   51 4507 1621 FO
+c14
+  51   51 4393 1877 PO
+0 sg
+  51   51 4393 1877 FO
+c15
+  51   51 4294 2118 PO
+0 sg
+  51   51 4294 2118 FO
+c16
+  51   51 4201 2334 PO
+0 sg
+  51   51 4201 2334 FO
+c17
+  51   51 4098 2499 PO
+0 sg
+  51   51 4098 2499 FO
+c18
+  51   51 3896 2652 PO
+0 sg
+  51   51 3896 2652 FO
+c19
+  51   51 3676 2803 PO
+0 sg
+  51   51 3676 2803 FO
+c20
+  51   51 3490 2949 PO
+0 sg
+  51   51 3490 2949 FO
+c21
+  51   51 3283 3083 PO
+0 sg
+  51   51 3283 3083 FO
+c22
+  51   51 3082 3213 PO
+0 sg
+  51   51 3082 3213 FO
+c23
+  51   51 2907 3338 PO
+0 sg
+  51   51 2907 3338 FO
+c24
+  51   51 2678 3453 PO
+0 sg
+  51   51 2678 3453 FO
+c25
+  51   51 2469 3570 PO
+0 sg
+  51   51 2469 3570 FO
+c26
+  51   51 2290 3691 PO
+0 sg
+  51   51 2290 3691 FO
+c27
+  51   51 2119 3789 PO
+0 sg
+  51   51 2119 3789 FO
+c28
+  51   51 1952 3875 PO
+0 sg
+  51   51 1952 3875 FO
+c29
+  51   51 1830 3937 PO
+0 sg
+  51   51 1830 3937 FO
+c30
+  51   51 1719 3997 PO
+0 sg
+  51   51 1719 3997 FO
+c31
+  51   51 1621 4058 PO
+0 sg
+  51   51 1621 4058 FO
+c32
+  51   51 1517 4120 PO
+0 sg
+  51   51 1517 4120 FO
+c33
+  51   51 1422 4163 PO
+0 sg
+  51   51 1422 4163 FO
+c34
+  51   51 1350 4169 PO
+0 sg
+  51   51 1350 4169 FO
+c35
+  51   51 1306 4160 PO
+0 sg
+  51   51 1306 4160 FO
+c36
+  51   51 1284 4143 PO
+0 sg
+  51   51 1284 4143 FO
+c37
+  51   51 1312 4149 PO
+0 sg
+  51   51 1312 4149 FO
+c38
+  51   51 1370 4170 PO
+0 sg
+  51   51 1370 4170 FO
+c39
+  51   51 1435 4185 PO
+0 sg
+  51   51 1435 4185 FO
+c40
+  51   51 1470 4210 PO
+0 sg
+  51   51 1470 4210 FO
+c41
+  51   51 1484 4245 PO
+0 sg
+  51   51 1484 4245 FO
+c42
+  51   51 1459 4285 PO
+0 sg
+  51   51 1459 4285 FO
+c43
+  51   51 1424 4317 PO
+0 sg
+  51   51 1424 4317 FO
+c44
+  51   51 1383 4338 PO
+0 sg
+  51   51 1383 4338 FO
+c45
+  51   51 1357 4354 PO
+0 sg
+  51   51 1357 4354 FO
+c46
+  51   51 1329 4378 PO
+0 sg
+  51   51 1329 4378 FO
+c47
+  51   51 1287 4398 PO
+0 sg
+  51   51 1287 4398 FO
+c48
+  51   51 1249 4416 PO
+0 sg
+  51   51 1249 4416 FO
+c49
+  51   51 1221 4436 PO
+0 sg
+  51   51 1221 4436 FO
+c50
+  51   51 1184 4454 PO
+0 sg
+  51   51 1184 4454 FO
+c51
+  51   51 1133 4470 PO
+0 sg
+  51   51 1133 4470 FO
+c52
+  51   51 1086 4484 PO
+0 sg
+  51   51 1086 4484 FO
+c53
+  51   51 1047 4492 PO
+0 sg
+  51   51 1047 4492 FO
+c54
+  51   51 1020 4496 PO
+0 sg
+  51   51 1020 4496 FO
+c55
+  51   51  996 4496 PO
+0 sg
+  51   51  996 4496 FO
+c56
+  51   51  978 4498 PO
+0 sg
+  51   51  978 4498 FO
+c57
+  51   51  963 4503 PO
+0 sg
+  51   51  963 4503 FO
+c58
+  51   51  950 4518 PO
+0 sg
+  51   51  950 4518 FO
+c59
+  51   51  935 4532 PO
+0 sg
+  51   51  935 4532 FO
+c60
+  51   51  924 4547 PO
+0 sg
+  51   51  924 4547 FO
+c61
+  51   51  917 4563 PO
+0 sg
+  51   51  917 4563 FO
+c62
+  51   51  911 4573 PO
+0 sg
+  51   51  911 4573 FO
+c63
+  51   51  906 4581 PO
+0 sg
+  51   51  906 4581 FO
+c64
+  51   51  902 4586 PO
+0 sg
+  51   51  902 4586 FO
+c65
+  51   51  900 4593 PO
+0 sg
+  51   51  900 4593 FO
+c66
+  51   51  899 4603 PO
+0 sg
+  51   51  899 4603 FO
+c67
+  51   51  899 4609 PO
+0 sg
+  51   51  899 4609 FO
+c68
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5554  762 PO
+0 sg
+  51   51 5554  762 FO
+c9
+  51   51 5146  822 PO
+0 sg
+  51   51 5146  822 FO
+c10
+  51   51 4896 1023 PO
+0 sg
+  51   51 4896 1023 FO
+c11
+  51   51 4702 1134 PO
+0 sg
+  51   51 4702 1134 FO
+c12
+  51   51 4689 1289 PO
+0 sg
+  51   51 4689 1289 FO
+c13
+  51   51 4756 1461 PO
+0 sg
+  51   51 4756 1461 FO
+c14
+  51   51 4752 1641 PO
+0 sg
+  51   51 4752 1641 FO
+c15
+  51   51 4750 1758 PO
+0 sg
+  51   51 4750 1758 FO
+c16
+  51   51 4749 1897 PO
+0 sg
+  51   51 4749 1897 FO
+c17
+  51   51 4726 2070 PO
+0 sg
+  51   51 4726 2070 FO
+c18
+  51   51 4680 2249 PO
+0 sg
+  51   51 4680 2249 FO
+c19
+  51   51 4596 2415 PO
+0 sg
+  51   51 4596 2415 FO
+c20
+  51   51 4429 2553 PO
+0 sg
+  51   51 4429 2553 FO
+c21
+  51   51 4225 2655 PO
+0 sg
+  51   51 4225 2655 FO
+c22
+  51   51 3987 2736 PO
+0 sg
+  51   51 3987 2736 FO
+c23
+  51   51 3815 2815 PO
+0 sg
+  51   51 3815 2815 FO
+c24
+  51   51 3588 2936 PO
+0 sg
+  51   51 3588 2936 FO
+c25
+  51   51 3426 3100 PO
+0 sg
+  51   51 3426 3100 FO
+c26
+  51   51 3318 3259 PO
+0 sg
+  51   51 3318 3259 FO
+c27
+  51   51 3234 3391 PO
+0 sg
+  51   51 3234 3391 FO
+c28
+  51   51 3138 3472 PO
+0 sg
+  51   51 3138 3472 FO
+c29
+  51   51 3030 3539 PO
+0 sg
+  51   51 3030 3539 FO
+c30
+  51   51 2919 3611 PO
+0 sg
+  51   51 2919 3611 FO
+c31
+  51   51 2810 3665 PO
+0 sg
+  51   51 2810 3665 FO
+c32
+  51   51 2711 3730 PO
+0 sg
+  51   51 2711 3730 FO
+c33
+  51   51 2567 3796 PO
+0 sg
+  51   51 2567 3796 FO
+c34
+  51   51 2346 3862 PO
+0 sg
+  51   51 2346 3862 FO
+c35
+  51   51 2153 3907 PO
+0 sg
+  51   51 2153 3907 FO
+c36
+  51   51 1982 3938 PO
+0 sg
+  51   51 1982 3938 FO
+c37
+  51   51 1845 3966 PO
+0 sg
+  51   51 1845 3966 FO
+c38
+  51   51 1759 4018 PO
+0 sg
+  51   51 1759 4018 FO
+c39
+  51   51 1741 4073 PO
+0 sg
+  51   51 1741 4073 FO
+c40
+  51   51 1769 4107 PO
+0 sg
+  51   51 1769 4107 FO
+c41
+  51   51 1767 4143 PO
+0 sg
+  51   51 1767 4143 FO
+c42
+  51   51 1751 4176 PO
+0 sg
+  51   51 1751 4176 FO
+c43
+  51   51 1733 4213 PO
+0 sg
+  51   51 1733 4213 FO
+c44
+  51   51 1705 4249 PO
+0 sg
+  51   51 1705 4249 FO
+c45
+  51   51 1648 4278 PO
+0 sg
+  51   51 1648 4278 FO
+c46
+  51   51 1587 4300 PO
+0 sg
+  51   51 1587 4300 FO
+c47
+  51   51 1507 4326 PO
+0 sg
+  51   51 1507 4326 FO
+c48
+  51   51 1431 4346 PO
+0 sg
+  51   51 1431 4346 FO
+c49
+  51   51 1361 4363 PO
+0 sg
+  51   51 1361 4363 FO
+c50
+  51   51 1303 4379 PO
+0 sg
+  51   51 1303 4379 FO
+c51
+  51   51 1246 4394 PO
+0 sg
+  51   51 1246 4394 FO
+c52
+  51   51 1194 4408 PO
+0 sg
+  51   51 1194 4408 FO
+c53
+  51   51 1141 4426 PO
+0 sg
+  51   51 1141 4426 FO
+c54
+  51   51 1098 4443 PO
+0 sg
+  51   51 1098 4443 FO
+c55
+  51   51 1060 4466 PO
+0 sg
+  51   51 1060 4466 FO
+c56
+  51   51 1033 4485 PO
+0 sg
+  51   51 1033 4485 FO
+c57
+  51   51 1011 4506 PO
+0 sg
+  51   51 1011 4506 FO
+c58
+  51   51  985 4524 PO
+0 sg
+  51   51  985 4524 FO
+c59
+  51   51  965 4539 PO
+0 sg
+  51   51  965 4539 FO
+c60
+  51   51  946 4551 PO
+0 sg
+  51   51  946 4551 FO
+c61
+  51   51  930 4562 PO
+0 sg
+  51   51  930 4562 FO
+c62
+  51   51  917 4574 PO
+0 sg
+  51   51  917 4574 FO
+c63
+  51   51  909 4582 PO
+0 sg
+  51   51  909 4582 FO
+c64
+  51   51  904 4590 PO
+0 sg
+  51   51  904 4590 FO
+c65
+  51   51  901 4592 PO
+0 sg
+  51   51  901 4592 FO
+c66
+  51   51  899 4595 PO
+0 sg
+  51   51  899 4595 FO
+c67
+  51   51  899 4592 PO
+0 sg
+  51   51  899 4592 FO
+c68
+  51   51  899 4589 PO
+0 sg
+  51   51  899 4589 FO
+c69
+  51   51  899 4596 PO
+0 sg
+  51   51  899 4596 FO
+c70
+  51   51  899 4600 PO
+0 sg
+  51   51  899 4600 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 5270  771 PO
+0 sg
+  51   51 5270  771 FO
+c9
+  51   51 5043  848 PO
+0 sg
+  51   51 5043  848 FO
+c10
+  51   51 4716 1040 PO
+0 sg
+  51   51 4716 1040 FO
+c11
+  51   51 4699 1306 PO
+0 sg
+  51   51 4699 1306 FO
+c12
+  51   51 4454 1596 PO
+0 sg
+  51   51 4454 1596 FO
+c13
+  51   51 4357 1837 PO
+0 sg
+  51   51 4357 1837 FO
+c14
+  51   51 4348 2045 PO
+0 sg
+  51   51 4348 2045 FO
+c15
+  51   51 4400 2204 PO
+0 sg
+  51   51 4400 2204 FO
+c16
+  51   51 4441 2336 PO
+0 sg
+  51   51 4441 2336 FO
+c17
+  51   51 4427 2467 PO
+0 sg
+  51   51 4427 2467 FO
+c18
+  51   51 4393 2563 PO
+0 sg
+  51   51 4393 2563 FO
+c19
+  51   51 4265 2667 PO
+0 sg
+  51   51 4265 2667 FO
+c20
+  51   51 4088 2757 PO
+0 sg
+  51   51 4088 2757 FO
+c21
+  51   51 3774 2858 PO
+0 sg
+  51   51 3774 2858 FO
+c22
+  51   51 3435 3010 PO
+0 sg
+  51   51 3435 3010 FO
+c23
+  51   51 3072 3187 PO
+0 sg
+  51   51 3072 3187 FO
+c24
+  51   51 2796 3358 PO
+0 sg
+  51   51 2796 3358 FO
+c25
+  51   51 2563 3510 PO
+0 sg
+  51   51 2563 3510 FO
+c26
+  51   51 2371 3648 PO
+0 sg
+  51   51 2371 3648 FO
+c27
+  51   51 2242 3765 PO
+0 sg
+  51   51 2242 3765 FO
+c28
+  51   51 2196 3861 PO
+0 sg
+  51   51 2196 3861 FO
+c29
+  51   51 2114 3934 PO
+0 sg
+  51   51 2114 3934 FO
+c30
+  51   51 1944 4004 PO
+0 sg
+  51   51 1944 4004 FO
+c31
+  51   51 1794 4071 PO
+0 sg
+  51   51 1794 4071 FO
+c32
+  51   51 1669 4121 PO
+0 sg
+  51   51 1669 4121 FO
+c33
+  51   51 1638 4076 PO
+0 sg
+  51   51 1638 4076 FO
+c34
+  51   51 1604 4079 PO
+0 sg
+  51   51 1604 4079 FO
+c35
+  51   51 1597 4085 PO
+0 sg
+  51   51 1597 4085 FO
+c36
+  51   51 1601 4085 PO
+0 sg
+  51   51 1601 4085 FO
+c37
+  51   51 1592 4091 PO
+0 sg
+  51   51 1592 4091 FO
+c38
+  51   51 1538 4120 PO
+0 sg
+  51   51 1538 4120 FO
+c39
+  51   51 1462 4157 PO
+0 sg
+  51   51 1462 4157 FO
+c40
+  51   51 1409 4196 PO
+0 sg
+  51   51 1409 4196 FO
+c41
+  51   51 1376 4245 PO
+0 sg
+  51   51 1376 4245 FO
+c42
+  51   51 1373 4281 PO
+0 sg
+  51   51 1373 4281 FO
+c43
+  51   51 1379 4308 PO
+0 sg
+  51   51 1379 4308 FO
+c44
+  51   51 1377 4331 PO
+0 sg
+  51   51 1377 4331 FO
+c45
+  51   51 1347 4356 PO
+0 sg
+  51   51 1347 4356 FO
+c46
+  51   51 1320 4378 PO
+0 sg
+  51   51 1320 4378 FO
+c47
+  51   51 1285 4398 PO
+0 sg
+  51   51 1285 4398 FO
+c48
+  51   51 1239 4420 PO
+0 sg
+  51   51 1239 4420 FO
+c49
+  51   51 1186 4436 PO
+0 sg
+  51   51 1186 4436 FO
+c50
+  51   51 1142 4445 PO
+0 sg
+  51   51 1142 4445 FO
+c51
+  51   51 1107 4454 PO
+0 sg
+  51   51 1107 4454 FO
+c52
+  51   51 1077 4462 PO
+0 sg
+  51   51 1077 4462 FO
+c53
+  51   51 1049 4469 PO
+0 sg
+  51   51 1049 4469 FO
+c54
+  51   51 1025 4477 PO
+0 sg
+  51   51 1025 4477 FO
+c55
+  51   51 1001 4489 PO
+0 sg
+  51   51 1001 4489 FO
+c56
+  51   51  980 4499 PO
+0 sg
+  51   51  980 4499 FO
+c57
+  51   51  959 4507 PO
+0 sg
+  51   51  959 4507 FO
+c58
+  51   51  942 4518 PO
+0 sg
+  51   51  942 4518 FO
+c59
+  51   51  930 4530 PO
+0 sg
+  51   51  930 4530 FO
+c60
+  51   51  921 4544 PO
+0 sg
+  51   51  921 4544 FO
+c61
+  51   51  915 4557 PO
+0 sg
+  51   51  915 4557 FO
+c62
+  51   51  910 4570 PO
+0 sg
+  51   51  910 4570 FO
+c63
+  51   51  905 4576 PO
+0 sg
+  51   51  905 4576 FO
+c64
+  51   51  902 4582 PO
+0 sg
+  51   51  902 4582 FO
+c65
+  51   51  900 4586 PO
+0 sg
+  51   51  900 4586 FO
+c66
+  51   51  899 4592 PO
+0 sg
+  51   51  899 4592 FO
+c67
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c68
+  51   51  899 4608 PO
+0 sg
+  51   51  899 4608 FO
+c69
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c8
+  51   51 5768  773 PO
+0 sg
+  51   51 5768  773 FO
+c8
+  51   51 4360  798 PO
+0 sg
+  51   51 4360  798 FO
+c9
+  51   51 3523  890 PO
+0 sg
+  51   51 3523  890 FO
+c10
+  51   51 3800 1137 PO
+0 sg
+  51   51 3800 1137 FO
+c11
+  51   51 3385 1513 PO
+0 sg
+  51   51 3385 1513 FO
+c12
+  51   51 3507 1815 PO
+0 sg
+  51   51 3507 1815 FO
+c13
+  51   51 3875 1999 PO
+0 sg
+  51   51 3875 1999 FO
+c14
+  51   51 4180 2148 PO
+0 sg
+  51   51 4180 2148 FO
+c15
+  51   51 4386 2302 PO
+0 sg
+  51   51 4386 2302 FO
+c16
+  51   51 4403 2450 PO
+0 sg
+  51   51 4403 2450 FO
+c17
+  51   51 4294 2617 PO
+0 sg
+  51   51 4294 2617 FO
+c18
+  51   51 4024 2780 PO
+0 sg
+  51   51 4024 2780 FO
+c19
+  51   51 3822 2886 PO
+0 sg
+  51   51 3822 2886 FO
+c20
+  51   51 3668 2975 PO
+0 sg
+  51   51 3668 2975 FO
+c21
+  51   51 3527 3061 PO
+0 sg
+  51   51 3527 3061 FO
+c22
+  51   51 3295 3138 PO
+0 sg
+  51   51 3295 3138 FO
+c23
+  51   51 3092 3202 PO
+0 sg
+  51   51 3092 3202 FO
+c24
+  51   51 2894 3270 PO
+0 sg
+  51   51 2894 3270 FO
+c25
+  51   51 2703 3341 PO
+0 sg
+  51   51 2703 3341 FO
+c26
+  51   51 2466 3427 PO
+0 sg
+  51   51 2466 3427 FO
+c27
+  51   51 2216 3535 PO
+0 sg
+  51   51 2216 3535 FO
+c28
+  51   51 1980 3633 PO
+0 sg
+  51   51 1980 3633 FO
+c29
+  51   51 1820 3744 PO
+0 sg
+  51   51 1820 3744 FO
+c30
+  51   51 1760 3851 PO
+0 sg
+  51   51 1760 3851 FO
+c31
+  51   51 1675 3965 PO
+0 sg
+  51   51 1675 3965 FO
+c32
+  51   51 1623 4055 PO
+0 sg
+  51   51 1623 4055 FO
+c33
+  51   51 1619 4114 PO
+0 sg
+  51   51 1619 4114 FO
+c34
+  51   51 1643 4110 PO
+0 sg
+  51   51 1643 4110 FO
+c35
+  51   51 1612 4112 PO
+0 sg
+  51   51 1612 4112 FO
+c36
+  51   51 1567 4130 PO
+0 sg
+  51   51 1567 4130 FO
+c37
+  51   51 1487 4155 PO
+0 sg
+  51   51 1487 4155 FO
+c38
+  51   51 1414 4177 PO
+0 sg
+  51   51 1414 4177 FO
+c39
+  51   51 1347 4222 PO
+0 sg
+  51   51 1347 4222 FO
+c40
+  51   51 1300 4247 PO
+0 sg
+  51   51 1300 4247 FO
+c41
+  51   51 1268 4249 PO
+0 sg
+  51   51 1268 4249 FO
+c42
+  51   51 1256 4241 PO
+0 sg
+  51   51 1256 4241 FO
+c43
+  51   51 1231 4263 PO
+0 sg
+  51   51 1231 4263 FO
+c44
+  51   51 1187 4302 PO
+0 sg
+  51   51 1187 4302 FO
+c45
+  51   51 1139 4357 PO
+0 sg
+  51   51 1139 4357 FO
+c46
+  51   51 1098 4406 PO
+0 sg
+  51   51 1098 4406 FO
+c47
+  51   51 1073 4438 PO
+0 sg
+  51   51 1073 4438 FO
+c48
+  51   51 1064 4461 PO
+0 sg
+  51   51 1064 4461 FO
+c49
+  51   51 1050 4482 PO
+0 sg
+  51   51 1050 4482 FO
+c50
+  51   51 1028 4500 PO
+0 sg
+  51   51 1028 4500 FO
+c51
+  51   51 1010 4508 PO
+0 sg
+  51   51 1010 4508 FO
+c52
+  51   51  998 4507 PO
+0 sg
+  51   51  998 4507 FO
+c53
+  51   51  983 4511 PO
+0 sg
+  51   51  983 4511 FO
+c54
+  51   51  973 4509 PO
+0 sg
+  51   51  973 4509 FO
+c55
+  51   51  963 4508 PO
+0 sg
+  51   51  963 4508 FO
+c56
+  51   51  953 4512 PO
+0 sg
+  51   51  953 4512 FO
+c57
+  51   51  943 4512 PO
+0 sg
+  51   51  943 4512 FO
+c58
+  51   51  938 4525 PO
+0 sg
+  51   51  938 4525 FO
+c59
+  51   51  930 4544 PO
+0 sg
+  51   51  930 4544 FO
+c60
+  51   51  921 4559 PO
+0 sg
+  51   51  921 4559 FO
+c61
+  51   51  911 4568 PO
+0 sg
+  51   51  911 4568 FO
+c62
+  51   51  905 4572 PO
+0 sg
+  51   51  905 4572 FO
+c63
+  51   51  902 4578 PO
+0 sg
+  51   51  902 4578 FO
+c64
+  51   51  900 4581 PO
+0 sg
+  51   51  900 4581 FO
+c65
+  51   51  899 4593 PO
+0 sg
+  51   51  899 4593 FO
+c66
+  51   51  899 4601 PO
+0 sg
+  51   51  899 4601 FO
+c67
+  51   51  899 4605 PO
+0 sg
+  51   51  899 4605 FO
+c68
+  51   51  899 4609 PO
+0 sg
+  51   51  899 4609 FO
+c69
+  51   51  899 4599 PO
+0 sg
+  51   51  899 4599 FO
+c70
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+c71
+  51   51  899 4615 PO
+0 sg
+  51   51  899 4615 FO
+24 w
+1.000000 0.000000 0.000000 sr
+100 -23 -102 -17 5562 798 3 MP stroke
+102 -19 -101 -21 5299 797 3 MP stroke
+102 -21 -103 -19 5038 799 3 MP stroke
+98 -30 -105 -9 4781 822 3 MP stroke
+86 -47 -104 9 4538 884 3 MP stroke
+67 -64 -97 32 4326 992 3 MP stroke
+39 -77 -80 53 4167 1146 3 MP stroke
+16 -82 -63 66 4059 1328 3 MP stroke
+5 -83 -54 72 3979 1522 3 MP stroke
+0 -83 -49 73 3914 1722 3 MP stroke
+-4 -83 -46 75 3860 1923 3 MP stroke
+-8 -82 -42 75 3814 2127 3 MP stroke
+-5 -83 -45 75 3764 2330 3 MP stroke
+-1 -83 -48 73 3705 2533 3 MP stroke
+2 -83 -51 72 3637 2733 3 MP stroke
+12 -82 -59 68 3549 2930 3 MP stroke
+24 -80 -69 62 3435 3118 3 MP stroke
+39 -77 -80 53 3287 3292 3 MP stroke
+52 -71 -89 43 3109 3447 3 MP stroke
+65 -65 -96 33 2904 3580 3 MP stroke
+71 -60 -99 27 2686 3697 3 MP stroke
+70 -62 -98 29 2469 3813 3 MP stroke
+70 -62 -98 29 2252 3929 3 MP stroke
+70 -62 -98 28 2034 4045 3 MP stroke
+79 -54 -102 19 1802 4144 3 MP stroke
+77 -57 -101 21 1572 4243 3 MP stroke
+69 -63 -98 30 1357 4356 3 MP stroke
+71 -61 -99 28 1139 4471 3 MP stroke
+-35 17 953 4599 2 MP stroke
+21 -27 899 4599 2 MP stroke
+-308 8 5768 773 2 MP stroke
+-308 -4 5506 780 2 MP stroke
+-308 4 5243 776 2 MP stroke
+-305 33 4981 780 2 MP stroke
+-288 85 4722 808 2 MP stroke
+-248 144 4477 880 2 MP stroke
+-179 197 4266 1002 2 MP stroke
+-118 224 4114 1170 2 MP stroke
+-89 233 4014 1361 2 MP stroke
+-73 236 3938 1559 2 MP stroke
+-62 238 3876 1760 2 MP stroke
+-52 239 3824 1963 2 MP stroke
+-61 238 3780 2167 2 MP stroke
+-71 237 3728 2369 2 MP stroke
+-81 234 3667 2571 2 MP stroke
+-108 228 3598 2770 2 MP stroke
+-140 216 3506 2964 2 MP stroke
+-180 197 3387 3148 2 MP stroke
+-214 174 3234 3316 2 MP stroke
+-243 149 3051 3464 2 MP stroke
+-257 133 2844 3591 2 MP stroke
+-254 138 2625 3704 2 MP stroke
+-255 137 2409 3821 2 MP stroke
+-256 135 2192 3938 2 MP stroke
+-274 111 1974 4052 2 MP stroke
+-270 117 1741 4147 2 MP stroke
+-252 140 1511 4246 2 MP stroke
+-257 134 1297 4365 2 MP stroke
+-179 136 1078 4479 2 MP stroke
+DA
+0 sg
+25 -26 24 -27 25 -27 24 -27 25 -28 24 -28 25 -28 24 -29 
+25 -29 24 -29 25 -30 24 -30 24 -30 25 -30 24 -31 25 -32 
+24 -31 25 -32 24 -33 25 -32 24 -34 25 -33 24 -34 25 -34 
+24 -35 25 -35 24 -36 25 -36 24 -36 24 -37 25 -38 24 -38 
+25 -38 24 -39 25 -39 24 -40 25 -40 24 -41 25 -41 24 -42 
+25 -43 24 -43 25 -44 24 -44 24 -44 25 -46 24 -46 25 -47 
+24 -47 25 -48 24 -48 25 -50 24 -50 25 -50 24 -52 25 -52 
+24 -53 25 -54 24 -54 24 -55 25 -56 24 -57 25 -58 24 -59 
+25 -60 24 -60 25 -62 24 -62 25 -63 24 -65 25 -65 24 -67 
+25 -67 24 -69 24 -70 25 -71 24 -72 25 -74 24 -74 25 -76 
+24 -77 25 -79 23 -75 3738 4616 84 MP stroke
+SO
+4869 0 899 773 2 MP stroke
+3381 4881 mt 
+(N) s
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 96 FMSR
+
+3467 4941 mt 
+(d) s
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 120 FMSR
+
+3520 4881 mt 
+(/N) s
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 96 FMSR
+
+3640 4941 mt 
+(d,a) s
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 120 FMSR
+
+ 562 2696 mt  -90 rotate
+(R) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 96 FMSR
+
+ 622 2610 mt  -90 rotate
+(v) s
+90 rotate
+ 502 2610 mt  -90 rotate
+(3) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 120 FMSR
+
+ 562 2557 mt  -90 rotate
+(/R) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 96 FMSR
+
+ 502 2437 mt  -90 rotate
+(3) s
+90 rotate
+ 622 2437 mt  -90 rotate
+(v,0) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 120 FMSR
+
+3499  294 mt 
+(D2) s
+ 882 4658 mt 
+( ) s
+6239  431 mt 
+( ) s
+6 w
+1 sg
+0 626 1366 0 0 -626 4829 4556 4 MP
+PP
+-1366 0 0 626 1366 0 0 -626 4829 4556 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+4829 4556 mt 6195 4556 L
+4829 3930 mt 6195 3930 L
+4829 4556 mt 4829 3930 L
+6195 4556 mt 6195 3930 L
+4829 4556 mt 6195 4556 L
+4829 4556 mt 4829 3930 L
+4829 4556 mt 6195 4556 L
+4829 3930 mt 6195 3930 L
+4829 4556 mt 4829 3930 L
+6195 4556 mt 6195 3930 L
+5293 4065 mt 
+(Sample Boxes) s
+c39
+  36   36 5078 4022 PO
+0 sg
+  36   36 5078 4022 FO
+5293 4212 mt 
+(DNS Domain) s
+24 w
+1.000000 0.000000 0.000000 sr
+356 0 4900 4169 2 MP stroke
+-107 22 107 22 5149 4147 3 MP stroke
+6 w
+0 sg
+5293 4359 mt 
+(Homogeneous) s
+DA
+24 w
+356 0 4900 4316 2 MP stroke
+SO
+5293 4506 mt 
+(Inhomogeneous) s
+356 0 4900 4463 2 MP stroke
+6 w
+
+end %%Color Dict
+
+eplot
+%%EndObject
+
+epage
+end
+
+showpage
+
+%%Trailer
+%%EOF
