@@ -6,3 +6,6 @@
 *.log
 *.pdf
 *.ps
+*.synctex.gz
+*.ttt
+*.fff
