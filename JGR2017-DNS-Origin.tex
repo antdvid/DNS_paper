@@ -244,7 +244,7 @@ configuration of cloudy area on entrainment-mixing processes.
 {\color{green}By design, the initial fields of temperature and supersaturation in Case 1 are closely related to the initial velocity field whereas those in Case 2 and Case 3 are independent of the initial velocity field instead.}
 
 \begin{figure}\centering
-\includegraphics[width=0.9\linewidth]{figure_1}
+\includegraphics[width=0.9\linewidth]{init_vapor_supersat}
 \caption{Cross sections of the initial supersaturation(upper row) and temperature (K) field(lower row) for different cases. The cloudy part occupies about half of the computational domain.\label{fig:slice_case123}}
 \end{figure}
 
@@ -279,14 +279,30 @@ Six numerical experiments are performed to represent six scenarios (denoted by D
 \Fig{fig:therm_dynam} compares between the six simulations the temporal evolution of the domain mean, standard deviation and relative dispersion of turbulent kinetic energy (TKE, a, b, c), of temperature (d,e,f) and water vapor mixing ratio (g, h, i), and supersaturation (j, k, l). Relative dispersion is defined as the ratio of the standard deviation to the mean of the corresponding variables. As expected, the mean TKE and its standard deviation for the three forced turbulence simulations (F1, F2 and F3) remain approximately constant determined by the large scale forcing after a short relaxation from the initial time. However, it is interesting to observe a transient turbulence enhancement before gradually decaying to zero in the decaying cases, especially for D2 and D3. This transient enhancement results likely from the buoyancy effect, which is caused by the deviation of temperature and vapor mixing ratio to the reference value according to \Eq{eq:source_term}. The D3 simulation exhibits the strongest enhancement, followed by D2. But for D2 the enhancement lasts longer. The mixing in D3 is accelerated by the sedimentation effect, making it a slightly stronger and faster than D2. Note that D1 can be regarded as the intermediate stage of mixing process in D2 or D3, and therefore the buoyancy effect quickly disappear and show little enhancement in the figure.  Most of the droplets have a chance to enter the clear air and evaporate at an early stage. Evaporation process absorbs latent heat from the environment, resulting in deviation of the temperature field from the mean value. The transient enhancement can be seen more clearly from the standard deviation of temperature. The transient enhancement is weaker for the three forced simulations F1, F2 and F3 (but still stronger than that of TKE).  It is noteworthy that the behavior of transient turbulence enhancement does not appear in the field of water vapor mixing ratio, which is consistent with \citet{Kumar14}. Note that the vapor mixing ratio in the clear air is much lower than in the cloudy air. The droplets entering the clear area quickly evaporate while the droplets staying in the cloudy area continue to grow by condensation. This phase transition process reduces the difference of vapor mixing ratio between clear air and cloudy air, thus the transient growth of the deviation can hardly be observed.  The behavior of supersaturation reflects the combination of temperature and water vapor mixing ratio, as expected. The variations manifest themselves in the plots of relative dispersion.
 
 \begin{figure}[!htbp]\centering
-\includegraphics[width=1.0\linewidth]{figure_2}
+\includegraphics[width=0.3\linewidth]{mean_tke}
+\includegraphics[width=0.3\linewidth]{std_tke}
+\includegraphics[width=0.3\linewidth]{dsp_tke}\\
+\includegraphics[width=0.3\linewidth]{mean_temp}
+\includegraphics[width=0.3\linewidth]{std_temp}
+\includegraphics[width=0.3\linewidth]{dsp_temp}\\
+\includegraphics[width=0.3\linewidth]{mean_vapor}
+\includegraphics[width=0.3\linewidth]{std_vapor}
+\includegraphics[width=0.3\linewidth]{dsp_vapor}\\
+\includegraphics[width=0.3\linewidth]{mean_super}
+\includegraphics[width=0.3\linewidth]{std_super}
+\includegraphics[width=0.3\linewidth]{dsp_super}
 \caption{Temporal changes of key properties. The left, middle and right columns are the mean, standard deviation, and relative dispersion, respectively. The rows from top to bottom are turbulent kinetic energy, temperature, vapor mixing ratio and supersaturation, respectively.\label{fig:therm_dynam}}
 \end{figure}
 
 \subsection{Evolution of microphysical properties}
 \Fig{fig:rad_distri} shows the temporal variation of the cloud droplet size distribution for all the six simulations. Several points are evident. First, the droplets start with a monodisperse distribution droplet radius of $15\mu m$. As the turbulent mixing between the subsaturated environment and the supersaturated cloudy air proceeds, some droplets evaporate, the size distributions gradually shift to small sizes and broadens until all droplets completely evaporate. Due to the initial configuration, the final states of all the cases contain no droplets and are in subsaturated environments. Second, the three cases in {\color{green}the mode of} decaying turbulence (D1, D2 and D3) are quite different in their evolution of size distributions. However, the difference between the three forced turbulence cases (F1, F2 and F3) almost disappear, demonstrating that the buoyancy effect is overwhelmed by the external forcing {\color{green}in the cases of forced turbulence}. The differences in the decaying cases are caused by the buoyancy term in \Eq{eq:source_term}. The role of buoyancy in spectral broadening is also evident from the comparison of the corresponding simulations between modes of decaying and forced turbulence. {\color{green}It is noteworthy that some droplets grow in the first few seconds for all the cases, with the largest droplet radius of about $15.12\mu m$ found in F2. However, this phenomenon is too difficult to see from the figure.}
 \begin{figure}[!htbp]\centering
-\includegraphics[width=\linewidth]{figure_3}
+\includegraphics[width=0.48\linewidth]{pdf_radius_d1}
+\includegraphics[width=0.48\linewidth]{pdf_radius_f1}\\
+\includegraphics[width=0.48\linewidth]{pdf_radius_d2}
+\includegraphics[width=0.48\linewidth]{pdf_radius_f2}\\
+\includegraphics[width=0.48\linewidth]{pdf_radius_d3}
+\includegraphics[width=0.48\linewidth]{pdf_radius_f3}
 \caption{Evolution of droplet size distribution for decaying turbulence (left column) and forced turbulence (right column). The color denotes the droplet concentration normalized by the maximum concentration. The panels from up to bottom are Case 1, Case 2 and Case 3, respectively.} \label{fig:rad_distri}
 \end{figure}
 
@@ -294,7 +310,12 @@ To better illustrate the impacts of different simulation scenarios, \Fig{fig:tem
 mean volume radius (c), mean radius (d), standard deviation (e) and relative dispersion of the cloud droplet size distribution(f). It is evident that in all the simulations, LWC and droplet concentration decrease as turbulent mixing and droplet evaporation proceed. The mean volume radius and mean radius also decrease with time because the decrease of liquid water content is stronger/faster than that of droplet concentration. It is noteworthy that in all the simulations, standard deviations first increase, peak at some time, and then decrease beyond the peak time. The occurrence of maximum standard deviation stems primarily from the combined spectral broadening related to entrainment-mixing processes and the shrinking of droplet populations due to evaporation of small droplets. Also noteworthy is that the peak standard deviations occur between $5s$ and $10s$ for all the six simulation scenarios. The coupled variations of mean radius and standard deviation result in relative dispersion peaking at a much later time compared to standard deviation. Despite the commonalities, the differences among the different scenarios are evident. Since the configuration of Case 1 is close to an already-mixed case, its number concentration and mean radius decay at a faster rate, and the standard deviation of the droplet size is lower than the other cases. Case 2 and Case 3 exhibit no notable difference except for the number concentration. Since the mixing process of Case 3 is accelerated by the buoyancy effects in the vertical direction, the number concentration of Case 3 exhibits a stronger decrease than Case 2. Comparison between the forced cases and decaying cases further shows two contrasting phases. In the first phase, the forced cases contain more liquid water content, larger number concentration and mean radius than the corresponding decaying cases, while the opposite is true in the later stage. This implies that the decaying cases initially have faster mixing and evaporation, but are later overtaken by the forced turbulence. 
   
 \begin{figure}[!htbp]\centering
-\includegraphics[width=\linewidth]{figure_4}
+\includegraphics[width=0.48\linewidth]{num_con}
+\includegraphics[width=0.48\linewidth]{lwc}\\
+\includegraphics[width=0.48\linewidth]{vmean_radius}
+\includegraphics[width=0.48\linewidth]{mean_radius}\\
+\includegraphics[width=0.48\linewidth]{std_radius}
+\includegraphics[width=0.48\linewidth]{dsp_radius}
 \caption{Temporal evolutions of (a) droplets concentration, (b) liquid water content, (c) mean volume radius, (d) mean radius, (e) standard deviation, and (f) relative dispersion.}\label{fig:temporal_variation} 
 \end{figure}
 
@@ -312,7 +333,12 @@ The middle panel shows the mixing diagrams for case D2 and F2. These cases have 
 The mixing diagrams for {\color{green}the new} case D3 and F3 are displayed in the bottom panel. {\color{green}The results of} Case 3 resemble most properties of Case 1 and Case 2, except that its points are more scattered than the other two cases. This phenomenon is likely due to the sedimentation effect, which enhances the droplet motion in the vertical direction. Since the initial cloudy area in Case 3 is vertically sandwiched between two clear air regions, the cloud droplets moving up and down can easily enter a different environment (clear region) in the early stage, therefore increasing the variability of the scatter plots. {\color{green}It is noteworthy that the difference between the mixing diagrams lies more in the cloudy area configurations (esp., Case 1 vs. Case 2 or Case 3) than the mode of turbulence (forced or freely decaying) unlike the temporal evoluations of droplet size distribution shown in \Fig{fig:rad_distri}.  The strong similarity in the mixing diagrams between the six different simulations should be highlighted, as it suggests the potential for a unified parameterization of different mixing mechanisms detailed next.}
 
 \begin{figure}[!htbp]\centering
-\includegraphics[width=\linewidth]{figure_5}
+\includegraphics[width=0.4\linewidth]{mixing_cased1_tt}
+\includegraphics[width=0.4\linewidth]{mixing_casef1_tt}\\
+\includegraphics[width=0.4\linewidth]{mixing_cased2_tt}
+\includegraphics[width=0.4\linewidth]{mixing_casef2_tt}\\
+\includegraphics[width=0.4\linewidth]{mixing_cased3_tt}
+\includegraphics[width=0.4\linewidth]{mixing_casef3_tt}
 \caption{Microphysical mixing diagram for scenario D1, D2, D3, F1, F2 and F3. The green
 circles represent the results for different sample boxes and the red triangles represent the mean over the entire domain, with arrow indicating the direction of time. The solid and dashed black lines denote the extreme inhomogeneous and homogeneous mixing, respectively. Only the boxes with non-zero droplets at the initial time are considered.}
 \label{fig:mixing_diagram}
@@ -330,7 +356,7 @@ temporal states in time $t_j$ and $t_{j-1}$.
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\linewidth]{figure_6}
+\includegraphics[width=1.0\linewidth]{mixing_dia}
 \caption{Schematic illustration of the sequence of states involved in an entrainment and isobaric mixing event and the definition of the homogeneous mixing degree. The three black solid lines correspond to extreme inhomogeneous mixing, homogeneous mixing (relative humidity of the dry air is $66\%$), and the contour of a constant $\gamma = LWC_j/LWC_{j-1} = 0.2$. The different superscripts above the state $3$ denote the possible final states corresponding to different mixing mechanisms. See text for the meanings of the other lines and symbols. \label{fig:rn_dia}}
 \end{figure}
   
@@ -395,7 +421,10 @@ instantaneous domain-mean and the different color denotes the different scenario
 Evidently, $\psi_3$, $\psi_4$ and $\psi_5$ are virtually equivalent, with most points falling around the perfect one-to-one line. The relationship between $\psi_2$ and $\psi_3$ is tight until both are larger than $1$. Despite being still largely positively correlated, the relationships between $\psi_1$ and {\color{green}the other measures is much weaker, which is expected because $\psi_1$ is not constrained by the two limiting homogeneous and inhomogeneous mixing mechanisms.} 
 
 \begin{figure}[!htbp]\centering
-\includegraphics[width=\linewidth]{figure_7}
+\includegraphics[width=0.45\linewidth]{phi3_phi1}
+\includegraphics[width=0.45\linewidth]{phi3_phi2}\\
+\includegraphics[width=0.45\linewidth]{phi3_phi4}
+\includegraphics[width=0.45\linewidth]{phi3_phi5}
 \caption{Comparison between the five measures of microphysical homogeneous mixing degree. Each dot represents an instantaneous domain-mean; different color denotes the six different scenarios.\label{phi_compare}}
 \end{figure}
 
@@ -442,12 +471,20 @@ To examine the usefulness of the conventional Damk\"{o}hler number,
 \Fig{fig:PhiDa} shows all five microphysical measures ($\psi_1$, $\psi_2$, $\psi_3$, $\psi_4$, $\psi_5$) against the inverse of the Damk\"{o}hler number, with color indicating the simulation time normalized by the final time. The positive correlations are evident, suggesting that a smaller Damk\"{o}hler number corresponds to a higher homogeneous mixing degree. The results (esp., for $\psi_1$) are consistent with that reported by \citet{And09}. Furthermore, according to the determination coefficient ($R^2$), the $\psi_2$-$Da$ relationship has the best power-law fit ($R^2 = 0.84$). As expected from \Fig{fig:PhiDa}, the relationships for $\psi_3$, $\psi_4$ and $\psi_5$ are similar, with $R^2$ being $0.43$, $0.37$, and $0.34$, respectively. The worst correlation is between $\psi_1$ and $Da$, with $R^2$ being $0.26$. To examine the potential of the transition scale number, \Fig{fig:PhiNL} shows the five microphysics measures against the transition scale number. Similarly, all the relationships are positively correlated and can be fitted with power-law relationships. In terms of their corresponding $R^2$ values, the fitness order of the relationships are $\psi_2$($R^2 = 0.83$), $\psi_3$($R^2 = 0.43$), $\psi_4$($R^2=0.37$), $\psi_5$($R^2=0.43$), and $\psi_1$($R^2 = 0.25$), respectively. These results are consistent with the heuristic argument that {\color{green} a smaller Damk\"{o}hler number or larger transition scale number corresponds to more homogeneous mixing mechanism because turbulent mixing is relatively faster than droplet evaporation. For convenience, \Table{tb:fitness} summarizes the empirical power-law expressions and the corresponding values of $R^2$. The preceding results suggest that the two non-dimensional numbers, Damk\"{o}hler number and transition scale number, are virtually equivalent in terms of their usefulness in developing parameterization for the microphysical effects of various different entrainment-mixing processes.}
 
 \begin{figure}[!htbp]\centering
-\includegraphics[width=\linewidth]{figure_8}
+\includegraphics[width=0.45\linewidth]{phi1da}
+\includegraphics[width=0.45\linewidth]{phi2da}\\
+\includegraphics[width=0.45\linewidth]{phi3da}
+\includegraphics[width=0.45\linewidth]{phi4da}\\
+\includegraphics[width=0.45\linewidth]{phi5da}
 \caption{Scatter plots of the five microphysical measures ($\psi_1$, $\psi_2$, $\psi_3$, $\psi_4$, $\psi_5$) of homogeneous mixing degree as a function of the inverse of the Damk\"ohler number ($Da$). Each point denotes the domain mean value for the corresponding scenario and time; the symbol and color the different simulation scenario and the normalized simulation time, respectively.\label{fig:PhiDa}}
 \end{figure}
 
 \begin{figure}[!htbp]\centering
-\includegraphics[width=\linewidth]{figure_9}
+\includegraphics[width=0.45\linewidth]{phi1nl}
+\includegraphics[width=0.45\linewidth]{phi2nl}\\
+\includegraphics[width=0.45\linewidth]{phi3nl}
+\includegraphics[width=0.45\linewidth]{phi4nl}\\
+\includegraphics[width=0.45\linewidth]{phi5nl}
 \caption{Scatter plots of the five microphysical measures of homogeneous mixing degree as a function of the transition scale number($N_L$). Each point denotes the domain mean value for the corresponding scenario and time; the symbol and color denote the different simulation scenario and the normalized simulation time, respectively.\label{fig:PhiNL}}
 \end{figure}
 
@@ -470,7 +507,8 @@ $\psi_5$  & $(95.32, -0.41, 0.34)$  & $(66.72, 0.23, 0.34)$\\
 
 Further inspection of the definitions of the Damk\"ohler number and transition scale number reveals that their essential difference lies in their use of different turbulent mixing length scales: the Damk\"ohler number is based on the Taylor length scale while the transition scale number is based on the transition scale. {\color{green} \Fig{fig:TaylorScaleTranScale} shows the close relationship between the two characteristic length scales (a), which leads to  close relationship between the two non-dimensional numbers (b). Although the Damk\"{o}hler number and transition scale number are equivalent in principle. The latter} is easier to estimate in practice, because the calculation of the Taylor length scale requires information on the spatial gradient of liquid water mixing ratio in addition to dissipation rate. Thus, all together, these results suggest that entrainment-mixing processes is best parameterized using $\psi_2$ as a function of transition scale number reinforcing the result of  \citet{Lu2013a} based on the  observational analysis and EMPM simulations. {\color{green}The similarity between our DNS results and the observational results is noteworthy, which somewhat echoes the results for the mixing diagram reported in \citet{Kumar2017}.}     
 \begin{figure}\centering
-\includegraphics[width=\linewidth]{figure_10}
+\includegraphics[width=0.45\linewidth]{taylor_trans}
+\includegraphics[width=0.45\linewidth]{da_nl_avg}
 \caption{Comparison between the Taylor length scale and transition length scale (a), and between transition scale number (b). Each point denotes the domain mean value for the corresponding scenario and time. The symbol and color denotes the different simulations scenario and the normalized simulation time respectively. \label{fig:TaylorScaleTranScale}}
 \end{figure}
 
