@@ -1,7 +1,9 @@
 import os
 
-FileName = "C:\\Users\\zgao\\Documents\\DNS_entr\\JGR2017-DNS-Supplement-Figures.tex"
-figure_tag = "s"
+#FileName = "C:\\Users\\zgao\\Documents\\DNS_entr\\JGR2017-DNS-Supplement-Figures.tex"
+#figure_tag = "s"
+FileName = "C:\\Users\\zgao\\Documents\\DNS_entr\\JGR2017-DNS-Origin.tex"
+figure_tag = ""
 #start reading file
 count = 0
 row_count = 0
@@ -40,3 +42,4 @@ with open(FileName, encoding="UTF8") as fp:
                 text_file.write(latex_source)
             os.system("pdflatex latex_source_file.tex -job-name={0}".format("figure_{0}{1}".format(figure_tag, count)))
 
+os.system("del *.aux *.log")
